@@ -1,0 +1,738 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>다올행정사무소 | 종합 행정 서비스</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" as="style" crossorigin href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/variable/pretendardvariable.css" />
+<style>
+:root{
+  --primary:#1F2937; --primary-ink:#111827;
+  --bg:#FFFFFF; --bg-sub:#F7F7F5;
+  --text:#111827; --text-2:#6B7280; --text-3:#9CA3AF;
+  --border:#E5E7EB; --border-strong:#D1D5DB;
+  --kakao:#FEE500; --kakao-ink:#391B1B;
+  --acc-imm:#3B6FD9; --acc-imm-bg:#EEF3FD;
+  --acc-permit:#3182F6; --acc-permit-bg:#EAF2FE;
+  --acc-appeal:#C0362C; --acc-appeal-bg:#FBEEED;
+  --acc-docs:#0D8C7A; --acc-docs-bg:#E9F6F3;
+  --acc-etc:#7C4FD9; --acc-etc-bg:#F3EEFC;
+  --sans:'Pretendard Variable', Pretendard, -apple-system, BlinkMacSystemFont, sans-serif;
+  --maxw:1160px;
+}
+*{box-sizing:border-box; margin:0; padding:0;}
+html{scroll-behavior:smooth;}
+body{font-family:var(--sans); color:var(--text); background:var(--bg); line-height:1.6; -webkit-font-smoothing:antialiased; overflow-x:hidden;}
+img,svg{display:block; max-width:100%;}
+a{color:inherit; text-decoration:none;}
+ul{list-style:none;}
+button{font-family:inherit; cursor:pointer;}
+.wrap{max-width:var(--maxw); margin:0 auto; padding:0 28px;}
+:focus-visible{outline:2px solid var(--primary); outline-offset:3px;}
+@media (prefers-reduced-motion: reduce){*{animation-duration:0.01ms !important; transition-duration:0.01ms !important;}}
+
+/* ===== Header ===== */
+header{position:sticky; top:0; z-index:60; background:rgba(255,255,255,0.9); backdrop-filter:blur(10px); border-bottom:1px solid var(--border);}
+.nav-row{display:flex; align-items:center; justify-content:space-between; height:74px;}
+.logo{font-weight:700; font-size:18px; letter-spacing:-0.01em;}
+.nav-links{display:flex; align-items:center; gap:30px;}
+.nav-links a{font-size:14.5px; color:var(--text-2); transition:color .2s;}
+.nav-links a:hover{color:var(--text);}
+.nav-cta{background:var(--primary); color:#fff !important; padding:9px 18px; border-radius:6px; font-size:14px; font-weight:600;}
+.burger{display:none; width:32px; height:32px; background:none; border:none; flex-direction:column; justify-content:center; gap:5px;}
+.burger span{display:block; width:100%; height:2px; background:var(--text); transition:transform .25s, opacity .25s;}
+.burger.open span:nth-child(1){transform:translateY(7px) rotate(45deg);}
+.burger.open span:nth-child(2){opacity:0;}
+.burger.open span:nth-child(3){transform:translateY(-7px) rotate(-45deg);}
+.mobile-panel{display:none; flex-direction:column; border-top:1px solid var(--border); padding:16px 28px 24px; gap:15px; background:var(--bg);}
+.mobile-panel.open{display:flex;}
+.mobile-panel a{font-size:15.5px; color:var(--text-2);}
+.mobile-panel .nav-cta{align-self:flex-start;}
+
+/* ===== Typography scale ===== */
+h1{font-size:clamp(32px, 5vw, 56px); font-weight:700; line-height:1.22; letter-spacing:-0.02em;}
+h2{font-size:clamp(26px, 3.4vw, 38px); font-weight:700; line-height:1.28; letter-spacing:-0.015em;}
+h3{font-size:24px; font-weight:700; line-height:1.35;}
+.body-lg{font-size:18px; color:var(--text-2); line-height:1.75;}
+.caption{font-size:14px; color:var(--text-3);}
+
+section{padding:96px 0;}
+@media (max-width:860px){section{padding:60px 0;}}
+
+/* ===== Hero — Apple ===== */
+.hero{padding:120px 0 110px; text-align:center;}
+.hero .wrap{max-width:760px;}
+.hero h1{max-width:14ch; margin:0 auto;}
+.hero p{margin:26px auto 0; max-width:46ch;}
+.hero-actions{margin-top:40px; display:flex; justify-content:center; align-items:center; gap:20px; flex-wrap:wrap;}
+.btn-primary{background:var(--primary); color:#fff; padding:16px 30px; border-radius:8px; font-size:16px; font-weight:600; border:none;}
+.btn-text{font-size:15px; color:var(--text-2); border-bottom:1px solid var(--border-strong); padding-bottom:2px;}
+.hero-visual{margin:72px auto 0; max-width:480px; aspect-ratio:16/9; position:relative;}
+.hv-doc{position:absolute; width:210px; height:150px; background:var(--bg-sub); border:1px solid var(--border); border-radius:10px; left:8%; top:20%; padding:20px;}
+.hv-doc .ln{height:2px; background:var(--border-strong); margin-bottom:12px; border-radius:1px;}
+.hv-doc .ln:nth-child(1){width:60%;} .hv-doc .ln:nth-child(2){width:88%;} .hv-doc .ln:nth-child(3){width:70%;}
+.hv-circle{position:absolute; width:150px; height:150px; border-radius:50%; background:var(--primary); right:6%; top:8%; opacity:0.06;}
+.hv-check{position:absolute; right:14%; bottom:10%; width:56px; height:56px; border-radius:50%; background:var(--primary); display:flex; align-items:center; justify-content:center;}
+.hv-check svg{width:24px; height:24px; stroke:#fff;}
+
+/* ===== 업무찾기 — Toss 2x3 ===== */
+.finder{background:var(--bg-sub);}
+.finder-head{text-align:center; max-width:560px; margin:0 auto 48px;}
+.finder-grid{display:grid; grid-template-columns:repeat(3, 1fr); gap:16px;}
+.finder-card{background:#fff; border:1px solid var(--border); border-radius:14px; padding:28px 24px; display:flex; flex-direction:column; gap:14px; transition:border-color .2s, transform .15s;}
+.finder-card:hover{border-color:var(--border-strong); transform:translateY(-2px);}
+.finder-icon{width:44px; height:44px; border-radius:10px; display:flex; align-items:center; justify-content:center; font-size:20px;}
+.finder-card h3{font-size:17px; font-weight:700;}
+.finder-card p{font-size:13.5px; color:var(--text-2);}
+.finder-arrow{margin-top:auto; font-size:13.5px; font-weight:600; color:var(--text);}
+
+/* ===== 출입국 — Google style: friendly, bright, situation cards ===== */
+.sec-imm{background:#fff;}
+.sec-eyebrow{display:inline-block; font-size:13px; font-weight:700; padding:5px 12px; border-radius:20px; margin-bottom:18px;}
+.eyebrow-imm{background:var(--acc-imm-bg); color:var(--acc-imm);}
+.sit-grid{display:grid; grid-template-columns:repeat(3, 1fr); gap:14px; margin-top:36px;}
+.sit-card{background:var(--acc-imm-bg); border-radius:16px; padding:26px 22px; transition:transform .15s;}
+.sit-card:hover{transform:translateY(-3px);}
+.sit-emoji{font-size:26px; margin-bottom:14px;}
+.sit-card p.main{font-size:16px; font-weight:700; margin-bottom:6px; line-height:1.4;}
+.sit-card p.sub{font-size:13px; color:var(--text-2);}
+
+/* ===== 인허가 — Toss style: question + choose + step result ===== */
+.sec-permit{background:var(--bg-sub);}
+.eyebrow-permit{background:var(--acc-permit-bg); color:var(--acc-permit);}
+.step-indicator{display:flex; align-items:center; gap:10px; margin:30px 0 8px;}
+.step-dot{font-size:13px; font-weight:700; color:var(--text-3);}
+.step-dot.active{color:var(--acc-permit);}
+.step-line{flex:0 0 40px; height:1px; background:var(--border-strong);}
+.biz-grid{display:grid; grid-template-columns:repeat(4, 1fr); gap:12px; margin-top:20px;}
+.biz-card{background:#fff; border:1.5px solid var(--border); border-radius:12px; padding:22px 16px; text-align:center; font-size:15px; font-weight:600; transition:border-color .15s, background .15s;}
+.biz-card:hover{border-color:var(--acc-permit);}
+.biz-card.selected{border-color:var(--acc-permit); background:var(--acc-permit-bg); color:var(--acc-permit);}
+.biz-result{margin-top:28px; background:#fff; border:1px solid var(--border); border-radius:14px; padding:28px; display:none;}
+.biz-result.show{display:block;}
+.biz-result h4{font-size:17px; font-weight:700; margin-bottom:14px;}
+.biz-result ul{display:flex; flex-direction:column; gap:10px; margin-bottom:20px;}
+.biz-result li{font-size:14.5px; color:var(--text-2); display:flex; gap:8px;}
+.biz-result li::before{content:'✓'; color:var(--acc-permit); font-weight:700;}
+.btn-permit{background:var(--acc-permit); color:#fff; padding:12px 22px; border-radius:8px; font-size:14.5px; font-weight:600; border:none;}
+
+/* ===== 기업·공장 — Apple: full-width, editorial, minimal color ===== */
+.sec-business{background:var(--primary); color:#fff; padding:0;}
+.biz-hero{padding:100px 0; text-align:center;}
+.biz-hero .wrap{max-width:640px;}
+.biz-hero h2{color:#fff;}
+.biz-hero p{color:#9AA2AE; margin-top:18px; font-size:16.5px;}
+.biz-hero .btn-primary{background:#fff; color:var(--primary); margin-top:32px;}
+.editorial{background:#fff; color:var(--text); padding:90px 0;}
+.ed-row{display:grid; grid-template-columns:80px 1fr; gap:32px; padding:44px 0; border-top:1px solid var(--border);}
+.ed-row:last-child{border-bottom:1px solid var(--border);}
+.ed-num{font-size:15px; font-weight:700; color:var(--text-3);}
+.ed-row h3{margin-bottom:12px;}
+.ed-row p{font-size:15.5px; color:var(--text-2); max-width:56ch; line-height:1.8;}
+.case-study{margin-top:60px; border:1px solid var(--border); border-radius:16px; padding:40px; background:var(--bg-sub);}
+.cs-tag{font-size:12.5px; font-weight:700; letter-spacing:0.03em; color:var(--text-3); margin-bottom:14px;}
+.case-study h4{font-size:20px; font-weight:700; margin-bottom:24px;}
+.cs-grid{display:grid; grid-template-columns:repeat(4, 1fr); gap:24px;}
+.cs-grid div p.k{font-size:12.5px; color:var(--text-3); margin-bottom:6px; font-weight:600;}
+.cs-grid div p.v{font-size:14px; color:var(--text); line-height:1.6;}
+
+/* ===== 행정심판 — focused/urgent: minimal color, list rows ===== */
+.sec-appeal{background:#fff;}
+.eyebrow-appeal{background:var(--acc-appeal-bg); color:var(--acc-appeal);}
+.appeal-list{margin-top:30px; border-top:1px solid var(--border);}
+.appeal-row{display:flex; justify-content:space-between; align-items:center; padding:22px 4px; border-bottom:1px solid var(--border); font-size:16px; font-weight:600; transition:background .15s;}
+.appeal-row:hover{background:var(--bg-sub);}
+.appeal-row span.arrow{color:var(--acc-appeal); font-weight:700;}
+.info-box{margin-top:26px; display:flex; gap:12px; background:var(--bg-sub); border-radius:10px; padding:18px 20px; align-items:flex-start;}
+.info-box .ic{width:20px; height:20px; border-radius:50%; background:var(--text-3); color:#fff; font-size:12px; font-weight:700; display:flex; align-items:center; justify-content:center; flex-shrink:0; margin-top:2px;}
+.info-box p{font-size:14px; color:var(--text-2); line-height:1.7;}
+
+/* ===== 서류작성 — Notion/Search style ===== */
+.sec-docs{background:var(--bg-sub);}
+.eyebrow-docs{background:var(--acc-docs-bg); color:var(--acc-docs);}
+.search-box{margin-top:28px; display:flex; align-items:center; gap:12px; background:#fff; border:1.5px solid var(--border); border-radius:12px; padding:16px 20px; max-width:560px;}
+.search-box input{border:none; outline:none; font-size:15px; flex:1; font-family:inherit; background:transparent;}
+.doc-list{margin-top:32px; display:flex; flex-direction:column; max-width:560px;}
+.doc-row{display:flex; justify-content:space-between; padding:16px 4px; border-bottom:1px solid var(--border); font-size:15px;}
+.doc-row span.arrow{color:var(--acc-docs);}
+
+/* ===== 기타 업무 — conversational ===== */
+.sec-etc{background:#fff; text-align:center;}
+.sec-etc .wrap{max-width:560px;}
+.eyebrow-etc{background:var(--acc-etc-bg); color:var(--acc-etc); margin:0 auto 18px;}
+.chip-row{display:flex; flex-wrap:wrap; justify-content:center; gap:10px; margin-top:30px;}
+.chip{border:1.5px solid var(--border); border-radius:24px; padding:11px 20px; font-size:14.5px; font-weight:600; transition:border-color .15s;}
+.chip:hover{border-color:var(--acc-etc); color:var(--acc-etc);}
+
+/* ===== 성공사례 ===== */
+.sec-cases{background:var(--bg-sub);}
+.filter-tabs{display:flex; gap:10px; margin:30px 0 8px; flex-wrap:wrap;}
+.filter-tab{border:1px solid var(--border); background:#fff; padding:9px 18px; border-radius:20px; font-size:13.5px; font-weight:600; color:var(--text-2);}
+.filter-tab.active{background:var(--primary); color:#fff; border-color:var(--primary);}
+.case-grid{display:grid; grid-template-columns:repeat(2, 1fr); gap:18px; margin-top:30px;}
+.case-card{background:#fff; border:1px solid var(--border); border-radius:14px; padding:26px; display:none;}
+.case-card.show{display:block;}
+.case-card .cat{font-size:12.5px; font-weight:700; color:var(--text-3); margin-bottom:10px;}
+.case-card h4{font-size:16.5px; font-weight:700; margin-bottom:14px;}
+.case-card dl{margin-bottom:14px;}
+.case-card dt{font-size:12px; font-weight:700; color:var(--text-3); margin-top:10px;}
+.case-card dt:first-child{margin-top:0;}
+.case-card dd{font-size:13.5px; color:var(--text-2); line-height:1.65; margin-top:3px;}
+.case-card .result{display:inline-block; font-size:12.5px; font-weight:600; background:var(--bg-sub); padding:5px 10px; border-radius:5px;}
+
+/* ===== 행정사 소개 — timeline ===== */
+.sec-about{background:#fff;}
+.about-top{display:flex; gap:32px; align-items:center; margin-bottom:60px;}
+.avatar{width:96px; height:96px; border-radius:50%; background:var(--bg-sub); border:1px solid var(--border); flex-shrink:0; display:flex; align-items:center; justify-content:center; font-size:34px; color:var(--text-3);}
+.about-top h3{margin-bottom:6px;}
+.about-tags{display:flex; gap:8px; margin-top:12px; flex-wrap:wrap;}
+.about-tag{font-size:12.5px; background:var(--bg-sub); padding:6px 12px; border-radius:14px; color:var(--text-2);}
+.timeline{display:flex; flex-direction:column;}
+.tl-row{display:grid; grid-template-columns:100px 1fr; gap:24px; padding:22px 0; border-top:1px solid var(--border);}
+.tl-row:last-child{border-bottom:1px solid var(--border);}
+.tl-year{font-weight:700; color:var(--text-3);}
+.tl-row p{font-size:15px; color:var(--text-2);}
+
+/* ===== FAQ ===== */
+.sec-faq{background:var(--bg-sub);}
+.faq-list{max-width:720px; margin-top:20px;}
+details{border-top:1px solid var(--border); padding:20px 0;}
+details:last-child{border-bottom:1px solid var(--border);}
+summary{cursor:pointer; font-size:16px; font-weight:600; list-style:none; display:flex; justify-content:space-between; align-items:center; gap:16px;}
+summary::-webkit-details-marker{display:none;}
+summary::after{content:'+'; font-size:20px; color:var(--text-3); font-weight:400; flex-shrink:0;}
+details[open] summary::after{content:'–';}
+details p{margin-top:14px; font-size:14.5px; color:var(--text-2); line-height:1.75; max-width:60ch;}
+.faq-item{display:none;} .faq-item.show{display:block;}
+
+/* ===== 상담문의 — 3-step ===== */
+.sec-contact{background:var(--primary); color:#fff;}
+.contact-box{max-width:560px; margin:0 auto; background:#22293A; border-radius:18px; padding:44px;}
+.form-progress{display:flex; align-items:center; gap:8px; margin-bottom:32px;}
+.fp-dot{width:26px; height:26px; border-radius:50%; background:#39415A; color:#8A93AA; font-size:12px; font-weight:700; display:flex; align-items:center; justify-content:center;}
+.fp-dot.active{background:#fff; color:var(--primary);}
+.fp-line{flex:1; height:1px; background:#39415A;}
+.step-panel{display:none;}
+.step-panel.active{display:block;}
+.step-panel h4{font-size:19px; font-weight:700; margin-bottom:22px;}
+.opt-grid{display:grid; grid-template-columns:1fr 1fr; gap:10px;}
+.opt-chip{border:1px solid #39415A; border-radius:10px; padding:16px; text-align:center; font-size:14.5px; font-weight:600; color:#D1D5DB;}
+.opt-chip.selected{border-color:#fff; background:rgba(255,255,255,0.08); color:#fff;}
+textarea, input[type=text], input[type=tel]{width:100%; background:rgba(255,255,255,0.06); border:1px solid #39415A; color:#fff; padding:14px 16px; border-radius:10px; font-size:14.5px; font-family:inherit;}
+textarea{min-height:110px; resize:vertical;}
+input::placeholder, textarea::placeholder{color:#7C8695;}
+.radio-row{display:flex; gap:14px; margin-bottom:18px;}
+.radio-opt{display:flex; align-items:center; gap:7px; font-size:14px; color:#D1D5DB;}
+.step-actions{display:flex; justify-content:space-between; margin-top:28px;}
+.btn-ghost{background:none; border:none; color:#9AA2AE; font-size:14.5px;}
+.btn-next{background:#fff; color:var(--primary); padding:12px 24px; border-radius:8px; font-weight:700; font-size:14.5px; border:none;}
+
+footer{padding:32px 0 90px; background:var(--primary-ink); border-top:1px solid rgba(255,255,255,0.08); color:#9AA2AE;}
+.footer-row{display:flex; justify-content:space-between; flex-wrap:wrap; gap:12px; font-size:13px;}
+
+.mobile-sticky{display:none; position:fixed; bottom:0; left:0; right:0; z-index:70; border-top:1px solid var(--border); background:#fff;}
+.mobile-sticky-row{display:grid; grid-template-columns:1fr 1fr;}
+.mobile-sticky a{display:flex; align-items:center; justify-content:center; gap:8px; padding:15px 0; font-size:14.5px; font-weight:700;}
+.mobile-sticky .m-kakao{background:var(--kakao); color:var(--kakao-ink);}
+.mobile-sticky .m-tel{background:var(--primary); color:#fff;}
+
+@media (max-width:860px){
+  .nav-links{display:none;} .burger{display:flex;}
+  .finder-grid{grid-template-columns:1fr 1fr;}
+  .sit-grid{grid-template-columns:1fr 1fr;}
+  .biz-grid{grid-template-columns:1fr 1fr;}
+  .ed-row{grid-template-columns:1fr; gap:10px;}
+  .cs-grid{grid-template-columns:1fr 1fr; gap:18px;}
+  .case-grid{grid-template-columns:1fr;}
+  .about-top{flex-direction:column; align-items:flex-start;}
+  .contact-box{padding:30px 22px;}
+  .opt-grid{grid-template-columns:1fr;}
+  .mobile-sticky{display:block;}
+  body{padding-bottom:56px;}
+}
+@media (max-width:520px){
+  .finder-grid{grid-template-columns:1fr;}
+  .sit-grid{grid-template-columns:1fr;}
+  .biz-grid{grid-template-columns:1fr 1fr;}
+  .cs-grid{grid-template-columns:1fr 1fr;}
+  .wrap{padding:0 20px;}
+}
+</style>
+</head>
+<body>
+
+<header>
+  <div class="wrap nav-row">
+    <a href="#top" class="logo">다올행정사무소</a>
+    <nav class="nav-links">
+      <a href="#finder">업무안내</a>
+      <a href="#cases">성공사례</a>
+      <a href="#about">소개</a>
+      <a href="#faq">FAQ</a>
+      <a href="#contact" class="nav-cta">상담하기</a>
+    </nav>
+    <button class="burger" id="burgerBtn" aria-label="메뉴 열기" aria-expanded="false"><span></span><span></span><span></span></button>
+  </div>
+  <div class="mobile-panel" id="mobilePanel">
+    <a href="#finder">업무안내</a>
+    <a href="#cases">성공사례</a>
+    <a href="#about">소개</a>
+    <a href="#faq">FAQ</a>
+    <a href="#contact" class="nav-cta">상담하기</a>
+  </div>
+</header>
+
+<main id="top">
+
+  <!-- HERO — Apple: 절제, 여백, 하나의 메시지 -->
+  <section class="hero">
+    <div class="wrap">
+      <h1>복잡한 행정업무, 더 쉽게 해결할 수 있도록</h1>
+      <p class="body-lg">출입국부터 인허가, 기업 행정, 행정심판까지 — 상황에 맞는 절차를 상담해드립니다.</p>
+      <div class="hero-actions">
+        <a href="#finder" class="btn-primary">내 상황 확인하기</a>
+        <a href="#contact" class="btn-text">카카오톡 상담</a>
+      </div>
+      <div class="hero-visual">
+        <div class="hv-circle"></div>
+        <div class="hv-doc"><div class="ln"></div><div class="ln"></div><div class="ln"></div></div>
+        <div class="hv-check"><svg viewBox="0 0 24 24" fill="none" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M5 13l4 4L19 7"/></svg></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 업무찾기 — Toss: 2x3 선택 카드, 고객 언어 -->
+  <section class="finder" id="finder">
+    <div class="wrap">
+      <div class="finder-head">
+        <h2>어떤 도움이 필요하신가요?</h2>
+        <p class="body-lg" style="margin-top:12px;">해당하는 상황을 선택하면 필요한 절차를 바로 확인할 수 있어요.</p>
+      </div>
+      <div class="finder-grid">
+        <a href="#immigration" class="finder-card">
+          <div class="finder-icon" style="background:var(--acc-imm-bg);">🌍</div>
+          <h3>외국인 취업·체류 문제가 있어요</h3>
+          <p>비자, 체류자격, 출입국 관련 업무</p>
+          <span class="finder-arrow" style="color:var(--acc-imm);">자세히 보기 →</span>
+        </a>
+        <a href="#permit" class="finder-card">
+          <div class="finder-icon" style="background:var(--acc-permit-bg);">🏢</div>
+          <h3>사업을 시작하려는데 허가가 필요해요</h3>
+          <p>영업허가, 신고, 각종 등록</p>
+          <span class="finder-arrow" style="color:var(--acc-permit);">자세히 보기 →</span>
+        </a>
+        <a href="#business" class="finder-card">
+          <div class="finder-icon" style="background:var(--bg-sub);">🏭</div>
+          <h3>공장·사업장 행정업무가 필요해요</h3>
+          <p>공장설립, 기업 관련 행정</p>
+          <span class="finder-arrow">자세히 보기 →</span>
+        </a>
+        <a href="#appeal" class="finder-card">
+          <div class="finder-icon" style="background:var(--acc-appeal-bg);">⚖️</div>
+          <h3>행정처분을 받았어요</h3>
+          <p>행정심판, 이의신청, 불복절차</p>
+          <span class="finder-arrow" style="color:var(--acc-appeal);">자세히 보기 →</span>
+        </a>
+        <a href="#docs" class="finder-card">
+          <div class="finder-icon" style="background:var(--acc-docs-bg);">📄</div>
+          <h3>서류 작성·제출을 도와주세요</h3>
+          <p>신청서, 신고서, 사실증명 서류</p>
+          <span class="finder-arrow" style="color:var(--acc-docs);">자세히 보기 →</span>
+        </a>
+        <a href="#etc" class="finder-card">
+          <div class="finder-icon" style="background:var(--acc-etc-bg);">💬</div>
+          <h3>어떤 업무인지 모르겠어요</h3>
+          <p>괜찮아요, 상황만 알려주세요</p>
+          <span class="finder-arrow" style="color:var(--acc-etc);">자세히 보기 →</span>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- 출입국 — Google: 친절함, 밝은 톤, 상황 선택 카드 -->
+  <section class="sec-imm" id="immigration">
+    <div class="wrap">
+      <span class="sec-eyebrow eyebrow-imm">출입국 · 외국인</span>
+      <h2>어떤 상황이신가요?</h2>
+      <p class="body-lg" style="margin-top:12px;">비자 종류보다 지금 상황을 먼저 알려주세요.</p>
+      <div class="sit-grid">
+        <div class="sit-card"><div class="sit-emoji">💼</div><p class="main">한국에서 취업하고 싶어요</p><p class="sub">E-7 취업비자</p></div>
+        <div class="sit-card"><div class="sit-emoji">💍</div><p class="main">가족과 함께 살고 싶어요</p><p class="sub">F-6 결혼이민</p></div>
+        <div class="sit-card"><div class="sit-emoji">🏡</div><p class="main">오래 체류하고 싶어요</p><p class="sub">F-5 영주권</p></div>
+        <div class="sit-card"><div class="sit-emoji">🇰🇷</div><p class="main">재외동포예요</p><p class="sub">F-4 재외동포</p></div>
+        <div class="sit-card"><div class="sit-emoji">📅</div><p class="main">체류기간을 연장하고 싶어요</p><p class="sub">체류기간 연장</p></div>
+        <div class="sit-card"><div class="sit-emoji">❓</div><p class="main">잘 모르겠어요</p><p class="sub">상담으로 확인해요</p></div>
+      </div>
+      <div style="margin-top:34px;"><a href="#contact" class="btn-primary" style="background:var(--acc-imm);">내 상황 상담하기</a></div>
+    </div>
+  </section>
+
+  <!-- 인허가 — Toss: 질문형, 단계 선택 -->
+  <section class="sec-permit" id="permit">
+    <div class="wrap">
+      <span class="sec-eyebrow eyebrow-permit">인허가 · 신고 · 등록</span>
+      <h2>사업을 시작하려는데, 어떤 허가가 필요한지 모르시나요?</h2>
+      <div class="step-indicator">
+        <span class="step-dot active">01 사업 선택</span>
+        <span class="step-line"></span>
+        <span class="step-dot" id="stepDot2">02 필요 업무 확인</span>
+      </div>
+      <p class="body-lg" style="margin-top:6px;">어떤 사업을 준비하고 계신가요?</p>
+      <div class="biz-grid" id="bizGrid">
+        <button class="biz-card" data-biz="음식점">음식점</button>
+        <button class="biz-card" data-biz="제조업">제조업</button>
+        <button class="biz-card" data-biz="건설업">건설업</button>
+        <button class="biz-card" data-biz="기타">기타</button>
+      </div>
+      <div class="biz-result" id="bizResult">
+        <h4 id="bizResultTitle">선택 결과</h4>
+        <ul id="bizResultList"></ul>
+        <a href="#contact" class="btn-permit">내 상황 확인하기</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- 기업·공장 — Apple: 풀와이드, 에디토리얼, 절제된 색 -->
+  <section class="sec-business" id="business">
+    <div class="biz-hero">
+      <div class="wrap">
+        <h2>기업의 행정업무를 더 명확하게</h2>
+        <p>공장설립부터 사업 관련 인허가, 기업 행정업무까지 — 전문 행정사가 단계별로 검토합니다.</p>
+        <a href="#contact" class="btn-primary">기업 상담하기</a>
+      </div>
+    </div>
+    <div class="editorial">
+      <div class="wrap">
+        <div class="ed-row">
+          <div class="ed-num">01</div>
+          <div><h3>공장 설립</h3><p>사업 계획부터 필요한 인허가까지, 입지조건과 건축기준을 단계별로 검토합니다.</p></div>
+        </div>
+        <div class="ed-row">
+          <div class="ed-num">02</div>
+          <div><h3>사업 관련 인허가</h3><p>영업허가, 시설기준, 각종 등록 절차를 업종에 맞게 준비합니다.</p></div>
+        </div>
+        <div class="ed-row">
+          <div class="ed-num">03</div>
+          <div><h3>기업 행정업무</h3><p>기업 운영 과정에서 발생하는 각종 신고와 행정 절차를 지원합니다.</p></div>
+        </div>
+
+        <div class="case-study">
+          <div class="cs-tag">CASE STUDY</div>
+          <h4>A 제조기업 — 공장 설립 관련 행정절차 진행</h4>
+          <div class="cs-grid">
+            <div><p class="k">CHALLENGE</p><p class="v">부지 확정 전 필요한 인허가 요건을 파악하지 못한 상태</p></div>
+            <div><p class="k">PROCESS</p><p class="v">입지조건과 환경영향, 건축기준을 함께 검토</p></div>
+            <div><p class="k">DURATION</p><p class="v">상담부터 인허가 완료까지 진행</p></div>
+            <div><p class="k">RESULT</p><p class="v">공장설립 인허가 완료</p></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 행정심판 — 긴급 대응형: 최소한의 색, 가로형 리스트 -->
+  <section class="sec-appeal" id="appeal">
+    <div class="wrap">
+      <span class="sec-eyebrow eyebrow-appeal">행정심판 · 이의신청</span>
+      <h2>행정기관의 처분을 받으셨나요?</h2>
+      <p class="body-lg" style="margin-top:12px;">현재 어떤 상황인지 선택해 주세요.</p>
+      <div class="appeal-list">
+        <div class="appeal-row"><span>영업정지 처분을 받았어요</span><span class="arrow">→</span></div>
+        <div class="appeal-row"><span>과징금·과태료 처분을 받았어요</span><span class="arrow">→</span></div>
+        <div class="appeal-row"><span>허가가 취소되었어요</span><span class="arrow">→</span></div>
+        <div class="appeal-row"><span>처분에 이의가 있어요</span><span class="arrow">→</span></div>
+        <div class="appeal-row"><span>어떤 절차인지 모르겠어요</span><span class="arrow">→</span></div>
+      </div>
+      <div class="info-box">
+        <span class="ic">i</span>
+        <p>상황과 처분 내용에 따라 확인해야 할 절차와 기한이 달라질 수 있습니다. 처분서를 받으신 후 가능한 빨리 상담받으시길 권해드립니다.</p>
+      </div>
+      <div style="margin-top:26px;"><a href="#contact" class="btn-primary" style="background:var(--acc-appeal);">내 상황 상담하기</a></div>
+    </div>
+  </section>
+
+  <!-- 서류작성 — Notion/Search 스타일 -->
+  <section class="sec-docs" id="docs">
+    <div class="wrap">
+      <span class="sec-eyebrow eyebrow-docs">서류작성 · 제출대행</span>
+      <h2>어떤 서류가 필요하신가요?</h2>
+      <div class="search-box">
+        <span style="color:var(--text-3);">🔍</span>
+        <input type="text" placeholder="업무명을 검색해보세요 (예: 신고서, 사실증명)">
+      </div>
+      <p class="caption" style="margin-top:24px; font-weight:600;">자주 찾는 업무</p>
+      <div class="doc-list">
+        <div class="doc-row"><span>신청서 작성</span><span class="arrow">→</span></div>
+        <div class="doc-row"><span>신고서 작성</span><span class="arrow">→</span></div>
+        <div class="doc-row"><span>행정기관 제출서류</span><span class="arrow">→</span></div>
+        <div class="doc-row"><span>사실확인 관련 서류</span><span class="arrow">→</span></div>
+        <div class="doc-row" style="border-bottom:none;"><span>기타 업무</span><span class="arrow">→</span></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 기타 업무 — 대화형 -->
+  <section class="sec-etc" id="etc">
+    <div class="wrap">
+      <span class="sec-eyebrow eyebrow-etc">기타 업무</span>
+      <h2>찾으시는 업무가 없으신가요?</h2>
+      <p class="body-lg" style="margin-top:12px;">괜찮습니다. 어떤 도움이 필요한지 간단히 알려주세요.</p>
+      <div class="chip-row">
+        <a href="#contact" class="chip">사업 관련</a>
+        <a href="#contact" class="chip">외국인 관련</a>
+        <a href="#contact" class="chip">행정기관 관련</a>
+        <a href="#contact" class="chip">서류 작성</a>
+        <a href="#contact" class="chip">잘 모르겠어요</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- 성공사례 -->
+  <section class="sec-cases" id="cases">
+    <div class="wrap">
+      <h2>실제 업무 진행 사례</h2>
+      <div class="filter-tabs" id="filterTabs">
+        <button class="filter-tab active" data-filter="all">전체</button>
+        <button class="filter-tab" data-filter="imm">출입국</button>
+        <button class="filter-tab" data-filter="permit">인허가</button>
+        <button class="filter-tab" data-filter="business">기업</button>
+        <button class="filter-tab" data-filter="appeal">행정심판</button>
+      </div>
+      <div class="case-grid" id="caseGrid">
+        <div class="case-card show" data-cat="imm">
+          <div class="cat">출입국</div><h4>D-2 → E-7 체류자격 변경</h4>
+          <dl>
+            <dt>의뢰인 상황</dt><dd>국내 대학 졸업 후 취업이 예정된 유학생</dd>
+            <dt>문제</dt><dd>D-2 학생비자에서 취업비자로 변경할 수 있는지 확인이 필요했음</dd>
+            <dt>검토 내용</dt><dd>학력, 경력, 고용계약, 기업 요건을 함께 검토</dd>
+            <dt>진행</dt><dd>체류자격 변경 신청서 작성 및 제출 대행</dd>
+          </dl>
+          <span class="result">결과: 체류자격 변경 완료</span>
+        </div>
+        <div class="case-card show" data-cat="permit">
+          <div class="cat">인허가</div><h4>요식업 영업허가 신규 등록</h4>
+          <dl>
+            <dt>의뢰인 상황</dt><dd>음식점 신규 개업을 준비 중인 자영업자</dd>
+            <dt>문제</dt><dd>영업허가에 필요한 시설기준을 정확히 알지 못했음</dd>
+            <dt>검토 내용</dt><dd>업종별 시설기준을 사전 점검</dd>
+            <dt>진행</dt><dd>영업허가 등록에 필요한 서류를 준비해 접수</dd>
+          </dl>
+          <span class="result">결과: 영업허가 완료</span>
+        </div>
+        <div class="case-card show" data-cat="business">
+          <div class="cat">기업</div><h4>제조업 공장설립 인허가</h4>
+          <dl>
+            <dt>의뢰인 상황</dt><dd>공장 부지를 확정하려는 제조업 대표</dd>
+            <dt>문제</dt><dd>부지 조건에 따른 인허가 요건을 파악하지 못한 상태</dd>
+            <dt>검토 내용</dt><dd>입지조건, 환경영향, 건축기준을 함께 검토</dd>
+            <dt>진행</dt><dd>공장설립 인허가 절차 진행</dd>
+          </dl>
+          <span class="result">결과: 인허가 완료</span>
+        </div>
+        <div class="case-card show" data-cat="appeal">
+          <div class="cat">행정심판</div><h4>영업정지처분 집행정지 신청</h4>
+          <dl>
+            <dt>의뢰인 상황</dt><dd>영업정지 처분을 받은 자영업자</dd>
+            <dt>문제</dt><dd>처분 확정 전 영업을 지속할 방법이 필요했음</dd>
+            <dt>검토 내용</dt><dd>영업 지속 필요성 및 집행정지 요건 검토</dd>
+            <dt>진행</dt><dd>처분의 효력을 정지시키는 집행정지 신청</dd>
+          </dl>
+          <span class="result">결과: 집행정지 인용</span>
+        </div>
+      </div>
+      <p class="caption" style="margin-top:24px;">※ 위 사례는 의뢰인 동의 및 관련 규정에 따라 개인정보를 제외하고 구성한 예시입니다.</p>
+    </div>
+  </section>
+
+  <!-- 행정사 소개 — Timeline -->
+  <section class="sec-about" id="about">
+    <div class="wrap">
+      <h2 style="margin-bottom:44px;">행정업무를 정확하게 이해하고, 끝까지 함께하겠습니다</h2>
+      <div class="about-top">
+        <div class="avatar">👤</div>
+        <div>
+          <h3>대표 행정사 ○○○</h3>
+          <p class="caption">종합 행정사 사무소 대표</p>
+          <div class="about-tags">
+            <span class="about-tag">출입국</span>
+            <span class="about-tag">인허가</span>
+            <span class="about-tag">기업행정</span>
+            <span class="about-tag">행정심판</span>
+          </div>
+        </div>
+      </div>
+      <div class="timeline">
+        <div class="tl-row"><div class="tl-year">[연도]</div><p>[개업 또는 등록 연도를 입력하세요]</p></div>
+        <div class="tl-row"><div class="tl-year">[연도]</div><p>[주요 경력 사항을 입력하세요]</p></div>
+        <div class="tl-row"><div class="tl-year">[연도]</div><p>[전문 분야 확대 등 실제 이력을 입력하세요]</p></div>
+      </div>
+      <p class="caption" style="margin-top:16px;">※ 이 타임라인은 빈 틀입니다. 실제 행정사의 등록일·경력·자격 사항으로만 채워 넣어야 하며, 실적을 임의로 만들어 넣으면 안 됩니다.</p>
+    </div>
+  </section>
+
+  <!-- FAQ -->
+  <section class="sec-faq" id="faq">
+    <div class="wrap">
+      <h2>자주 묻는 질문</h2>
+      <div class="filter-tabs" id="faqTabs">
+        <button class="filter-tab active" data-filter="all">전체</button>
+        <button class="filter-tab" data-filter="imm">출입국</button>
+        <button class="filter-tab" data-filter="permit">인허가</button>
+        <button class="filter-tab" data-filter="business">기업</button>
+        <button class="filter-tab" data-filter="appeal">행정심판</button>
+      </div>
+      <div class="faq-list" id="faqList">
+        <details class="faq-item show" data-cat="imm"><summary>비자가 반드시 승인되나요?</summary><p>출입국 관련 업무는 개인별 조건과 심사 결과에 따라 달라질 수 있으며, 승인 여부를 보장하지 않습니다.</p></details>
+        <details class="faq-item show" data-cat="permit"><summary>인허가는 얼마나 걸리나요?</summary><p>업종과 조건에 따라 처리 기간이 달라지며, 상담 시 예상 기간을 안내드립니다.</p></details>
+        <details class="faq-item show" data-cat="business"><summary>기업 상담도 비용이 발생하나요?</summary><p>초기 상담 비용은 사무소 정책에 따르며, 정식 수임 여부와 비용은 상담 과정에서 안내드립니다.</p></details>
+        <details class="faq-item show" data-cat="appeal"><summary>행정심판은 언제까지 청구해야 하나요?</summary><p>처분이 있음을 안 날로부터 90일 이내가 원칙이며, 정확한 기한은 처분서를 확인해 안내드립니다.</p></details>
+        <details class="faq-item show" data-cat="imm"><summary>준비해야 할 서류를 모르겠습니다.</summary><p>상담 과정에서 현재 상황을 확인한 후 필요한 서류를 구체적으로 안내해드립니다.</p></details>
+        <details class="faq-item show" data-cat="all"><summary>모든 업무를 대행할 수 있나요?</summary><p>행정사법에 따른 업무 범위 내에서 진행하며, 범위 밖의 업무는 상담 시 안내해드립니다.</p></details>
+      </div>
+    </div>
+  </section>
+
+  <!-- 상담문의 — 3-step -->
+  <section class="sec-contact" id="contact">
+    <div class="wrap">
+      <h2 style="text-align:center; color:#fff;">상담을 신청하세요</h2>
+      <p style="text-align:center; color:#9AA2AE; margin-top:12px;">3단계면 충분합니다. 카카오톡으로 먼저 문의하셔도 됩니다.</p>
+
+      <div class="contact-box">
+        <div class="form-progress">
+          <div class="fp-dot active" data-step="1">1</div><div class="fp-line"></div>
+          <div class="fp-dot" data-step="2">2</div><div class="fp-line"></div>
+          <div class="fp-dot" data-step="3">3</div>
+        </div>
+
+        <div class="step-panel active" id="panel1">
+          <h4>어떤 업무가 필요하신가요?</h4>
+          <div class="opt-grid" id="optGrid">
+            <button class="opt-chip" data-opt="출입국">출입국</button>
+            <button class="opt-chip" data-opt="인허가">인허가</button>
+            <button class="opt-chip" data-opt="기업행정">기업행정</button>
+            <button class="opt-chip" data-opt="행정심판">행정심판</button>
+            <button class="opt-chip" data-opt="서류작성">서류작성</button>
+            <button class="opt-chip" data-opt="기타">기타</button>
+          </div>
+          <div class="step-actions"><span></span><button class="btn-next" id="toStep2">다음</button></div>
+        </div>
+
+        <div class="step-panel" id="panel2">
+          <h4>현재 상황을 간단하게 알려주세요</h4>
+          <textarea placeholder="예: 외국인 직원을 채용했는데 어떤 비자가 필요한지 모르겠어요"></textarea>
+          <div class="step-actions"><button class="btn-ghost" id="toStep1">이전</button><button class="btn-next" id="toStep3">다음</button></div>
+        </div>
+
+        <div class="step-panel" id="panel3">
+          <h4>상담받을 방법을 선택해 주세요</h4>
+          <div class="radio-row">
+            <label class="radio-opt"><input type="radio" name="method" checked> 전화</label>
+            <label class="radio-opt"><input type="radio" name="method"> 카카오톡</label>
+            <label class="radio-opt"><input type="radio" name="method"> 문자</label>
+          </div>
+          <input type="tel" placeholder="연락처를 입력해 주세요" style="margin-bottom:8px;">
+          <div class="step-actions"><button class="btn-ghost" id="toStep2b">이전</button><button class="btn-next" id="submitForm">상담 신청하기</button></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer>
+  <div class="wrap footer-row">
+    <p>ⓒ 다올행정사무소. 이 페이지는 웍스프레임 포트폴리오용 데모입니다.</p>
+    <p>사업자등록번호 000-00-00000</p>
+  </div>
+</footer>
+
+<div class="mobile-sticky">
+  <div class="mobile-sticky-row">
+    <a href="tel:031-000-0000" class="m-tel">📞 전화상담</a>
+    <a href="#contact" class="m-kakao">💬 카카오톡</a>
+  </div>
+</div>
+
+<script>
+  // nav
+  const burger = document.getElementById('burgerBtn');
+  const panel = document.getElementById('mobilePanel');
+  burger.addEventListener('click', () => {
+    const open = panel.classList.toggle('open');
+    burger.classList.toggle('open');
+    burger.setAttribute('aria-expanded', open);
+  });
+  panel.querySelectorAll('a').forEach(a => a.addEventListener('click', () => { panel.classList.remove('open'); burger.classList.remove('open'); }));
+
+  // 인허가 business selector
+  const bizData = {
+    '음식점': ['영업허가 및 등록', '식품위생 관련 신고', '시설기준 점검'],
+    '제조업': ['공장 관련 등록', '사업 관련 신고', '각종 인허가'],
+    '건설업': ['건설업 등록', '시공 관련 인허가', '현장 관련 신고'],
+    '기타': ['업종별 인허가 확인', '필요 신고서류 안내', '사업자 관련 행정']
+  };
+  document.querySelectorAll('.biz-card').forEach(btn => {
+    btn.addEventListener('click', () => {
+      document.querySelectorAll('.biz-card').forEach(b => b.classList.remove('selected'));
+      btn.classList.add('selected');
+      const biz = btn.dataset.biz;
+      document.getElementById('bizResultTitle').textContent = biz + '을(를) 준비 중이시군요. 확인이 필요한 주요 업무';
+      const list = document.getElementById('bizResultList');
+      list.innerHTML = '';
+      bizData[biz].forEach(item => { const li = document.createElement('li'); li.textContent = item; list.appendChild(li); });
+      document.getElementById('bizResult').classList.add('show');
+      document.getElementById('stepDot2').classList.add('active');
+    });
+  });
+
+  // 성공사례 필터
+  document.getElementById('filterTabs').addEventListener('click', (e) => {
+    if(!e.target.matches('.filter-tab')) return;
+    document.querySelectorAll('#filterTabs .filter-tab').forEach(t => t.classList.remove('active'));
+    e.target.classList.add('active');
+    const f = e.target.dataset.filter;
+    document.querySelectorAll('#caseGrid .case-card').forEach(c => {
+      c.classList.toggle('show', f === 'all' || c.dataset.cat === f);
+    });
+  });
+
+  // FAQ 필터
+  document.getElementById('faqTabs').addEventListener('click', (e) => {
+    if(!e.target.matches('.filter-tab')) return;
+    document.querySelectorAll('#faqTabs .filter-tab').forEach(t => t.classList.remove('active'));
+    e.target.classList.add('active');
+    const f = e.target.dataset.filter;
+    document.querySelectorAll('#faqList .faq-item').forEach(c => {
+      c.classList.toggle('show', f === 'all' || c.dataset.cat === f || c.dataset.cat === 'all');
+    });
+  });
+
+  // 3-step form
+  let selectedOpt = null;
+  document.getElementById('optGrid').addEventListener('click', (e) => {
+    if(!e.target.matches('.opt-chip')) return;
+    document.querySelectorAll('.opt-chip').forEach(c => c.classList.remove('selected'));
+    e.target.classList.add('selected');
+    selectedOpt = e.target.dataset.opt;
+  });
+  function goStep(n){
+    document.querySelectorAll('.step-panel').forEach(p => p.classList.remove('active'));
+    document.getElementById('panel'+n).classList.add('active');
+    document.querySelectorAll('.fp-dot').forEach(d => d.classList.toggle('active', Number(d.dataset.step) <= n));
+  }
+  document.getElementById('toStep2').addEventListener('click', () => goStep(2));
+  document.getElementById('toStep1').addEventListener('click', () => goStep(1));
+  document.getElementById('toStep3').addEventListener('click', () => goStep(3));
+  document.getElementById('toStep2b').addEventListener('click', () => goStep(2));
+  document.getElementById('submitForm').addEventListener('click', (e) => {
+    e.preventDefault();
+    const btn = e.target;
+    const original = btn.textContent;
+    btn.textContent = '신청이 접수되었습니다';
+    setTimeout(() => { btn.textContent = original; goStep(1); }, 2200);
+  });
+</script>
+</body>
+</html>
