@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>수행사례 | 다올종합행정사</title>
+<meta name="description" content="업무별 필터. 결과는 예시입니다. 인용·허가를 단정하지 않습니다.">
+<link rel="stylesheet" as="style" crossorigin href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/variable/pretendardvariable.css">
+<link rel="stylesheet" href="assets/office.css">
+</head>
+<body>
+<a class="skip" href="#main">본문으로</a>
+<div class="topbar"><div class="wrap"><span>일반행정사 · 종합 행정</span><span>서울 종로 · <a href="tel:02-000-0005">02-000-0005</a></span></div></div>
+<header>
+  <div class="wrap nav">
+    <a href="index.html" class="brand"><b>다올종합행정사</b><span>문제부터 절차를 찾습니다</span></a>
+    <nav class="nav-links" aria-label="주요 메뉴">
+      <div class="mega" id="megaWrap"><button class="mega-btn" type="button" aria-expanded="false" aria-controls="megaPanel">업무분야</button></div>
+      <a href="find.html">상황별 상담</a>
+      <a class="is-on" href="cases.html">수행사례</a>
+      <a href="about.html">전문성</a>
+      <a href="info.html">정보센터</a>
+      <button class="icon-btn" id="searchOpen" type="button" aria-label="검색">⌕</button>
+      <a class="nav-consult" href="consult.html">상담하기</a>
+    </nav>
+    <button class="burger" id="bb" type="button" aria-label="메뉴 열기" aria-expanded="false"><span></span><span></span><span></span></button>
+  </div>
+  <div class="mega-panel" id="megaPanel">
+    <div class="mega-inner">
+      <div><b>민원·행정</b><a href="services.html#minwon">민원</a></div>
+      <div><b>인허가</b><a href="services.html#permit">허가</a></div>
+      <div><b>행정구제</b><a href="services.html#relief">심판</a></div>
+      <div><b>출입국</b><a href="services.html#visa">체류</a></div>
+      <div><b>기업행정</b><a href="services.html#biz">기업</a></div>
+      <div><b>기타</b><a href="services.html">전체</a></div>
+    </div>
+  </div>
+  <div class="mpanel" id="mp"><a href="cases.html">수행사례</a><a href="consult.html">상담</a><a href="tel:02-000-0005">전화</a></div>
+</header>
+<div class="search-scrim" id="searchScrim"><div class="search-box"><label class="field" for="searchInput">사이트에서 찾기</label><input id="searchInput" type="search" placeholder="예: 공장"><div class="search-hits" id="searchHits"></div></div></div>
+<main id="main">
+  <section class="page-hero">
+    <div class="wrap">
+      <p class="crumb"><a href="index.html">홈</a> / 수행사례</p>
+      <p class="eyebrow">CASE STUDY</p>
+      <h1>실제 수행사례</h1>
+      <p class="lead">형식을 보여 주기 위한 예시입니다. 승소율·건수를 넣지 않습니다.</p>
+    </div>
+  </section>
+  <section class="sec">
+    <div class="wrap">
+      <div class="filters" id="caseFilters">
+        <button type="button" class="on" data-f="all">전체</button>
+        <button type="button" data-f="민원">민원</button>
+        <button type="button" data-f="인허가">인허가</button>
+        <button type="button" data-f="행정심판">행정심판</button>
+        <button type="button" data-f="출입국">출입국</button>
+        <button type="button" data-f="기업">기업</button>
+        <button type="button" data-f="법인">법인</button>
+        <button type="button" data-f="기타">기타</button>
+      </div>
+      <div class="case-grid" id="caseList">
+        <a href="case-01.html" data-cat="인허가"><span class="k">인허가</span><h3>공장 관련 행정절차 대행</h3><p>문제 · 절차 · 대응. 허가 완료라고 쓰지 않습니다.</p></a>
+        <a href="case-01.html" data-cat="민원"><span class="k">민원</span><h3>기관 민원 서류 작성</h3><p>작성·제출. 해결을 단정하지 않습니다.</p></a>
+        <a href="case-01.html" data-cat="행정심판"><span class="k">행정심판</span><h3>처분 대응 검토</h3><p>기간과 절차. 인용을 약속하지 않습니다.</p></a>
+        <a href="case-01.html" data-cat="출입국"><span class="k">출입국</span><h3>체류 관련 서류</h3><p>비자 발급을 약속하지 않습니다.</p></a>
+        <a href="case-01.html" data-cat="기업"><span class="k">기업</span><h3>기업 서류·인증 검토</h3><p>요건 확인. 선정 보장이 아닙니다.</p></a>
+        <a href="case-01.html" data-cat="법인"><span class="k">법인</span><h3>비영리 관련 서류</h3><p>설립 허가를 단정하지 않습니다.</p></a>
+      </div>
+    </div>
+  </section>
+</main>
+<footer>
+  <div class="wrap"><div class="foot-name">다올종합행정사</div><p>예시 사무소 · 서울 종로</p></div>
+</footer>
+<div class="sticky"><a class="tel" href="tel:02-000-0005">전화상담</a><a class="kakao" href="consult.html">상담문의</a></div>
+<script src="assets/office.js"></script>
+</body>
+</html>

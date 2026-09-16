@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>상담 | 다올토지행정사</title>
+<meta name="description" content="토지 위치·개발 목적·현황을 알려 주세요. 경기 용인. 예시 사무소입니다.">
+<link rel="stylesheet" as="style" crossorigin href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/variable/pretendardvariable.css">
+<link rel="stylesheet" href="assets/office.css">
+</head>
+<body>
+<a class="skip" href="#contact">본문으로</a>
+<div class="topbar"><div class="wrap"><span>일반행정사 · 토지개발 인허가</span><span><span id="hoursLive">평일 09:00–18:00</span> · 경기 용인 · <a href="tel:031-000-0003">031-000-0003</a></span></div></div>
+<header>
+  <div class="wrap nav">
+    <a href="index.html" class="brand"><b>다올토지행정사</b><span>매입 전 · 개발 가능성</span></a>
+    <nav class="nav-links" aria-label="주요 메뉴">
+      <a href="permits.html">토지개발</a>
+      <a href="diagnose.html">인허가 진단</a>
+      <a href="cases.html">성공사례</a>
+      <a href="practice.html">전문성</a>
+      <a href="info.html">정보센터</a>
+      <a class="nav-consult is-on" href="consult.html">상담하기</a>
+    </nav>
+    <a class="nav-phone" href="tel:031-000-0003">031-000-0003</a>
+    <button class="burger" id="bb" type="button" aria-label="메뉴 열기" aria-expanded="false"><span></span><span></span><span></span></button>
+  </div>
+  <div class="mpanel" id="mp">
+    <a href="permits.html">토지개발</a>
+    <a href="diagnose.html">진단</a>
+    <a href="consult.html">상담</a>
+    <a href="tel:031-000-0003">전화 031-000-0003</a>
+  </div>
+</header>
+<main>
+  <section class="contact" id="contact">
+    <div class="wrap contact-grid">
+      <div>
+        <h2>내 토지 개발<br>가능성 확인하기</h2>
+        <p class="lead">지번과 목적만 있어도 됩니다. 허가를 약속하지 않습니다. 카카오 채널은 개설 후 연결하며, 이 데모는 아래 폼입니다.</p>
+        <a class="tel" href="tel:031-000-0003">031-000-0003</a>
+        <p class="hours">평일 09:00–18:00</p>
+      </div>
+      <form class="form" id="cf" action="#" method="post">
+        <div class="field">
+          <label>어떤 상담이 필요하신가요?</label>
+          <select id="t" name="type">
+            <option value="">선택</option>
+            <option>개발 가능성 검토</option>
+            <option>개발행위허가</option>
+            <option>농지전용</option>
+            <option>산지전용</option>
+            <option>공장·창고</option>
+            <option>전원주택</option>
+            <option>토지분할</option>
+            <option>기타</option>
+          </select>
+        </div>
+        <div class="form-grid">
+          <div class="field"><label for="n">이름</label><input id="n" name="name" required placeholder="홍길동" autocomplete="name"></div>
+          <div class="field"><label for="c">연락처</label><input id="c" name="contact" required placeholder="010-0000-0000" autocomplete="tel"></div>
+        </div>
+        <p style="font-size:13px;font-weight:600;margin:4px 0 8px;color:var(--ink)">토지 위치</p>
+        <div class="form-grid">
+          <div class="field"><label for="si">시 / 군 / 구</label><input id="si" name="si"></div>
+          <div class="field"><label for="dong">읍 / 면 / 동</label><input id="dong" name="dong"></div>
+          <div class="field"><label for="lot">지번</label><input id="lot" name="lot"></div>
+        </div>
+        <p style="font-size:13px;font-weight:600;margin:8px 0 10px;color:var(--ink)">개발 목적</p>
+        <div class="radios">
+          <label><input type="radio" name="purpose" value="전원주택"> 전원주택</label>
+          <label><input type="radio" name="purpose" value="공장"> 공장</label>
+          <label><input type="radio" name="purpose" value="창고"> 창고</label>
+          <label><input type="radio" name="purpose" value="근린"> 근린생활시설</label>
+          <label><input type="radio" name="purpose" value="태양광"> 태양광</label>
+          <label><input type="radio" name="purpose" value="분할"> 토지분할</label>
+          <label><input type="radio" name="purpose" value="기타"> 기타</label>
+        </div>
+        <p style="font-size:13px;font-weight:600;margin:18px 0 10px;color:var(--ink)">현재 상황</p>
+        <div class="radios">
+          <label><input type="radio" name="stage" value="매입 전"> 토지 매입 전</label>
+          <label><input type="radio" name="stage" value="보유"> 토지 보유 중</label>
+          <label><input type="radio" name="stage" value="설계"> 설계 진행 중</label>
+          <label><input type="radio" name="stage" value="허가"> 허가 진행 중</label>
+          <label><input type="radio" name="stage" value="반려"> 반려·보완 상태</label>
+        </div>
+        <div class="field" style="margin-top:16px">
+          <label for="m">문의 내용</label>
+          <textarea id="m" name="message" rows="4" placeholder="접도, 면적, 반려 사유 등"></textarea>
+        </div>
+        <div class="field">
+          <label for="files">자료 첨부 (토지이용계획확인원 · 등기 · 대장 · 현장사진 · 도면)</label>
+          <input id="files" name="files" type="file" multiple accept=".pdf,.jpg,.jpeg,.png,.dwg" data-files="fileOut">
+          <p id="fileOut" style="font-size:12px;color:var(--muted);margin-top:6px"></p>
+        </div>
+        <label class="consent">
+          <input type="checkbox" required>
+          <span>상담을 위해 이름·연락처·지번 수집에 동의합니다. <a href="privacy.html" style="color:var(--green);font-weight:700">개인정보처리방침</a></span>
+        </label>
+        <button class="btn btn-green submit" type="submit">상담 신청</button>
+        <p class="form-msg">데모입니다. 파일·입력은 이 브라우저에만 남고 서버로 가지 않습니다.</p>
+      </form>
+    </div>
+  </section>
+</main>
+<footer>
+  <div class="wrap">
+    <div class="foot-name">다올토지행정사</div>
+    <p>예시 사무소 · 031-000-0003</p>
+  </div>
+</footer>
+<div class="sticky"><a class="tel" href="tel:031-000-0003">전화상담</a><a class="kakao" href="consult.html">카카오톡</a></div>
+<script src="assets/office.js"></script>
+</body>
+</html>

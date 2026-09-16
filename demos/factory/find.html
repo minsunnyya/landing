@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>기업 행정 진단 | 다올기업행정사</title>
+<meta name="description" content="업종·지역·상황으로 관련 업무를 안내합니다. 가능 여부를 자동 판정하지 않습니다.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" as="style" crossorigin href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/variable/pretendardvariable.css">
+<link rel="stylesheet" href="assets/office.css">
+</head>
+<body>
+<a class="skip" href="#d">본문으로</a>
+<div class="topbar"><div class="wrap"><span>일반행정사 · 공장 · 기업</span><span>경기 성남 · <a href="tel:031-000-0000">031-000-0000</a></span></div></div>
+<header>
+  <div class="wrap nav">
+    <a href="index.html" class="brand"><b>다올기업행정사</b><span>CORPORATE ADMINISTRATION</span></a>
+    <nav class="nav-links" aria-label="주요 메뉴">
+      <a href="factory-site.html">공장 행정</a>
+      <a href="corporate.html">기업 행정</a>
+      <a href="find.html" class="is-on">기업 행정 진단</a>
+      <a href="cases.html">성공사례</a>
+      <a href="info.html">정보센터</a>
+      <a href="about.html">소개</a>
+      <a class="nav-consult" href="consult.html">상담</a>
+    </nav>
+    <button class="burger" id="bb" type="button" aria-label="메뉴 열기" aria-expanded="false"><span></span><span></span><span></span></button>
+  </div>
+  <div class="mpanel" id="mp"><a href="find.html">진단</a><a href="consult.html">상담</a></div>
+</header>
+<main>
+  <section class="page-hero" id="d">
+    <div class="wrap">
+      <p class="crumb"><a href="index.html">홈</a> · 진단</p>
+      <p class="eyebrow">DIAGNOSIS</p>
+      <h1>우리 회사가 지금 어떤<br>행정 절차를 필요로 하나요?</h1>
+      <p class="lead">안내만 합니다. 허가·등록 가능 여부를 이 화면에서 판정하지 않습니다.</p>
+    </div>
+  </section>
+  <section class="sec" style="padding-top:8px">
+    <div class="wrap">
+      <div class="diag" id="findBiz">
+        <p class="step-l">지금 필요한 업무</p>
+        <div class="quiz">
+          <button type="button" data-k="need" data-v="new">공장을 설립하려고 합니다</button>
+          <button type="button" data-k="need" data-v="change">기존 공장을 변경·이전하려 합니다</button>
+          <button type="button" data-k="need" data-v="permit">사업 관련 인허가가 필요합니다</button>
+          <button type="button" data-k="need" data-v="corp">기업 운영 행정이 필요합니다</button>
+        </div>
+        <p class="step-l">사업장 위치</p>
+        <div class="quiz">
+          <button type="button" data-k="region" data-v="경기">경기</button>
+          <button type="button" data-k="region" data-v="충남">충남</button>
+          <button type="button" data-k="region" data-v="충북">충북</button>
+          <button type="button" data-k="region" data-v="경북">경북</button>
+          <button type="button" data-k="region" data-v="기타">그 외</button>
+        </div>
+        <p class="step-l">규모 감각</p>
+        <div class="quiz">
+          <button type="button" data-k="size" data-v="소규모">소규모 · 기존 건물</button>
+          <button type="button" data-k="size" data-v="신설">신설 · 대규모</button>
+          <button type="button" data-k="size" data-v="모름">아직 모름</button>
+        </div>
+        <div class="quiz-out" id="findOut"></div>
+      </div>
+    </div>
+  </section>
+</main>
+<footer>
+  <div class="wrap"><div class="foot-name">다올기업행정사</div><p>예시 사무소 · 허가 여부를 자동 판정하지 않습니다.</p></div>
+</footer>
+<div class="sticky"><a class="talk" href="consult.html">상담</a><a class="tel" href="tel:031-000-0000">전화상담</a></div>
+<script src="assets/office.js"></script>
+</body>
+</html>

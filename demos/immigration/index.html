@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>한빛출입국행정사 | 어떤 비자가 필요한지부터</title>
+<meta name="description" content="체류자격 변경·연장, 취업·결혼·유학·영주. 서울 구로. 예시 사무소입니다. 허가를 보장하지 않습니다.">
+<meta property="og:type" content="website">
+<meta property="og:title" content="한빛출입국행정사 | 어떤 비자가 필요한지부터">
+<meta property="og:description" content="목적·학력·가족관계에 따라 체류자격을 검토합니다. 허가를 보장하지 않습니다.">
+<meta property="og:image" content="assets/hero-consult.jpg">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:image" content="assets/hero-consult.jpg">
+<link rel="image_src" href="assets/hero-consult.jpg">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" as="style" crossorigin href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/variable/pretendardvariable.css">
+<link rel="stylesheet" href="assets/office.css">
+</head>
+<body>
+<a class="skip" href="#finder">본문으로</a>
+<div class="topbar"><div class="wrap"><span>일반행정사 · 출입국 · 체류</span><span><span id="hoursLive">평일 09:00–18:00</span> · 서울 구로 · <a href="tel:02-000-0000">02-000-0000</a></span></div></div>
+<header>
+  <div class="wrap nav">
+    <a href="index.html" class="brand"><b>한빛출입국행정사</b><span>비자부터 체류까지</span></a>
+    <nav class="nav-links" aria-label="주요 메뉴">
+      <a href="find.html">비자 찾기</a>
+      <a href="visas.html">비자·체류</a>
+      <a href="corporate.html">기업 출입국</a>
+      <a href="cases.html">수행사례</a>
+      <a href="info.html">정보센터</a>
+      <button class="icon-btn" id="searchOpen" type="button" aria-label="비자 검색">⌕</button>
+      <span class="lang"><a class="is-on" href="index.html" lang="ko">KR</a> <a href="en.html" lang="en">EN</a></span>
+      <a class="nav-consult" href="consult.html">상담하기</a>
+    </nav>
+    <button class="burger" id="bb" type="button" aria-label="메뉴 열기" aria-expanded="false"><span></span><span></span><span></span></button>
+  </div>
+  <div class="mpanel" id="mp">
+    <a href="find.html">비자 찾기 · 자가진단</a>
+    <a href="#" data-search>비자·체류자격 검색</a>
+    <details><summary>비자·체류</summary>
+      <a href="visa-e7.html">E-7</a><a href="visa-f6.html">F-6</a><a href="visa-f4.html">F-4</a>
+      <a href="visa-f5.html">F-5</a><a href="visa-d2.html">D-2</a><a href="visa-d10.html">D-10</a>
+      <a href="visa-stay.html">연장</a>
+    </details>
+    <a href="corporate.html">기업 출입국</a>
+    <a href="consult.html">상담 신청</a>
+    <a href="en.html">English</a>
+    <a href="tel:02-000-0000">전화 02-000-0000</a>
+  </div>
+</header>
+<div class="search-scrim" id="searchScrim">
+  <div class="search-box">
+    <label class="field" for="searchInput">비자 종류, 직업, 목적</label>
+    <input id="searchInput" type="search" placeholder="예: E-7 / 요리사 / 결혼비자 / 영주권">
+    <div class="search-hits" id="searchHits"></div>
+  </div>
+</div>
+<main>
+  <section class="hero">
+    <img class="hero-img" src="assets/hero-consult.jpg" width="1920" height="1280" alt="한빛출입국행정사 대표 이미지. 서류를 두고 체류·비자 상담하는 장면입니다.">
+    <div class="wrap hero-grid">
+      <div>
+        <p class="label">VISA · IMMIGRATION · STAY</p>
+        <h1>어떤 비자가 필요한지부터<br>정확하게 확인하세요.</h1>
+        <p class="lead">목적, 직업, 학력, 가족관계, 현재 체류자격에 따라 검토해야 할 요건이 달라집니다. 허가·체류를 보장하지 않습니다.</p>
+        <div class="hero-actions">
+          <a class="btn btn-teal" href="find.html">비자 자가진단 시작 →</a>
+          <a class="btn btn-ghost" href="consult.html">상담 신청</a>
+        </div>
+        <p class="demo">포트폴리오용 예시입니다. 기준일 2026.09.15. 공식 안내는 하이코리아·1345입니다.</p>
+      </div>
+      <div class="hero-card" id="finder">
+        <h2>어떤 목적으로 한국에 오셨나요?</h2>
+        <div class="quiz" id="heroQuiz">
+          <button type="button" data-p="취업">취업</button>
+          <button type="button" data-p="유학">유학</button>
+          <button type="button" data-p="결혼">결혼</button>
+          <button type="button" data-p="기업">외국인 직원 채용</button>
+        </div>
+        <div class="quiz-out" id="heroQuizOut"></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="sec sheet">
+    <div class="wrap">
+      <p class="eyebrow">SEARCH</p>
+      <h2 class="rule">비자·체류자격·직종을 검색하세요.</h2>
+      <form class="search-hero" id="searchHero">
+        <span aria-hidden="true">⌕</span>
+        <input id="searchHeroQ" type="search" placeholder="예: E-7 / 요리사 / 결혼비자 / 영주권">
+        <button type="submit">검색</button>
+      </form>
+      <p class="asof" style="margin-top:10px">검색은 안내 페이지로 연결합니다. 비자 발급을 판정하지 않습니다.</p>
+    </div>
+  </section>
+
+  <section class="sec">
+    <div class="wrap">
+      <p class="eyebrow">PURPOSE</p>
+      <h2 class="rule">무엇을 위해 한국에 오셨나요?</h2>
+      <div class="purpose">
+        <a href="find.html?p=취업"><h3>취업</h3><p>E-7 등 취업 자격 검토</p></a>
+        <a href="visa-d2.html"><h3>유학</h3><p>D-2 · 졸업 후 경로</p></a>
+        <a href="visa-f6.html"><h3>결혼</h3><p>F-6 결혼이민</p></a>
+        <a href="consult.html?who=가족"><h3>가족동반</h3><p>초청·동반</p></a>
+        <a href="consult.html?purpose=사업"><h3>사업·투자</h3><p>상담에서 가름</p></a>
+        <a href="visa-d10.html"><h3>구직</h3><p>D-10</p></a>
+        <a href="visa-stay.html"><h3>방문·연장</h3><p>만료일과 연장</p></a>
+        <a href="visa-f5.html"><h3>영주·국적</h3><p>F-5 · 국적은 상담</p></a>
+        <a href="visa-f4.html"><h3>재외동포</h3><p>F-4</p></a>
+      </div>
+    </div>
+  </section>
+
+  <section class="sec sheet">
+    <div class="wrap">
+      <p class="eyebrow">CORE VISA</p>
+      <h2 class="rule">자주 찾는 체류자격</h2>
+      <p class="sub asof">2026.09.15 기준 안내. 직종·요건은 제도 변경이 있습니다.</p>
+      <div class="visa-grid">
+        <a href="visa-e7.html"><span class="badge">취업</span><span class="code">E-7</span><h3>특정활동</h3><p>전문직·기술직 취업</p><span class="go">자세히 보기 →</span></a>
+        <a href="visa-f6.html"><span class="badge">결혼</span><span class="code">F-6</span><h3>결혼이민</h3><p>한국인 배우자 등</p><span class="go">자세히 보기 →</span></a>
+        <a href="visa-f4.html"><span class="badge">동포</span><span class="code">F-4</span><h3>재외동포</h3><p>해당 여부부터</p><span class="go">자세히 보기 →</span></a>
+        <a href="visa-f5.html"><span class="badge">영주</span><span class="code">F-5</span><h3>영주</h3><p>유형마다 요건이 다름</p><span class="go">자세히 보기 →</span></a>
+        <a href="visa-d2.html"><span class="badge">유학</span><span class="code">D-2</span><h3>유학</h3><p>졸업 후 변경 검토</p><span class="go">자세히 보기 →</span></a>
+        <a href="visa-d10.html"><span class="badge">구직</span><span class="code">D-10</span><h3>구직</h3><p>구직 활동</p><span class="go">자세히 보기 →</span></a>
+      </div>
+      <p style="margin-top:18px"><a class="btn btn-navy" href="visas.html">전체 비자·체류 보기 →</a> <a class="btn btn-line" id="cmpGo" href="compare.html">고른 비자 비교</a></p>
+    </div>
+  </section>
+
+  <section class="sec">
+    <div class="wrap">
+      <p class="eyebrow">ROADMAP</p>
+      <h2 class="rule">체류 경로 예시</h2>
+      <p class="sub">지금 자격을 고르면 흔히 묻는 다음 단계만 보여 줍니다.</p>
+      <div class="road-pick" id="roadPick">
+        <button type="button" data-r="d2">지금은 D-2</button>
+        <button type="button" data-r="e7">지금은 E-7</button>
+        <button type="button" data-r="f6">지금은 F-6</button>
+        <button type="button" data-r="f4">지금은 F-4</button>
+      </div>
+      <div class="road" aria-hidden="true">
+        <span>D-2</span><i>→</i><span>D-10</span><i>→</i><span>E-7</span><i>→</i><span>F-2</span><i>→</i><span>F-5</span>
+      </div>
+      <div id="roadOut" style="margin-top:16px"></div>
+      <p style="margin-top:12px"><a href="roadmap.html" class="go">로드맵 페이지 →</a></p>
+    </div>
+  </section>
+
+  <section class="sec sheet">
+    <div class="wrap">
+      <p class="eyebrow">CORPORATE</p>
+      <h2 class="rule">외국인 채용을 준비하는 기업</h2>
+      <p class="sub">인재 채용부터 체류관리까지. 개인 상담과 폼이 다릅니다.</p>
+      <a class="btn btn-navy" href="corporate.html">외국인 채용 상담 →</a>
+    </div>
+  </section>
+
+  <section class="sec">
+    <div class="wrap">
+      <p class="eyebrow">CASE</p>
+      <h2 class="rule">수행사례</h2>
+      <p class="sub">형식 예시입니다. 국적·결과를 과장하지 않습니다.</p>
+      <div class="case-grid">
+        <a href="case-01.html"><span class="badge">E-7</span><h3>D-2 → E-7 검토</h3><p>학력·직종·고용주. 허가 완료라고 쓰지 않습니다.</p></a>
+        <a href="cases.html"><span class="badge">F-6</span><h3>결혼이민 서류</h3><p>초청·혼인 실질.</p></a>
+        <a href="cases.html"><span class="badge">기업</span><h3>채용 자격 가름</h3><p>E-7 해당 여부.</p></a>
+      </div>
+    </div>
+  </section>
+
+  <section class="sec sheet">
+    <div class="wrap">
+      <p class="eyebrow">FAQ</p>
+      <h2 class="rule">자주 묻는 질문</h2>
+      <details open>
+        <summary>비자와 체류자격은 같은 의미인가요?</summary>
+        <p>일상에서는 같이 부르지만, 사증 발급과 국내 체류자격은 절차가 다를 수 있습니다.</p>
+      </details>
+      <details>
+        <summary>E-7은 누구나 받을 수 있나요?</summary>
+        <p>아닙니다. 직종·학력·경력·고용주 요건이 있습니다. 받을 수 있다고 단정하지 않습니다.</p>
+      </details>
+      <details>
+        <summary>행정사를 통하면 본인이 안 가도 됩니까?</summary>
+        <p>대행이어도 지문·본인확인으로 출석을 요구하는 경우가 있습니다. 자격마다 다릅니다.</p>
+      </details>
+      <p style="margin-top:12px"><a href="info.html" class="go">정보센터 · FAQ →</a></p>
+    </div>
+  </section>
+
+  <section class="cta-banner">
+    <div class="wrap">
+      <h2>어떤 비자를 신청해야 할지 모르겠다면</h2>
+      <p>현재 상황을 알려 주세요. 자동 판정이 아닙니다.</p>
+      <a class="btn btn-teal" href="consult.html">상담 신청 →</a>
+    </div>
+  </section>
+</main>
+<footer>
+  <div class="wrap">
+    <div class="foot-name">한빛출입국행정사</div>
+    <div class="foot-nav">
+      <a href="find.html">비자 찾기</a>
+      <a href="visas.html">비자·체류</a>
+      <a href="corporate.html">기업</a>
+      <a href="fees.html">수임 안내</a>
+      <a href="about.html">소개</a>
+      <a href="privacy.html">개인정보처리방침</a>
+    </div>
+    <p>예시 사무소 · 대표 최서연 · 02-000-0000 · 서울 구로</p>
+    <p>법무부 등록번호·대행기관 여부는 개설 후 확인된 것만 올립니다. 카카오 채널은 개설 후 연결. 허가를 보장하지 않습니다.</p>
+  </div>
+</footer>
+<div class="sticky"><a class="talk" href="consult.html">상담</a><a class="tel" href="tel:02-000-0000">전화</a></div>
+<script src="assets/office.js"></script>
+</body>
+</html>

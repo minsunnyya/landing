@@ -3,21 +3,16 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>웍스프레임 | 행정사 홈페이지 전문 제작 스튜디오</title>
+    <meta name="theme-color" content="#f7f7f5" />
+    <title>WorksFrame — 행정사 사무소 홈페이지</title>
     <meta
       name="description"
-      content="행정 서비스의 전문성을 고객이 이해하기 쉬운 홈페이지로. 출입국·인허가·기업행정·행정심판 등 업종 특성을 이해하고, 상담으로 이어지는 행정사 전문 홈페이지를 제작합니다."
+      content="행정사 사무소만 만듭니다. 분야별 상담 동선, 행정사법에 맞는 문구, 카페24·아임웹에 올리는 홈페이지. 계정은 사무소 명의입니다."
     />
-    <meta property="og:title" content="웍스프레임 | 행정사 홈페이지 전문 제작" />
+    <meta property="og:title" content="WorksFrame — 행정사 사무소 홈페이지" />
     <meta
       property="og:description"
-      content="행정 서비스의 전문성을 고객이 이해하기 쉬운 홈페이지로 만듭니다."
-    />
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap"
-      rel="stylesheet"
+      content="업무가 다르면 페이지도 다릅니다. 행정사 사무소 홈페이지를 기획하고 만듭니다."
     />
     <link
       rel="stylesheet"
@@ -25,7 +20,7 @@
       crossorigin
       href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/variable/pretendardvariable.css"
     />
-    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="assets/style.css" />
     <noscript>
       <style>
         .reveal { opacity: 1 !important; transform: none !important; }
@@ -33,600 +28,530 @@
     </noscript>
   </head>
   <body id="top">
-    <header>
+    <a class="skip" href="#work">본문으로</a>
+
+    <header class="site-header">
       <div class="wrap nav">
-        <a href="#top" class="logo">
-          <svg viewBox="0 0 100 100" fill="none">
-            <rect x="8" y="34" width="52" height="42" rx="8" stroke="#111827" stroke-width="7" />
-            <rect x="34" y="8" width="58" height="52" rx="8" stroke="#2563EB" stroke-width="7" />
-            <line x1="34" y1="24" x2="92" y2="24" stroke="#2563EB" stroke-width="7" />
-          </svg>
-          <span>WorksFrame</span>
-        </a>
+        <a href="#top" class="logo">WorksFrame</a>
+        <nav class="nav-links" aria-label="주요 메뉴">
+          <a href="#work">작업</a>
+          <a href="#fit">대상</a>
+          <a href="#process">진행</a>
+          <a href="#pricing">구성</a>
+          <a href="#faq">질문</a>
+        </nav>
         <div class="nav-right">
-          <nav class="nav-links">
-            <a href="#value">전문 영역</a>
-            <a href="#portfolio">포트폴리오</a>
-            <a href="#industry">업종 이해</a>
-            <a href="#process">제작 과정</a>
-            <a href="#pricing">가격</a>
-            <a href="#faq">FAQ</a>
-          </nav>
-          <a class="nav-cta" href="#contact">무료 상담</a>
+          <a class="nav-cta" href="#contact">상담</a>
+          <button class="burger" id="burgerBtn" type="button" aria-label="메뉴 열기" aria-expanded="false">
+            <span></span><span></span><span></span>
+          </button>
         </div>
-        <button class="burger" id="burgerBtn" aria-label="메뉴 열기" aria-expanded="false">
-          <span></span><span></span><span></span>
-        </button>
       </div>
       <div class="mobile-panel" id="mobilePanel">
-        <a href="#value">전문 영역</a>
-        <a href="#portfolio">포트폴리오</a>
-        <a href="#industry">업종 이해</a>
-        <a href="#process">제작 과정</a>
-        <a href="#pricing">가격</a>
-        <a href="#faq">FAQ</a>
-        <a href="#contact" class="nav-cta">무료 상담</a>
+        <a href="#work">작업</a>
+        <a href="#fit">대상</a>
+        <a href="#process">진행</a>
+        <a href="#pricing">구성</a>
+        <a href="#ops">운영</a>
+        <a href="#faq">질문</a>
+        <a href="#contact">상담</a>
       </div>
     </header>
 
-    <!-- HERO -->
     <section class="hero">
-      <div class="wrap">
-        <div class="eyebrow">행정사 홈페이지 전문 제작 스튜디오</div>
-        <h1>행정 서비스의 전문성을,<br />고객이 이해하기 쉬운 홈페이지로</h1>
-        <p class="sub">
-          출입국·인허가·기업행정·행정심판까지 — 업종의 특성을 이해하고,
-          방문자가 상담까지 이어지도록 설계하는 행정사 전문 홈페이지를 만듭니다.
-        </p>
-        <div class="btn-row">
-          <a class="btn btn-primary" href="#contact">무료 상담 받기</a>
-          <a class="btn btn-secondary" href="#portfolio">포트폴리오 보기 →</a>
-        </div>
-        <div class="hero-stats">
-          <div class="hero-stat">
-            <div class="n">7<span style="font-size:20px">개+</span></div>
-            <div class="l">업종별 전문 구조</div>
-          </div>
-          <div class="hero-stat">
-            <div class="n">1:1</div>
-            <div class="l">대표가 직접 제작</div>
-          </div>
-          <div class="hero-stat">
-            <div class="n">모바일</div>
-            <div class="l">상담 전환 최적화</div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- VALUE — 전문 영역 5가지 -->
-    <section class="value" id="value">
-      <div class="wrap">
-        <div class="section-head reveal">
-          <div class="kicker">What we do</div>
-          <h2>‘홈페이지 제작’이 아니라,<br />행정사 홈페이지를 만듭니다</h2>
-          <p>
-            행정사 홈페이지는 일반 회사 소개 페이지와 목적이 다릅니다.
-            아래 다섯 가지를 전문 영역으로 잡고 설계합니다.
+      <div class="wrap hero-grid">
+        <div class="hero-copy">
+          <p class="hero-kicker">행정사 사무소 · 홈페이지</p>
+          <h1>의뢰인이 묻는 순서로<br />화면을 짭니다.</h1>
+          <p class="hero-sub">
+            출입국 고객과 인허가 고객은 첫 질문이 다릅니다. 템플릿 한 장을 돌려 쓰지 않고, 사무소 업무에 맞춰 상담까지 이어지게 만듭니다.
           </p>
-        </div>
-        <div class="value-grid reveal">
-          <div class="value-cell wide">
-            <span class="vnum">01</span>
-            <h3>행정사 업종 이해</h3>
-            <p>
-              출입국·인허가·행정심판 등 업무마다 고객이 궁금해하는 순서가
-              다릅니다. 업종 구조를 이해한 사람이 화면 흐름을 설계합니다.
-            </p>
-          </div>
-          <div class="value-cell narrow dark">
-            <span class="vnum">02</span>
-            <h3>상담 전환 구조</h3>
-            <p>
-              방문자가 ‘내 상황’을 찾고 자연스럽게 상담 신청까지 이어지도록
-              화면 동선을 짭니다.
-            </p>
-          </div>
-          <div class="value-cell narrow">
-            <span class="vnum">03</span>
-            <h3>신뢰감 있는 디자인</h3>
-            <p>화려함보다, 전문가에게 맡겨도 되겠다는 신뢰를 주는 절제된 디자인.</p>
-          </div>
-          <div class="value-cell wide">
-            <span class="vnum">04</span>
-            <h3>검색 · 지역 · 전문분야 노출</h3>
-            <p>
-              “지역 + 전문분야”로 검색하는 고객에게 걸리도록, 검색엔진 기본
-              최적화와 지역·분야 키워드 구조를 잡아드립니다.
-            </p>
-          </div>
-          <div class="value-cell wide">
-            <span class="vnum">05</span>
-            <h3>모바일 상담 최적화</h3>
-            <p>
-              대부분의 상담은 휴대폰에서 시작됩니다. 하단 고정 전화·카톡 버튼과
-              모바일 우선 레이아웃으로 문의 문턱을 낮춥니다.
-            </p>
-          </div>
-          <div class="value-cell narrow">
-            <span class="vnum">+</span>
-            <h3>행정사법 준수</h3>
-            <p>과장·허위 문구 없이, 업무 범위에 맞는 표현으로 제작합니다.</p>
+          <p class="hero-who">행정사만 합니다. 전국, 비대면.</p>
+          <div class="hero-actions">
+            <a class="btn-pill" href="#contact">상담하기</a>
+            <a class="btn-ghost" href="#work">작업 보기</a>
           </div>
         </div>
+        <aside class="hero-stage" aria-label="분야별 첫 질문 예시">
+          <p class="stage-label">방문자가 먼저 고르는 말</p>
+          <ol class="stage-cards">
+            <li>
+              <span>출입국</span>
+              <strong>체류기간이 언제 끝나나요?</strong>
+              <em>비자 검색 · 자가진단으로 분기</em>
+            </li>
+            <li>
+              <span>공장 · 기업</span>
+              <strong>사업이 공장인가요, 사무실인가요?</strong>
+              <em>입지 · 등록 · 인허가로 분기</em>
+            </li>
+            <li>
+              <span>행정심판</span>
+              <strong>처분서를 받으셨나요?</strong>
+              <em>유형 · 기한 안내. 인용은 약속하지 않음</em>
+            </li>
+          </ol>
+        </aside>
       </div>
     </section>
 
-    <!-- PORTFOLIO -->
-    <section id="portfolio">
+    <section class="trust" aria-label="계약 전에 확인하는 점">
+      <div class="wrap trust-row">
+        <p>행정사 사무소만</p>
+        <p>계정은 사무소 명의</p>
+        <p>행정사법 문구 점검</p>
+        <p>없는 실적은 넣지 않음</p>
+        <p>영업일 하루 안 회신</p>
+      </div>
+    </section>
+
+    <section id="work">
       <div class="wrap">
-        <div class="section-head reveal">
-          <div class="kicker">Portfolio</div>
-          <h2>업종별로 다르게 설계한 데모</h2>
-          <p>
-            같은 ‘행정사 홈페이지’라도 업무 분야에 따라 구조가 달라집니다.
-            아래 데모는 실제로 열어볼 수 있습니다.
-          </p>
-        </div>
-        <div class="portfolio-grid reveal">
-          <!-- 출입국 -->
-          <article class="folio-card">
-            <div class="folio-thumb th-imm">
-              <div class="mock">
-                <div class="bar"><i></i><i></i><i></i></div>
-                <div class="ln t"></div>
-                <div class="ln s"></div>
-                <div class="ln s2"></div>
-                <div class="chips"><b></b><b></b><b></b></div>
+        <article class="spot">
+          <div class="spot-copy">
+            <p class="spot-cat">대표 작업 · 종합 사무소</p>
+            <h2>여러 업무를<br />한 주소에서 나눕니다.</h2>
+            <p>
+              민원·인허가·구제·출입국을 업무 이름이나 지금 막힌 상황으로 찾습니다. 한 분야만 내세우지 않는 사무소에 맞춘 구성입니다.
+            </p>
+            <a class="text-link" href="demos/portfolio/index.html" target="_blank" rel="noopener">
+              데모 열기<span aria-hidden="true"> →</span>
+            </a>
+          </div>
+          <a class="spot-frame" href="demos/portfolio/index.html" target="_blank" rel="noopener">
+            <div class="browser">
+              <div class="browser-bar">
+                <span></span><span></span><span></span>
+                <div class="browser-url">office.example / total</div>
               </div>
+              <img src="demos/portfolio/assets/hero-office.jpg" width="960" height="660" alt="다올종합행정사 대표 이미지. 서류와 화면으로 여러 행정 업무를 정리하는 책상입니다.">
             </div>
-            <div class="folio-body">
-              <span class="folio-tag tag-imm">출입국 · 비자</span>
-              <h3>출입국·비자 전문 행정사</h3>
-              <p class="desc">
-                밝고 친절한 톤으로, 비자 종류보다 ‘내 상황’을 먼저 고르게 하는
-                구글 스타일 구성.
-              </p>
-              <div class="folio-meta">
-                <div class="row"><span class="k">타깃</span><span class="v">외국인 · 채용 기업</span></div>
-                <div class="row"><span class="k">핵심</span><span class="v">상황 선택 → 자격 확인 → 상담</span></div>
-              </div>
-              <div class="folio-links">
-                <a class="folio-link main" href="행정사_출입국_구글스타일.html" target="_blank" rel="noopener">메인 데모 열기 →</a>
-                <a class="folio-link" href="행정사_출입국_E7상세.html" target="_blank" rel="noopener">E-7 상세</a>
-                <a class="folio-link" href="행정사_출입국_F4상세.html" target="_blank" rel="noopener">F-4 상세</a>
-                <a class="folio-link" href="행정사_출입국_F5상세.html" target="_blank" rel="noopener">F-5 상세</a>
-                <a class="folio-link" href="행정사_출입국_F6상세.html" target="_blank" rel="noopener">F-6 상세</a>
-              </div>
+          </a>
+        </article>
+
+        <header class="block-head reveal">
+          <h2>분야마다 다른 화면.</h2>
+          <p>일반행정사 기준으로, 수임이 많은 분야부터 두었습니다. 첫 질문이 다릅니다.</p>
+        </header>
+
+        <div class="work-grid">
+          <article class="work-card reveal">
+            <a class="work-visual th-civil" href="demos/civil/index.html" target="_blank" rel="noopener">
+              <img src="demos/civil/assets/hero-consult.jpg" width="960" height="660" alt="다올민원행정사 대표 이미지. 창구에서 서류를 펼쳐 두고 상담하는 장면입니다.">
+            </a>
+            <div class="work-body">
+              <h3>민원</h3>
+              <p>어디에 넣어야 할지부터 같이 봅니다. 해결을 보장하지 않습니다.</p>
+              <a class="text-link" href="demos/civil/index.html" target="_blank" rel="noopener">데모<span aria-hidden="true"> →</span></a>
             </div>
           </article>
 
-          <!-- 기업·공장 -->
-          <article class="folio-card">
-            <div class="folio-thumb th-biz">
-              <div class="mock">
-                <div class="bar"><i></i><i></i><i></i></div>
-                <div class="ln t"></div>
-                <div class="ln s"></div>
-                <div class="ln s2"></div>
-                <div class="chips"><b></b><b></b></div>
-              </div>
-            </div>
-            <div class="folio-body">
-              <span class="folio-tag tag-biz">기업 · 공장</span>
-              <h3>공장·기업 행정 전문 행정사</h3>
-              <p class="desc">
-                절제된 색과 여백의 애플 스타일. 인허가 절차와 진행 사례를
-                신뢰감 있게 보여주는 구성.
-              </p>
-              <div class="folio-meta">
-                <div class="row"><span class="k">타깃</span><span class="v">기업 대표 · 사업자</span></div>
-                <div class="row"><span class="k">핵심</span><span class="v">인허가 절차 → 실적 → 상담</span></div>
-              </div>
-              <div class="folio-links">
-                <a class="folio-link main" href="행정사_기업공장_애플스타일.html" target="_blank" rel="noopener">데모 열기 →</a>
-              </div>
+          <article class="work-card reveal">
+            <a class="work-visual th-car" href="demos/driving/index.html" target="_blank" rel="noopener">
+              <img src="demos/driving/assets/hero-consult.jpg" width="960" height="660" alt="다올자동차행정사 대표 이미지. 차량 서류와 열쇠를 두고 상담하는 장면입니다.">
+            </a>
+            <div class="work-body">
+              <h3>자동차 행정</h3>
+              <p>내 차량 상황부터 등록 업무를 가릅니다. 완료를 약속하지 않습니다.</p>
+              <a class="text-link" href="demos/driving/index.html" target="_blank" rel="noopener">데모<span aria-hidden="true"> →</span></a>
             </div>
           </article>
 
-          <!-- 행정심판 -->
-          <article class="folio-card">
-            <div class="folio-thumb th-appeal">
-              <div class="mock">
-                <div class="bar"><i></i><i></i><i></i></div>
-                <div class="ln t"></div>
-                <div class="ln s"></div>
-                <div class="ln s2"></div>
-                <div class="chips"><b></b><b></b><b></b></div>
-              </div>
-            </div>
-            <div class="folio-body">
-              <span class="folio-tag tag-appeal">행정심판 · 권익구제</span>
-              <h3>행정심판 전문 행정사</h3>
-              <p class="desc">
-                처분을 받은 고객을 위한 긴급 대응형. 상황을 빠르게 고르고
-                기한 안내로 즉시 상담을 유도.
-              </p>
-              <div class="folio-meta">
-                <div class="row"><span class="k">타깃</span><span class="v">처분 통지 받은 개인·사업자</span></div>
-                <div class="row"><span class="k">핵심</span><span class="v">상황 → 대응 방법 → 긴급 상담</span></div>
-              </div>
-              <div class="folio-links">
-                <a class="folio-link main" href="행정사_행정심판_긴급대응형.html" target="_blank" rel="noopener">데모 열기 →</a>
-              </div>
+          <article class="work-card reveal">
+            <a class="work-visual th-immig" href="demos/immigration/index.html" target="_blank" rel="noopener">
+              <img src="demos/immigration/assets/hero-consult.jpg" width="960" height="660" alt="한빛출입국행정사 대표 이미지. 서류를 두고 체류·비자 상담하는 장면입니다.">
+            </a>
+            <div class="work-body">
+              <h3>출입국 · 비자</h3>
+              <p>비자 검색·자가진단부터. 허가는 보장하지 않습니다.</p>
+              <a class="text-link" href="demos/immigration/index.html" target="_blank" rel="noopener">데모<span aria-hidden="true"> →</span></a>
             </div>
           </article>
 
-          <!-- 종합 -->
-          <article class="folio-card">
-            <div class="folio-thumb th-total">
-              <div class="mock">
-                <div class="bar"><i></i><i></i><i></i></div>
-                <div class="ln t"></div>
-                <div class="ln s"></div>
-                <div class="ln s2"></div>
-                <div class="chips"><b></b><b></b><b></b></div>
-              </div>
-            </div>
-            <div class="folio-body">
-              <span class="folio-tag tag-total">종합 행정</span>
-              <h3>종합 행정사무소</h3>
-              <p class="desc">
-                여러 분야를 한 사이트에서. ‘업무 찾기’로 방문자를 각 분야로
-                안내하고 성공사례·FAQ까지 담은 통합형.
-              </p>
-              <div class="folio-meta">
-                <div class="row"><span class="k">타깃</span><span class="v">다양한 고객</span></div>
-                <div class="row"><span class="k">핵심</span><span class="v">분야별 서비스 → 전문성 → 상담</span></div>
-              </div>
-              <div class="folio-links">
-                <a class="folio-link main" href="행정사_종합_통합포트폴리오.html" target="_blank" rel="noopener">데모 열기 →</a>
-              </div>
+          <article class="work-card reveal">
+            <a class="work-visual th-land" href="demos/land/index.html" target="_blank" rel="noopener">
+              <img src="demos/land/assets/hero-land.jpg" width="960" height="660" alt="다올토지행정사 대표 이미지. 농지·도로·마을이 보이는 토지 항공사진입니다.">
+            </a>
+            <div class="work-body">
+              <h3>토지 · 개발</h3>
+              <p>공장·창고·전원주택을 짓기 전에 전용과 개발행위를 같이 봅니다. 허가는 보장하지 않습니다.</p>
+              <a class="text-link" href="demos/land/index.html" target="_blank" rel="noopener">데모<span aria-hidden="true"> →</span></a>
             </div>
           </article>
 
-          <!-- 자동차·운전 -->
-          <article class="folio-card">
-            <div class="folio-thumb th-car">
-              <div class="mock">
-                <div class="bar"><i></i><i></i><i></i></div>
-                <div class="ln t"></div>
-                <div class="ln s"></div>
-                <div class="ln s2"></div>
-                <div class="chips"><b></b><b></b><b></b></div>
-              </div>
-            </div>
-            <div class="folio-body">
-              <span class="folio-tag tag-car">자동차 · 운전</span>
-              <h3>자동차·운전 전문 행정사</h3>
-              <p class="desc">
-                면허 구제의 ‘골든타임’을 강조한 토스 스타일. 상황을 빠르게
-                선택하고 바로 상담으로 이어지는 구성.
-              </p>
-              <div class="folio-meta">
-                <div class="row"><span class="k">타깃</span><span class="v">일반 운전자 · 사업자</span></div>
-                <div class="row"><span class="k">핵심</span><span class="v">사건·업무 유형 → 상담</span></div>
-              </div>
-              <div class="folio-links">
-                <a class="folio-link main" href="행정사_자동차운전_토스스타일.html" target="_blank" rel="noopener">데모 열기 →</a>
-              </div>
+          <article class="work-card reveal">
+            <a class="work-visual th-biz" href="demos/factory/index.html" target="_blank" rel="noopener">
+              <img src="demos/factory/assets/hero-factory.jpg" width="960" height="660" alt="다올기업행정사 대표 이미지. 생산 현장입니다.">
+            </a>
+            <div class="work-body">
+              <h3>공장 · 기업 행정</h3>
+              <p>우리 회사 사업부터 필요한 인허가·행정을 가립니다. 허가를 약속하지 않습니다.</p>
+              <a class="text-link" href="demos/factory/index.html" target="_blank" rel="noopener">데모<span aria-hidden="true"> →</span></a>
             </div>
           </article>
 
-          <!-- 토지·개발 -->
-          <article class="folio-card">
-            <div class="folio-thumb th-land">
-              <div class="mock">
-                <div class="bar"><i></i><i></i><i></i></div>
-                <div class="ln t"></div>
-                <div class="ln s"></div>
-                <div class="ln s2"></div>
-                <div class="chips"><b></b><b></b></div>
-              </div>
-            </div>
-            <div class="folio-body">
-              <span class="folio-tag tag-land">토지 · 개발</span>
-              <h3>토지·개발 전문 행정사</h3>
-              <p class="desc">
-                프리미엄한 애플 에디토리얼. 개발행위·농지·산지전용 절차를
-                조건부터 짚는 전문성 중심 구성.
-              </p>
-              <div class="folio-meta">
-                <div class="row"><span class="k">타깃</span><span class="v">토지주 · 사업자</span></div>
-                <div class="row"><span class="k">핵심</span><span class="v">인허가 → 전문성 → 상담</span></div>
-              </div>
-              <div class="folio-links">
-                <a class="folio-link main" href="행정사_토지개발_애플스타일.html" target="_blank" rel="noopener">데모 열기 →</a>
-              </div>
-            </div>
-          </article>
-
-          <!-- 민원 전문 -->
-          <article class="folio-card">
-            <div class="folio-thumb th-civil">
-              <div class="mock">
-                <div class="bar"><i></i><i></i><i></i></div>
-                <div class="ln t"></div>
-                <div class="ln s"></div>
-                <div class="ln s2"></div>
-                <div class="chips"><b></b><b></b><b></b></div>
-              </div>
-            </div>
-            <div class="folio-body">
-              <span class="folio-tag tag-civil">민원 전문</span>
-              <h3>민원 전문 행정사</h3>
-              <p class="desc">
-                검색형 구글 스타일. ‘어떤 문제인지’부터 고르게 해 문제 상황을
-                해결 방법으로 연결하는 친절한 구성.
-              </p>
-              <div class="folio-meta">
-                <div class="row"><span class="k">타깃</span><span class="v">일반 고객</span></div>
-                <div class="row"><span class="k">핵심</span><span class="v">문제 상황 → 해결 방법 → 상담</span></div>
-              </div>
-              <div class="folio-links">
-                <a class="folio-link main" href="행정사_민원전문_구글스타일.html" target="_blank" rel="noopener">데모 열기 →</a>
-              </div>
+          <article class="work-card reveal">
+            <a class="work-visual th-appeal" href="demos/appeal/index.html" target="_blank" rel="noopener">
+              <img src="demos/appeal/assets/hero-consult.jpg" width="960" height="660" alt="세움권익행정사 대표 이미지. 사무실에서 처분 서류를 두고 상담하는 장면입니다.">
+            </a>
+            <div class="work-body">
+              <h3>행정심판 · 권익구제</h3>
+              <p>처분 유형부터 가립니다. 심판만 내도 처분은 집행됩니다. 인용은 보장하지 않습니다.</p>
+              <a class="text-link" href="demos/appeal/index.html" target="_blank" rel="noopener">데모<span aria-hidden="true"> →</span></a>
             </div>
           </article>
         </div>
-        <p class="price-note reveal" style="margin-top:32px">
-          ※ 위 데모는 포트폴리오용 예시이며, 상호·실적·경력은 실제 사무소 정보로만 채워 넣습니다.
-        </p>
+
+        <div class="visa-more reveal">
+          <p>출입국 상세 페이지</p>
+          <div class="visa-more-links">
+            <a href="demos/immigration/visa-stay.html" target="_blank" rel="noopener">연장·변경</a>
+            <a href="demos/immigration/visa-e7.html" target="_blank" rel="noopener">E-7</a>
+            <a href="demos/immigration/visa-f6.html" target="_blank" rel="noopener">F-6</a>
+            <a href="demos/immigration/visa-f4.html" target="_blank" rel="noopener">F-4</a>
+            <a href="demos/immigration/visa-f5.html" target="_blank" rel="noopener">F-5</a>
+          </div>
+        </div>
+        <p class="fineprint reveal">데모의 상호·약력·실적은 예시입니다. 실제 사무소 정보로만 넣습니다.</p>
       </div>
     </section>
 
-    <!-- INDUSTRY — 업종 이해 -->
-    <section class="industry" id="industry">
+    <section id="fit">
       <div class="wrap">
-        <div class="section-head reveal">
-          <div class="kicker">Why it differs</div>
-          <h2>업무 분야에 따라<br />홈페이지 구조가 달라집니다</h2>
-          <p>행정사는 전문 분야에 따라 고객도, 고객이 궁금해하는 순서도 다릅니다.</p>
+        <header class="block-head left reveal">
+          <h2>이런 사무소에 맞습니다.</h2>
+          <p>견적 전에, 진행해도 되는지부터 가릅니다.</p>
+        </header>
+        <div class="fit-grid reveal">
+          <article class="fit-card">
+            <h3>진행하기 좋은 경우</h3>
+            <ul>
+              <li>주력 업무가 분명하고, 받지 않는 업무도 말할 수 있을 때</li>
+              <li>전화·카톡이 주 상담이고, 사이트가 그 전 단계일 때</li>
+              <li>카페24·아임웹처럼 사무소가 글을 고칠 도구가 필요할 때</li>
+              <li>있는 사이트의 연락처는 살리되, 동선만 다시 잡고 싶을 때</li>
+              <li>광고 랜딩을 한 분야에 맞춰 짧게 쓰고 싶을 때</li>
+            </ul>
+          </article>
+          <article class="fit-card fit-out">
+            <h3>잘 안 맞는 경우</h3>
+            <ul>
+              <li>허가·인용·비자 발급을 사이트 문구로 보장하고 싶을 때</li>
+              <li>확인되지 않은 승소율·건수를 넣고 싶을 때</li>
+              <li>쇼핑몰·병원·학원처럼 행정사 외 업종일 때</li>
+              <li>워드프레스 자체 개발, 회원·결제 시스템을 원할 때</li>
+              <li>월 관리 대행만 맡기고, 제작은 없을 때</li>
+            </ul>
+          </article>
         </div>
-        <div class="ind-table reveal">
-          <div class="ind-row head">
-            <div class="ind-cell k">전문 분야</div>
-            <div class="ind-cell t">주요 타깃</div>
-            <div class="ind-cell c">홈페이지 핵심 흐름</div>
+      </div>
+    </section>
+
+    <section class="compare" id="compare">
+      <div class="wrap">
+        <header class="block-head reveal">
+          <h2>템플릿과 다릅니다.</h2>
+          <p>같은 ‘홈페이지’라도, 상담이 어디서 끊기는지가 다릅니다.</p>
+        </header>
+        <div class="compare-table reveal" role="table" aria-label="일반 템플릿과 분야 사이트 비교">
+          <div class="compare-row compare-head" role="row">
+            <span role="columnheader"></span>
+            <span role="columnheader">흔한 템플릿</span>
+            <span role="columnheader">웍스프레임</span>
           </div>
-          <div class="ind-row">
-            <div class="ind-cell k">출입국 · 비자</div>
-            <div class="ind-cell t">외국인 · 기업</div>
-            <div class="ind-cell c">비자 종류 → 자격 확인 → 상담</div>
+          <div class="compare-row" role="row">
+            <span role="rowheader">첫 화면</span>
+            <span>소개·실적·오시는 길</span>
+            <span>그 분야 고객이 먼저 묻는 말</span>
           </div>
-          <div class="ind-row">
-            <div class="ind-cell k">공장 · 기업</div>
-            <div class="ind-cell t">기업 대표</div>
-            <div class="ind-cell c">인허가 업무 → 절차 → 실적 → 상담</div>
+          <div class="compare-row" role="row">
+            <span role="rowheader">업무 안내</span>
+            <span>한 페이지에 나열</span>
+            <span>상황·자격·입지별로 페이지를 가름</span>
           </div>
-          <div class="ind-row">
-            <div class="ind-cell k">자동차 · 운전</div>
-            <div class="ind-cell t">일반 고객</div>
-            <div class="ind-cell c">사건·업무 유형 → 상담</div>
+          <div class="compare-row" role="row">
+            <span role="rowheader">상담</span>
+            <span>하단 연락처</span>
+            <span>흐름 안 전화·카톡·폼</span>
           </div>
-          <div class="ind-row">
-            <div class="ind-cell k">토지 · 개발</div>
-            <div class="ind-cell t">토지주 · 사업자</div>
-            <div class="ind-cell c">인허가 → 전문성 → 상담</div>
+          <div class="compare-row" role="row">
+            <span role="rowheader">문구</span>
+            <span>‘빠르고 확실한 해결’류</span>
+            <span>행정사법에 맞게 다듬음</span>
           </div>
-          <div class="ind-row">
-            <div class="ind-cell k">민원 전문</div>
-            <div class="ind-cell t">일반 고객</div>
-            <div class="ind-cell c">문제 상황 → 해결 방법 → 상담</div>
-          </div>
-          <div class="ind-row">
-            <div class="ind-cell k">행정심판 · 노무 등</div>
-            <div class="ind-cell t">특정 사건 고객</div>
-            <div class="ind-cell c">사건별 정보 → 대응 → 긴급 상담</div>
-          </div>
-          <div class="ind-row">
-            <div class="ind-cell k">종합 행정</div>
-            <div class="ind-cell t">다양한 고객</div>
-            <div class="ind-cell c">분야별 서비스 → 전문성 → 상담</div>
+          <div class="compare-row" role="row">
+            <span role="rowheader">소유</span>
+            <span>제작사 계정에 묶이는 경우</span>
+            <span>도메인·호스팅은 사무소 명의</span>
           </div>
         </div>
       </div>
     </section>
 
-    <!-- PROCESS -->
+    <section class="approach" id="approach">
+      <div class="wrap">
+        <header class="block-head reveal">
+          <h2>홈페이지가 아니라<br />상담 동선을 만듭니다.</h2>
+        </header>
+        <ol class="approach-list reveal">
+          <li>
+            <h3>업종에 맞는 첫 화면</h3>
+            <p>출입국은 만료일·자격, 기업은 입지·등록, 심판은 기한. 고객이 처음 묻는 말로 시작합니다.</p>
+          </li>
+          <li>
+            <h3>상담까지 끊기지 않게</h3>
+            <p>전화, 카카오톡, 폼을 화면 흐름 안에 둡니다. 대부분의 문의는 휴대폰에서 시작합니다.</p>
+          </li>
+          <li>
+            <h3>검색에 걸릴 문구만</h3>
+            <p>지역과 전문분야가 제목·설명·본문에 맞게 들어갑니다. 행정사법에 어긋나는 표현은 쓰지 않습니다.</p>
+          </li>
+        </ol>
+      </div>
+    </section>
+
     <section id="process">
       <div class="wrap">
-        <div class="section-head reveal">
-          <div class="kicker">Process</div>
-          <h2>이렇게 진행됩니다</h2>
-        </div>
-        <div class="process-strip reveal">
-          <div class="proc-item">
-            <span class="n">01</span>
-            <h3>무료 상담</h3>
-            <p>전문 분야와 목표 고객, 현재 홈페이지 상황을 카톡으로 편하게 알려주세요.</p>
-          </div>
-          <div class="proc-item">
-            <span class="n">02</span>
-            <h3>구조 기획</h3>
-            <p>업종에 맞는 화면 흐름과 상담 동선을 먼저 설계합니다.</p>
-          </div>
-          <div class="proc-item">
-            <span class="n">03</span>
-            <h3>디자인 시안</h3>
-            <p>신뢰감 있는 디자인 시안을 제안하고 함께 다듬습니다.</p>
-          </div>
-          <div class="proc-item">
-            <span class="n">04</span>
-            <h3>제작</h3>
-            <p>카페24·아임웹 등 상황에 맞는 도구로 반응형으로 구축합니다.</p>
-          </div>
-          <div class="proc-item">
-            <span class="n">05</span>
-            <h3>검수 &amp; 오픈</h3>
-            <p>검색 기본 설정까지 확인 후 오픈, 이후 수정에도 대응합니다.</p>
-          </div>
-        </div>
+        <header class="block-head reveal">
+          <h2>진행 순서</h2>
+          <p>자료가 모이면 랜딩은 약 1–2주, 분야 사이트는 3–5주, 종합은 5–7주입니다. 정확한 날짜는 상담 때 정합니다.</p>
+        </header>
+        <ol class="steps reveal">
+          <li>
+            <span>01 상담</span>
+            <p>전문 분야, 목표 고객, 지금 사이트 유무를 받습니다.</p>
+          </li>
+          <li>
+            <span>02 구조</span>
+            <p>화면 순서와 상담 위치를 먼저 정합니다. 시안보다 앞입니다.</p>
+          </li>
+          <li>
+            <span>03 시안</span>
+            <p>한 번 보고 고칩니다. 색보다 읽히는 순서가 우선입니다.</p>
+          </li>
+          <li>
+            <span>04 제작</span>
+            <p>카페24, 아임웹 등 사무소가 직접 만질 도구에 맞춰 올립니다. 계정은 사무소 명의입니다.</p>
+          </li>
+          <li>
+            <span>05 오픈</span>
+            <p>검색 기본값 확인 후 공개합니다. 이후 수정 범위는 운영에 적어 두었습니다.</p>
+          </li>
+        </ol>
       </div>
     </section>
 
-    <!-- PRICING -->
-    <section id="pricing" style="background: var(--paper-2)">
+    <section id="pricing">
       <div class="wrap">
-        <div class="section-head reveal">
-          <div class="kicker">Pricing</div>
-          <h2>초기 파트너 한정 특가</h2>
-          <p>
-            함께 성장할 초기 행정사 파트너를 찾는 단계입니다. 정가보다 낮은
-            가격으로 더 밀착해 진행해드립니다.
-          </p>
+        <header class="block-head reveal">
+          <h2>구성</h2>
+          <p>표시 금액은 부가세 별도입니다. 초기 행정사 사무소 기준이며, 범위가 늘면 다시 정합니다.</p>
+        </header>
+        <div class="plans reveal">
+          <article class="plan">
+            <h3>랜딩</h3>
+            <p class="plan-desc">한 분야, 한 페이지. 광고 유입에도 씁니다.</p>
+            <p class="plan-price">45만원<span>부터</span></p>
+            <p class="plan-time">약 1–2주 · 계약금 50% 후 시작</p>
+            <ul>
+              <li>분야 소개와 상담</li>
+              <li>모바일 전화 · 카카오톡</li>
+              <li>검색 기본 설정</li>
+            </ul>
+          </article>
+          <article class="plan plan-main">
+            <p class="plan-tag">많이 고르는 구성</p>
+            <h3>분야 사이트</h3>
+            <p class="plan-desc">면적·입지를 홈에서 가르고, 설립·등록을 페이지로 둡니다. 공장 · 기업 행정 데모가 이 구성입니다.</p>
+            <p class="plan-price">120만원<span>부터</span></p>
+            <p class="plan-time">약 3–5주 · 계약금 50% 후 시작</p>
+            <ul>
+              <li>업무별 페이지</li>
+              <li>상황 선택형 상담</li>
+              <li>사례 · 질문, 지역·분야 문구</li>
+            </ul>
+          </article>
+          <article class="plan">
+            <h3>종합 사무소</h3>
+            <p class="plan-desc">여러 분야를 한 주소에서 나눕니다. 위 종합 사무소 데모가 이 구성입니다.</p>
+            <p class="plan-price">200만원<span>부터</span></p>
+            <p class="plan-time">약 5–7주 · 계약금 50% 후 시작</p>
+            <ul>
+              <li>업무 찾기</li>
+              <li>분야별 상담 분기</li>
+              <li>사례 · 질문 필터</li>
+            </ul>
+          </article>
         </div>
-        <div class="pricing-grid reveal">
-          <div class="price-card">
-            <div class="tier">단일 분야 랜딩</div>
-            <div class="tier-sub">1페이지 · 상담 집중형</div>
-            <div class="amt">45만원<span>~</span></div>
-            <ul class="price-feats">
-              <li>단일 전문분야 소개 + 상담</li>
-              <li>모바일 상담 버튼(전화·카톡)</li>
-              <li>검색 기본 최적화</li>
-              <li>반응형 제작</li>
-            </ul>
-          </div>
-          <div class="price-card featured">
-            <span class="price-badge">가장 많이 선택</span>
-            <div class="tier">전문 분야 홈페이지</div>
-            <div class="tier-sub">3~5페이지 · 분야별 구성</div>
-            <div class="amt">120만원<span>~</span></div>
-            <ul class="price-feats">
-              <li>업무 분야별 상세 페이지</li>
-              <li>상황 선택형 상담 동선</li>
-              <li>성공사례 · FAQ 구성</li>
-              <li>지역·전문분야 키워드 구조</li>
-            </ul>
-          </div>
-          <div class="price-card">
-            <div class="tier">종합 행정사무소</div>
-            <div class="tier-sub">다분야 통합 · 확장형</div>
-            <div class="amt">200만원<span>~</span></div>
-            <ul class="price-feats">
-              <li>여러 분야 통합 ‘업무 찾기’</li>
-              <li>분야별 상담 폼 분기</li>
-              <li>사례 필터 · FAQ 필터</li>
-              <li>운영 편의 구조 안내</li>
-            </ul>
-          </div>
-        </div>
-        <p class="price-note">
-          블로그 연동, 다국어(외국인 대상), 페이지 추가 등 범위가 늘어나면 별도
-          협의합니다. 정확한 견적은 전문 분야와 현재 상황에 따라 상담 후 안내드립니다.
-        </p>
+        <p class="fineprint reveal">검수 후 잔금이 보통이며 세금계산서 발행이 가능합니다. 월 관리 패키지는 기본 견적에 넣지 않습니다.</p>
       </div>
     </section>
 
-    <!-- FAQ -->
+    <section id="ops">
+      <div class="wrap">
+        <header class="block-head reveal">
+          <h2>견적 전에 정해 두는 것</h2>
+          <p>행정사 사무소가 계약 전에 보통 확인하는 내용입니다.</p>
+        </header>
+
+        <div class="spec-grid reveal">
+          <article class="spec">
+            <h3>금액에 들어가는 것</h3>
+            <ul>
+              <li>구조 기획, 시안, 반응형 제작</li>
+              <li>전화 · 카카오톡 · 문의 폼</li>
+              <li>제목·설명 등 검색 기본값</li>
+              <li>개인정보 안내 문구, 행정 광고에 맞는 표현 점검</li>
+            </ul>
+          </article>
+          <article class="spec">
+            <h3>별도인 것</h3>
+            <ul>
+              <li>부가세</li>
+              <li>도메인, 호스팅, SSL — 연 비용은 플랫폼 기준</li>
+              <li>다국어, 블로그, 페이지 추가</li>
+              <li>사진 촬영, 네이버 플레이스·검색광고 대행</li>
+            </ul>
+          </article>
+          <article class="spec">
+            <h3>넘겨 주시면 되는 것</h3>
+            <ul>
+              <li>사무소명, 대표 성명, 연락처, 위치</li>
+              <li>사이트에 넣을 자격·등록 정보</li>
+              <li>주력 업무, 받지 않는 업무</li>
+              <li>있으면: 기존 주소, 로고, 사진, 자주 받는 질문</li>
+            </ul>
+          </article>
+          <article class="spec">
+            <h3>명의와 수정</h3>
+            <ul>
+              <li>도메인과 카페24·아임웹 계정은 사무소 명의</li>
+              <li>관리자 권한은 오픈 때 이관합니다</li>
+              <li>오픈 후 30일, 글·이미지 수정</li>
+              <li>그다음 간단한 수정은 카톡, 기능 추가는 별도</li>
+            </ul>
+          </article>
+        </div>
+        <p class="fineprint reveal">글은 사무소에서 주신 내용이 기준입니다. 없는 실적·경력을 채워 넣지 않습니다.</p>
+      </div>
+    </section>
+
     <section id="faq">
-      <div class="wrap">
-        <div class="section-head reveal" style="margin-bottom: 44px">
-          <div class="kicker">FAQ</div>
-          <h2>행정사님들이 자주 묻는 질문</h2>
-        </div>
+      <div class="wrap faq-layout">
+        <header class="block-head left reveal">
+          <h2>자주 묻는 질문</h2>
+          <p>계약 전에 반복되는 질문입니다.</p>
+        </header>
         <div class="faq-wrap reveal">
           <details open>
-            <summary>제 전문 분야에 맞는 구조를 잘 잡아주시나요?</summary>
+            <summary>제 분야 구조를 잡아 주나요?</summary>
             <p>
-              네. 출입국·인허가·행정심판 등 분야마다 고객이 궁금해하는 순서가
-              다르기 때문에, 제작 전에 목표 고객과 상담 동선을 먼저 기획합니다.
-              위 포트폴리오처럼 분야별로 다른 구조로 만들어드립니다.
+              제작 전에 목표 고객과 상담 순서를 정합니다. 위 작업처럼 분야마다 다른 흐름으로 만듭니다.
             </p>
           </details>
           <details>
-            <summary>“지역 + 전문분야”로 검색했을 때 노출이 잘 되나요?</summary>
+            <summary>지역과 전문분야로 검색되면 나오나요?</summary>
             <p>
-              제목·설명 태그, 반응형, 로딩 속도 등 기본적인 검색엔진최적화와
-              지역·전문분야 키워드 구조는 기본으로 잡아드립니다. 다만 상위 노출은
-              콘텐츠 운영·블로그·광고가 함께 작용하는 부분이라 제작만으로 100%
-              보장은 어렵고, 노출을 높이는 방법도 함께 안내해드립니다.
+              제목, 설명, 본문 구조와 반응형, 속도는 기본으로 맞춥니다. 상위 노출은 이후 글과 광고에도 달려 있어 제작만으로 약속하지 않습니다.
             </p>
           </details>
           <details>
-            <summary>상담 문의가 실제로 늘어나도록 만들 수 있나요?</summary>
+            <summary>상담이 늘어나나요?</summary>
             <p>
-              방문자가 ‘내 상황’을 빠르게 찾고 전화·카톡·상담폼으로 이어지도록
-              동선을 설계합니다. 다만 실제 상담 건수는 방문자 수와 상담 응대에도
-              영향을 받으므로, 특정 수치를 보장하지는 않습니다.
+              자기 상황을 찾고 연락할 수 있게 만듭니다. 건수는 방문과 응대에도 좌우되어 숫자를 보장하지 않습니다.
             </p>
           </details>
           <details>
-            <summary>기존에 쓰던 홈페이지가 있는데 개편만 가능한가요?</summary>
+            <summary>있는 사이트를 손볼 수도 있나요?</summary>
             <p>
-              네, 기존 자료(사진·글·연락처)를 최대한 활용해 디자인과 구조만 새로
-              정리하는 개편도 가능합니다. 현재 주소를 보내주시면 개선 포인트를
-              먼저 짚어드립니다.
+              사진, 글, 연락처를 살려 구조와 화면만 다시 잡는 작업도 합니다. 주소를 주시면 먼저 어디를 고칠지 말씀드립니다.
             </p>
           </details>
           <details>
-            <summary>광고(네이버·구글) 랜딩페이지로도 쓸 수 있나요?</summary>
+            <summary>광고 랜딩으로 쓰나요?</summary>
             <p>
-              네. 단일 분야 랜딩은 광고 유입 시 상담 전환에 집중하도록 구성할 수
-              있습니다. 광고 채널에 맞춰 문구와 상담 버튼 배치를 조정해드립니다.
+              됩니다. 한 분야 랜딩은 유입 후 상담에 맞춰 문구와 버튼 위치를 조정합니다.
             </p>
           </details>
           <details>
-            <summary>오픈 후에도 수정이나 관리를 도와주시나요?</summary>
+            <summary>오픈 후 수정도 하나요?</summary>
             <p>
-              오픈 후에도 텍스트·이미지 수정이나 간단한 오류 대응은 계속
-              도와드립니다. 큰 기능 추가가 아니라면 대부분 빠르게 처리해드리니
-              카톡으로 편하게 요청해주세요.
+              오픈 후 30일은 글·이미지를 견적 안에서 고칩니다. 이후 오탈자·이미지 교체 같은 간단한 요청은 카톡으로 받고, 페이지를 늘리거나 기능을 넣는 일은 별도입니다.
             </p>
           </details>
           <details>
-            <summary>상담 신청자의 개인정보는 안전하게 처리되나요?</summary>
+            <summary>개인정보는 어떻게 다루나요?</summary>
             <p>
-              상담 폼은 문의 응대 목적의 최소 정보만 수집하도록 구성하고,
-              개인정보 처리 안내 문구도 함께 넣어드립니다. 민감한 사건 정보는
-              폼에 남기지 않도록 안내하는 방식도 제안해드립니다.
+              문의 응대에 필요한 최소만 받도록 폼을 만들고, 안내 문구를 넣습니다. 사건 내용은 폼에 적지 않도록 안내할 수 있습니다.
             </p>
           </details>
           <details>
-            <summary>제작 기간과 결제는 어떻게 되나요?</summary>
+            <summary>기간과 결제는요?</summary>
             <p>
-              단일 분야 랜딩 기준 협의 후 빠르게 진행하며, 정확한 기간은 상담 시
-              안내드립니다. 결제는 보통 계약금 50% 후 제작 시작, 최종 검수 후 잔금
-              방식이며 세금계산서 발행도 가능합니다.
+              자료가 모인 뒤 랜딩 약 1–2주, 분야 사이트 3–5주, 종합 5–7주입니다. 계약금 50% 후 시작, 검수 후 잔금이 보통이며 세금계산서 발행이 가능합니다. 금액은 부가세 별도입니다.
+            </p>
+          </details>
+          <details>
+            <summary>사이트와 계정은 누구 것인가요?</summary>
+            <p>
+              도메인, 호스팅, 카페24·아임웹 계정은 사무소 앞으로 둡니다. 제작에 쓰는 관리자 권한은 오픈할 때 넘깁니다. 월 관리 패키지는 기본 견적에 넣지 않습니다.
+            </p>
+          </details>
+          <details>
+            <summary>행정사법 때문에 쓸 수 없는 문구가 있지 않나요?</summary>
+            <p>
+              있습니다. 성공 보장, 확인되지 않은 경력·실적, 다른 사무소 비방, 법령에 없는 업무처럼 읽히는 표현은 넣지 않습니다. 수임 사례는 사무소가 확인한 것만, 상담 폼에는 사건 내용을 자세히 적지 않게 안내합니다.
+            </p>
+          </details>
+          <details>
+            <summary>출입국인데 외국어 페이지가 필요한데요.</summary>
+            <p>
+              영문·중문 등은 페이지 수에 따라 별도입니다. 한국어 구조를 먼저 잡고, 필요한 언어만 추가하는 순서를 권합니다.
+            </p>
+          </details>
+          <details>
+            <summary>네이버 플레이스와 같이 하나요?</summary>
+            <p>
+              사이트 제작과 별도입니다. 주소·전화가 사이트와 맞게만 맞춰 드립니다. 플레이스 대행은 견적에 넣지 않습니다.
             </p>
           </details>
         </div>
       </div>
     </section>
 
-    <!-- FINAL CTA + FORM -->
-    <section id="contact" style="padding-top: 0; padding-bottom: 64px">
-      <div class="final">
-        <h2>지금 상담 한 번이면,<br />내 분야에 맞는 방향을 잡아드립니다</h2>
-        <p class="lead">
-          전문 분야와 현재 상황만 알려주세요. 어떤 구조가 맞는지 무료로
-          진단해드립니다.
-        </p>
-        <div class="btn-row" style="margin-bottom: 40px; justify-content: center">
-          <a class="btn btn-primary" href="https://open.kakao.com/o/sYTIkUMi">카카오톡으로 문의하기</a>
+    <section id="contact">
+      <div class="wrap contact-grid">
+        <div class="contact-copy reveal">
+          <h2>분야와 지금 상태만<br />알려 주세요.</h2>
+          <p>어떤 구조가 맞는지 먼저 짚어 드립니다. 영업일 기준 하루 안에 답합니다. 전국, 비대면으로 진행합니다.</p>
+          <ul class="contact-points">
+            <li>견적 전에 범위부터 가릅니다</li>
+            <li>데모는 예시이며, 사무소 정보로만 넣습니다</li>
+            <li>사건 내용은 이 폼에 적지 않으셔도 됩니다</li>
+          </ul>
+          <a class="text-link kakao" href="https://open.kakao.com/o/sYTIkUMi">카카오톡으로 문의<span aria-hidden="true"> →</span></a>
         </div>
 
         <form
           id="contact-form"
-          class="contact-form"
+          class="contact-form reveal"
           action="https://formspree.io/f/xqpkwwzq"
           method="POST"
         >
           <div class="form-grid">
             <div class="field">
               <label for="f-name">이름 / 사무소명</label>
-              <input id="f-name" name="name" type="text" required placeholder="예: 다올행정사무소 홍길동" />
+              <input id="f-name" name="name" type="text" required placeholder="홍길동 / ○○행정사무소" />
             </div>
             <div class="field">
-              <label for="f-contact">연락처 (전화 또는 카톡 ID)</label>
+              <label for="f-contact">전화 또는 카카오 ID</label>
               <input id="f-contact" name="contact" type="text" required placeholder="010-0000-0000" />
             </div>
           </div>
           <div class="field">
             <label for="f-field">전문 분야</label>
             <select id="f-field" name="field">
-              <option value="">선택해주세요</option>
+              <option value="">선택</option>
               <option>출입국 · 비자</option>
               <option>공장 · 기업 행정</option>
               <option>행정심판 · 권익구제</option>
@@ -637,66 +562,59 @@
             </select>
           </div>
           <div class="field">
-            <label for="f-url">현재 홈페이지 주소 (있다면)</label>
+            <label for="f-status">지금 상태</label>
+            <select id="f-status" name="status">
+              <option value="">선택</option>
+              <option>새로 만들 예정</option>
+              <option>있는 사이트를 손보고 싶음</option>
+              <option>광고용 랜딩이 필요함</option>
+              <option>아직 모름 · 구조만 듣고 싶음</option>
+            </select>
+          </div>
+          <div class="field">
+            <label for="f-url">현재 사이트 (있으면)</label>
             <input id="f-url" name="website" type="text" placeholder="https://" />
           </div>
           <div class="field">
-            <label for="f-msg">문의 내용</label>
-            <textarea id="f-msg" name="message" rows="4" placeholder="어떤 점이 궁금하신지 편하게 남겨주세요"></textarea>
+            <label for="f-msg">내용</label>
+            <textarea id="f-msg" name="message" rows="4" placeholder="주력 업무, 궁금한 점을 적어 주세요. 사건 내용은 적지 않으셔도 됩니다."></textarea>
           </div>
           <label class="consent">
             <input type="checkbox" required />
-            <span>문의 응대 목적으로 입력하신 이름·연락처를 수집하는 데 동의합니다. 상담 종료 후 파기됩니다.</span>
+            <span>문의 응대를 위해 이름과 연락처 수집에 동의합니다. 상담이 끝나면 파기합니다. <a href="privacy.html">개인정보처리방침</a></span>
           </label>
-          <button type="submit" class="btn btn-primary" style="width: 100%; justify-content: center">
-            상담 신청하기
-          </button>
-          <p class="form-done" style="display: none; color: #8fe3b0; font-size: 14px; margin-top: 14px">
-            문의가 접수되었습니다. 빠르게 연락드릴게요.
-          </p>
-          <p class="form-error" style="display: none; color: #ff8a8a; font-size: 14px; margin-top: 14px">
-            전송에 실패했습니다. 잠시 후 다시 시도해주세요.
-          </p>
+          <button type="submit" class="btn-pill submit">보내기</button>
+          <p class="form-done">접수했습니다. 연락드리겠습니다.</p>
+          <p class="form-error">보내지 못했습니다. 잠시 후 다시 시도해 주세요.</p>
         </form>
-
-        <div class="meta-row">
-          <span>평균 응답: 영업일 기준 1일 이내</span>
-          <span>서비스 지역: 전국 (비대면 상담 가능)</span>
-        </div>
       </div>
     </section>
 
     <footer>
       <div class="wrap">
-        <div class="foot-row">
-          <div>WorksFrame · 행정사 홈페이지 전문 제작</div>
-          <div>&copy; 2026 WorksFrame. All rights reserved.</div>
-        </div>
+        <div class="foot-brand">WorksFrame</div>
         <div class="foot-biz">
-          <span>상호: 웍스프레임</span>
-          <span>대표: 써니</span>
-          <span>연락처: [전화번호 입력]</span>
-          <span>이메일: [이메일 입력]</span>
-          <span>소재지: 경기도 [주소 입력]</span>
+          <span>상호 웍스프레임</span>
+          <span>대표 써니</span>
+          <span>연락처 [전화번호 입력]</span>
+          <span>이메일 [이메일 입력]</span>
+          <span>소재지 경기도 [주소 입력]</span>
         </div>
         <p class="foot-privacy">
-          문의 폼을 통해 수집한 개인정보는 상담 목적 외에 사용되지 않으며, 상담
-          완료 후 즉시 파기합니다. 포트폴리오의 사무소명·실적은 예시이며 실제
-          정보로 대체됩니다.
+          문의로 받은 개인정보는 상담 외에 쓰지 않고, 끝나면 바로 파기합니다.
+          포트폴리오의 사무소명과 실적은 예시입니다.
+          <a href="privacy.html">개인정보처리방침</a>
         </p>
+        <p class="foot-copy">© 2026 WorksFrame</p>
       </div>
     </footer>
 
-    <!-- MOBILE STICKY -->
     <div class="mobile-sticky">
-      <div class="mobile-sticky-row">
-        <a href="#contact" class="m-tel">📋 상담 신청</a>
-        <a href="https://open.kakao.com/o/sYTIkUMi" class="m-kakao">💬 카카오톡</a>
-      </div>
+      <a href="#contact">상담 신청</a>
+      <a class="m-kakao" href="https://open.kakao.com/o/sYTIkUMi">카카오톡</a>
     </div>
 
     <script>
-      // 모바일 메뉴 토글
       var burger = document.getElementById("burgerBtn");
       var panel = document.getElementById("mobilePanel");
       burger.addEventListener("click", function () {
@@ -712,14 +630,47 @@
         });
       });
 
-      // 상담 폼 전송 (Formspree)
+      var navLinks = document.querySelectorAll(".nav-links a");
+      var watched = [];
+      navLinks.forEach(function (link) {
+        var href = link.getAttribute("href");
+        if (!href || href.charAt(0) !== "#") return;
+        var section = document.querySelector(href);
+        if (section) watched.push({ link: link, section: section });
+      });
+      if ("IntersectionObserver" in window && watched.length) {
+        var navObserver = new IntersectionObserver(
+          function (entries) {
+            var visible = entries
+              .filter(function (entry) {
+                return entry.isIntersecting;
+              })
+              .sort(function (a, b) {
+                return b.intersectionRatio - a.intersectionRatio;
+              });
+            if (!visible.length) return;
+            var id = "#" + visible[0].target.id;
+            navLinks.forEach(function (link) {
+              var on = link.getAttribute("href") === id;
+              link.classList.toggle("is-active", on);
+              if (on) link.setAttribute("aria-current", "true");
+              else link.removeAttribute("aria-current");
+            });
+          },
+          { rootMargin: "-35% 0px -50% 0px", threshold: [0.1, 0.25, 0.5] }
+        );
+        watched.forEach(function (item) {
+          navObserver.observe(item.section);
+        });
+      }
+
       var contactForm = document.getElementById("contact-form");
       contactForm.addEventListener("submit", function (e) {
         e.preventDefault();
         var done = contactForm.querySelector(".form-done");
         var error = contactForm.querySelector(".form-error");
-        done.style.display = "none";
-        error.style.display = "none";
+        done.classList.remove("show");
+        error.classList.remove("show");
         fetch(contactForm.action, {
           method: "POST",
           body: new FormData(contactForm),
@@ -728,17 +679,16 @@
           .then(function (response) {
             if (response.ok) {
               contactForm.reset();
-              done.style.display = "block";
+              done.classList.add("show");
             } else {
-              error.style.display = "block";
+              error.classList.add("show");
             }
           })
           .catch(function () {
-            error.style.display = "block";
+            error.classList.add("show");
           });
       });
 
-      // 스크롤 리빌
       var revealEls = document.querySelectorAll(".reveal");
       var reduceMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
       if (reduceMotion || !("IntersectionObserver" in window)) {
@@ -755,7 +705,7 @@
               }
             });
           },
-          { threshold: 0.12, rootMargin: "0px 0px -60px 0px" }
+          { threshold: 0.08, rootMargin: "0px 0px -40px 0px" }
         );
         revealEls.forEach(function (el) {
           revealObserver.observe(el);

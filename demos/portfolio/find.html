@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>상황별 상담 | 다올종합행정사</title>
+<meta name="description" content="개인·사업자·기업·외국인·처분. 단계 질문 후 상담으로 연결합니다. 자동 법률 답변이 아닙니다.">
+<link rel="stylesheet" as="style" crossorigin href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/variable/pretendardvariable.css">
+<link rel="stylesheet" href="assets/office.css">
+</head>
+<body>
+<a class="skip" href="#main">본문으로</a>
+<div class="topbar"><div class="wrap"><span>일반행정사 · 종합 행정</span><span><span id="hoursLive">평일 09:00–18:00</span> · 서울 종로 · <a href="tel:02-000-0005">02-000-0005</a></span></div></div>
+<header>
+  <div class="wrap nav">
+    <a href="index.html" class="brand"><b>다올종합행정사</b><span>문제부터 절차를 찾습니다</span></a>
+    <nav class="nav-links" aria-label="주요 메뉴">
+      <div class="mega" id="megaWrap"><button class="mega-btn" type="button" aria-expanded="false" aria-controls="megaPanel">업무분야</button></div>
+      <a class="is-on" href="find.html">상황별 상담</a>
+      <a href="cases.html">수행사례</a>
+      <a href="about.html">전문성</a>
+      <a href="info.html">정보센터</a>
+      <button class="icon-btn" id="searchOpen" type="button" aria-label="검색">⌕</button>
+      <a class="nav-consult" href="consult.html">상담하기</a>
+    </nav>
+    <button class="burger" id="bb" type="button" aria-label="메뉴 열기" aria-expanded="false"><span></span><span></span><span></span></button>
+  </div>
+  <div class="mega-panel" id="megaPanel">
+    <div class="mega-inner">
+      <div><b>민원·행정</b><a href="services.html#minwon">민원</a><a href="services.html#minwon">진정·탄원</a></div>
+      <div><b>인허가</b><a href="services.html#permit">허가·신고</a><a href="services.html#permit">공장</a></div>
+      <div><b>행정구제</b><a href="services.html#relief">행정심판</a><a href="services.html#relief">이의신청</a></div>
+      <div><b>출입국</b><a href="services.html#visa">사증·체류</a></div>
+      <div><b>기업행정</b><a href="services.html#biz">인증·조달</a></div>
+      <div><b>기타</b><a href="services.html">전체 보기</a></div>
+    </div>
+  </div>
+  <div class="mpanel" id="mp"><a href="services.html">업무분야</a><a href="find.html">상황별 상담</a><a href="consult.html">상담하기</a><a href="tel:02-000-0005">전화</a></div>
+</header>
+<div class="search-scrim" id="searchScrim"><div class="search-box"><label class="field" for="searchInput">사이트에서 찾기</label><input id="searchInput" type="search"><div class="search-hits" id="searchHits"></div></div></div>
+<main id="main">
+  <section class="page-hero">
+    <div class="wrap">
+      <p class="crumb"><a href="index.html">홈</a> / 상황별 상담</p>
+      <p class="eyebrow">SITUATION</p>
+      <h1>어떤 도움이 필요하신가요?</h1>
+      <p class="lead">업무 이름을 몰라도 됩니다. 아래 카드 또는 단계 질문으로 상담 폼까지 갑니다. AI 상담이 아닙니다.</p>
+    </div>
+  </section>
+  <section class="sec">
+    <div class="wrap">
+      <div class="find-grid">
+        <a href="consult.html?need=민원"><span class="n">개인</span><h3>개인적인 민원이나 행정문제가 있습니다.</h3></a>
+        <a href="consult.html?need=인허가"><span class="n">사업자</span><h3>사업 관련 허가·신고·행정절차가 필요합니다.</h3></a>
+        <a href="consult.html?need=기업행정"><span class="n">기업</span><h3>기업 운영에 필요한 행정업무가 있습니다.</h3></a>
+        <a href="consult.html?need=출입국"><span class="n">외국인</span><h3>비자·체류 등 출입국 관련 도움이 필요합니다.</h3></a>
+        <a href="consult.html?need=행정심판"><span class="n">행정처분</span><h3>행정기관의 처분에 대응하고 싶습니다.</h3></a>
+        <a href="consult.html?need=모름"><span class="n">모름</span><h3>어떤 업무인지 모르겠습니다.</h3></a>
+      </div>
+    </div>
+  </section>
+  <section class="sec sheet">
+    <div class="wrap">
+      <p class="eyebrow">GUIDE</p>
+      <h2 class="rule">어떤 상황인가요?</h2>
+      <p class="sub">한 번 고르면 다음 질문이 나옵니다. 정답을 고르는 시험이 아닙니다.</p>
+      <div class="quiz" id="quiz">
+        <button type="button" data-q="개인">① 개인적인 문제</button>
+        <button type="button" data-q="사업">② 사업 관련 문제</button>
+        <button type="button" data-q="기업">③ 기업 관련 문제</button>
+        <button type="button" data-q="외국인">④ 외국인 관련 문제</button>
+        <button type="button" data-q="처분">⑤ 행정기관 처분 문제</button>
+        <button type="button" data-q="모름">⑥ 잘 모르겠습니다</button>
+      </div>
+      <div class="quiz-out" id="quizOut"></div>
+    </div>
+  </section>
+</main>
+<footer>
+  <div class="wrap">
+    <div class="foot-name">다올종합행정사</div>
+    <p>예시 사무소 · 서울 종로 · 02-000-0005</p>
+  </div>
+</footer>
+<div class="sticky"><a class="tel" href="tel:02-000-0005">전화상담</a><a class="kakao" href="consult.html">상담문의</a></div>
+<script src="assets/office.js"></script>
+</body>
+</html>

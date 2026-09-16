@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Consultation | Hanbit Immigration</title>
+<meta name="description" content="Who the visa is for comes first. We do not write free consult. We do not guarantee approval.">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" as="style" crossorigin href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/variable/pretendardvariable.css">
+<link rel="stylesheet" href="../assets/office.css">
+</head>
+<body>
+<a class="skip" href="#contact">Skip to content</a>
+<div class="topbar"><div class="wrap"><span>Licensed administrative agent · Immigration</span><span><span id="hoursLive">Weekdays 09:00–18:00</span> · Seoul Guro · <a href="tel:02-000-0000">02-000-0000</a></span></div></div>
+<header>
+  <div class="wrap nav">
+    <a href="index.html" class="brand"><b>Hanbit Immigration</b><span>Visa &amp; stay</span></a>
+    <nav class="nav-links" aria-label="Main">
+      <a href="find.html">Find the Right Visa</a>
+      <a href="visas.html">Visa types</a>
+      <a href="corporate.html">Employers</a>
+      <a href="cases.html">Cases</a>
+      <a href="info.html">Info</a>
+      <a class="nav-consult is-on" href="consult.html">Consultation</a>
+    </nav>
+    <button class="icon-btn" id="searchOpen" type="button" aria-label="Search">⌕</button>
+    <span class="lang"><a href="../consult.html" lang="ko">KR</a> <a class="is-on" href="consult.html" lang="en">EN</a></span>
+    <button class="burger" id="bb" type="button" aria-label="Menu" aria-expanded="false"><span></span><span></span><span></span></button>
+  </div>
+  <div class="mpanel" id="mp">
+    <a href="find.html">Find the Right Visa</a>
+    <a href="#" data-search>Search visa status</a>
+    <details><summary>Visa types</summary>
+      <a href="visa-e7.html">E-7</a><a href="visa-f6.html">F-6</a><a href="visa-f4.html">F-4</a>
+      <a href="visa-f5.html">F-5</a><a href="visa-d2.html">D-2</a><a href="visa-d10.html">D-10</a>
+      <a href="visa-stay.html">Extension</a>
+    </details>
+    <a href="corporate.html">Employers</a>
+    <a href="cases.html">Cases</a>
+    <a href="info.html">Info</a>
+    <a href="fees.html">Fees</a>
+    <a href="about.html">About</a>
+    <a href="consult.html">Visa &amp; Immigration Consultation</a>
+    <a href="../consult.html">한국어</a>
+    <a href="tel:02-000-0000">Call 02-000-0000</a>
+  </div>
+</header>
+<div class="search-scrim" id="searchScrim"><div class="search-box"><label class="field" for="searchInput">Visa type, job, or purpose</label><input id="searchInput" type="search" placeholder="e.g. E-7 / chef / marriage visa / permanent residence"><div class="search-hits" id="searchHits"></div></div></div>
+<main>
+  <section class="contact" id="contact">
+    <div class="wrap contact-grid">
+      <div>
+        <h2>Tell us your situation.</h2>
+        <p class="lead">This is not an automated visa decision. Kakao channel after it exists.</p>
+        <a class="tel" href="tel:02-000-0000">02-000-0000</a>
+        <p class="hours" style="color:#9eb8ce;margin-top:8px">Weekdays 09:00–18:00 · Korean consult; interpreters are extra</p>
+      </div>
+      <form class="form" id="cf" action="#" method="post">
+        <p class="step-l">Whose visa are you preparing?</p>
+        <div class="radios">
+          <label><input type="radio" name="who" value="본인"> Mine</label>
+          <label><input type="radio" name="who" value="가족"> Spouse / family</label>
+          <label><input type="radio" name="who" value="기업"> A foreign employee</label>
+          <label><input type="radio" name="who" value="초청"> I am the inviter</label>
+          <label><input type="radio" name="who" value="기타"> Other</label>
+        </div>
+        <div id="firmBlock" class="firm">
+          <p class="step-l">Employer</p>
+          <div class="form-grid">
+            <div class="field"><label for="co">Company</label><input id="co" name="company"></div>
+            <div class="field"><label for="pic">Contact person</label><input id="pic" name="pic"></div>
+          </div>
+          <div class="form-grid">
+            <div class="field"><label for="head">Headcount to hire</label><input id="head" name="headcount"></div>
+            <div class="field"><label for="job">Role</label><input id="job" name="job"></div>
+          </div>
+          <div class="field"><label for="hire">Employment type</label><input id="hire" name="hire" placeholder="Full-time, contract, etc."></div>
+        </div>
+        <p class="step-l">Where are you now?</p>
+        <div class="radios">
+          <label><input type="radio" name="place" value="한국"> Korea</label>
+          <label><input type="radio" name="place" value="해외"> Abroad</label>
+        </div>
+        <p class="step-l">Current status</p>
+        <div class="radios">
+          <label><input type="radio" name="need" value="D-2"> D-2</label>
+          <label><input type="radio" name="need" value="D-4"> D-4</label>
+          <label><input type="radio" name="need" value="E-7"> E-7</label>
+          <label><input type="radio" name="need" value="F-4"> F-4</label>
+          <label><input type="radio" name="need" value="F-6"> F-6</label>
+          <label><input type="radio" name="need" value="없음"> None</label>
+          <label><input type="radio" name="need" value="모름"> Not sure</label>
+          <label><input type="radio" name="need" value="기타"> Other</label>
+        </div>
+        <p class="step-l">Goal</p>
+        <div class="field">
+          <label for="purpose">Purpose</label>
+          <select id="purpose" name="purpose">
+            <option value="">Select</option>
+            <option>Work</option><option>Study</option><option>Marriage</option>
+            <option>Extension</option><option>Change of status</option><option>Permanent residence</option>
+            <option>Nationality</option><option>Invitation</option><option>Other</option>
+          </select>
+        </div>
+        <div class="field"><label for="nat">Nationality</label><input id="nat" name="nationality"></div>
+        <div class="field"><label for="m">Details</label><textarea id="m" name="message" rows="4" placeholder="Education, career, expiry date, etc."></textarea></div>
+        <div class="field">
+          <label for="files">File names only in this demo. Do not attach resident registration numbers.</label>
+          <input id="files" name="files" type="file" multiple accept=".pdf,.jpg,.jpeg,.png" data-files="fileOut">
+          <p id="fileOut" style="font-size:13px;color:var(--muted);margin-top:6px"></p>
+        </div>
+        <div class="form-grid">
+          <div class="field"><label for="n">Name</label><input id="n" name="name" required autocomplete="name"></div>
+          <div class="field"><label for="c">Phone</label><input id="c" name="contact" required autocomplete="tel"></div>
+        </div>
+        <div class="field"><label for="e">Email</label><input id="e" name="email" type="email" autocomplete="email"></div>
+        <label class="consent">
+          <input type="checkbox" required>
+          <span>I agree to collection of name, phone, and the inquiry for a reply. <a href="privacy.html" style="color:var(--teal);font-weight:700">Privacy</a></span>
+        </label>
+        <button class="btn btn-navy submit" type="submit">Request consultation</button>
+        <p class="form-msg">This demo does not send data. There is no admin CMS.</p>
+      </form>
+    </div>
+  </section>
+</main>
+<footer>
+  <div class="wrap">
+    <div class="foot-name">Hanbit Immigration</div>
+    <div class="foot-nav">
+      <a href="find.html">Find visa</a>
+      <a href="visas.html">Visa types</a>
+      <a href="corporate.html">Employers</a>
+      <a href="cases.html">Cases</a>
+      <a href="info.html">Info</a>
+      <a href="fees.html">Fees</a>
+      <a href="about.html">About</a>
+      <a href="consult.html">Consult</a>
+      <a href="privacy.html">Privacy</a>
+      <span class="lang"><a href="../consult.html" lang="ko">KR</a> <a class="is-on" href="consult.html" lang="en">EN</a></span>
+    </div>
+    <p>Sample office · Choi Seoyeon · 02-000-0000 · Seoul Guro</p>
+    <p>Ministry registration numbers are added only after they are confirmed. Kakao channel after it exists. We do not guarantee approval.</p>
+  </div>
+</footer>
+<div class="sticky"><a class="talk" href="consult.html">Consult</a><a class="tel" href="tel:02-000-0000">Call</a></div>
+<script src="../assets/office.js"></script>
+</body>
+</html>

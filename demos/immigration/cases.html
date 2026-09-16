@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>수행사례 | 한빛출입국행정사</title>
+<meta name="description" content="형식 예시입니다. 국적·허가 결과를 과장하지 않습니다.">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" as="style" crossorigin href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/variable/pretendardvariable.css">
+<link rel="stylesheet" href="assets/office.css">
+</head>
+<body>
+<a class="skip" href="#main">본문으로</a>
+<div class="topbar"><div class="wrap"><span>서울 구로 · <a href="tel:02-000-0000">02-000-0000</a></span></div></div>
+<header>
+  <div class="wrap nav">
+    <a href="index.html" class="brand"><b>한빛출입국행정사</b><span>비자부터 체류까지</span></a>
+    <nav class="nav-links">
+      <a href="find.html">비자 찾기</a>
+      <a href="visas.html">비자·체류</a>
+      <a href="corporate.html">기업 출입국</a>
+      <a class="is-on" href="cases.html">수행사례</a>
+      <a href="info.html">정보센터</a>
+      <button class="icon-btn" id="searchOpen" type="button" aria-label="검색">⌕</button>
+      <a class="nav-consult" href="consult.html">상담하기</a>
+    </nav>
+    <button class="burger" id="bb" type="button" aria-label="메뉴"><span></span><span></span><span></span></button>
+  </div>
+  <div class="mpanel" id="mp"><a href="cases.html">사례</a><a href="consult.html">상담</a></div>
+</header>
+<div class="search-scrim" id="searchScrim"><div class="search-box"><label class="field" for="searchInput">검색</label><input id="searchInput" type="search"><div class="search-hits" id="searchHits"></div></div></div>
+<main id="main">
+  <section class="page-hero">
+    <div class="wrap">
+      <p class="crumb"><a href="index.html">홈</a> / 수행사례</p>
+      <h1>수행사례</h1>
+      <p class="lead">개인을 식별하지 않습니다. 허가 완료·인용률을 쓰지 않습니다.</p>
+    </div>
+  </section>
+  <section class="sec">
+    <div class="wrap">
+      <div class="filters" id="caseFilters">
+        <button type="button" class="on" data-f="all">전체</button>
+        <button type="button" data-f="e7">E-7</button>
+        <button type="button" data-f="f6">F-6</button>
+        <button type="button" data-f="corp">기업</button>
+        <button type="button" data-f="d2">D-2</button>
+      </div>
+      <div class="case-grid" id="caseList">
+        <a href="case-01.html" data-cat="e7"><span class="badge">E-7</span><h3>CASE 023</h3><p>D-2 → E-7. 학력·직종·고용주 검토.</p></a>
+        <a href="case-01.html" data-cat="f6"><span class="badge">F-6</span><h3>CASE 018</h3><p>결혼이민 서류·혼인 실질 안내.</p></a>
+        <a href="corporate.html" data-cat="corp"><span class="badge">기업</span><h3>CASE 031</h3><p>채용 직종의 E-7 해당 여부 가름.</p></a>
+        <a href="visa-d2.html" data-cat="d2"><span class="badge">D-2</span><h3>CASE 011</h3><p>졸업 후 D-10·취업 경로 검토.</p></a>
+      </div>
+    </div>
+  </section>
+</main>
+<footer>
+  <div class="wrap"><div class="foot-name">한빛출입국행정사</div><p>카카오 채널은 개설 후</p></div>
+</footer>
+<div class="sticky"><a class="talk" href="consult.html">상담</a><a class="tel" href="tel:02-000-0000">전화</a></div>
+<script src="assets/office.js"></script>
+</body>
+</html>

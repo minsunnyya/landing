@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>공장설립 | 다올기업행정사</title>
+<meta name="description" content="공장설립, 어디서부터 시작해야 할까요. 위치·업종·규모부터 가립니다. 가능 여부를 단정하지 않습니다.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" as="style" crossorigin href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/variable/pretendardvariable.css">
+<link rel="stylesheet" href="assets/office.css">
+</head>
+<body>
+<a class="skip" href="#e">본문으로</a>
+<div class="topbar"><div class="wrap"><span>일반행정사 · 공장설립</span><span>경기 성남 · <a href="tel:031-000-0000">031-000-0000</a></span></div></div>
+<header>
+  <div class="wrap nav">
+    <a href="index.html" class="brand"><b>다올기업행정사</b><span>CORPORATE ADMINISTRATION</span></a>
+    <nav class="nav-links" aria-label="주요 메뉴">
+      <a href="factory-site.html" class="is-on">공장 행정</a>
+      <a href="corporate.html">기업 행정</a>
+      <a href="find.html">기업 행정 진단</a>
+      <a href="cases.html">성공사례</a>
+      <a href="info.html">정보센터</a>
+      <a href="about.html">소개</a>
+      <a class="nav-consult" href="consult.html">상담</a>
+    </nav>
+    <button class="burger" id="bb" type="button" aria-label="메뉴 열기" aria-expanded="false"><span></span><span></span><span></span></button>
+  </div>
+  <div class="mpanel" id="mp"><a href="factory-register.html">공장등록</a><a href="consult.html">상담</a></div>
+</header>
+<main>
+  <section class="page-hero" id="e">
+    <div class="wrap">
+      <p class="crumb"><a href="index.html">홈</a> · 공장 행정 · 공장설립</p>
+      <p class="eyebrow">01 ESTABLISHMENT</p>
+      <h1>공장설립, 어디서부터<br>시작해야 할까요?</h1>
+      <p class="lead">제조시설 면적·입지·업종이 갈립니다. 500㎡는 참고이며 예외가 있습니다. 허가를 확정하지 않습니다.</p>
+    </div>
+  </section>
+  <section class="sec" style="padding-top:8px">
+    <div class="wrap">
+      <h2 class="rule">공장설립 체크</h2>
+      <p class="sub">법적 가능 여부를 자동 판정하지 않습니다.</p>
+      <div class="diag" id="estCheck">
+        <p class="step-l">Q1. 공장을 설립하려는 지역은?</p>
+        <div class="quiz">
+          <button type="button" data-k="region" data-v="경기">경기도</button>
+          <button type="button" data-k="region" data-v="충청">충청</button>
+          <button type="button" data-k="region" data-v="기타">그 외</button>
+        </div>
+        <p class="step-l">Q2. 어떤 업종인가요?</p>
+        <div class="quiz">
+          <button type="button" data-k="use" data-v="제조">제조업</button>
+          <button type="button" data-k="use" data-v="식품">식품</button>
+          <button type="button" data-k="use" data-v="기타">기타</button>
+        </div>
+        <p class="step-l">Q3. 기존 건축물을 사용하시나요?</p>
+        <div class="quiz">
+          <button type="button" data-k="build" data-v="yes">예</button>
+          <button type="button" data-k="build" data-v="no">아니오</button>
+        </div>
+        <p class="step-l">Q4. 현재 토지를 보유하고 있나요?</p>
+        <div class="quiz">
+          <button type="button" data-k="land" data-v="own">예</button>
+          <button type="button" data-k="land" data-v="no">아니오</button>
+          <button type="button" data-k="land" data-v="rent">임대 예정</button>
+        </div>
+        <div class="quiz-out" id="estOut"></div>
+      </div>
+      <h2 class="rule" style="margin-top:48px">같이 보는 항목</h2>
+      <ol class="vline" style="margin-top:16px">
+        <li>공장 위치</li>
+        <li>업종</li>
+        <li>규모</li>
+        <li>건축물</li>
+        <li>환경 관련 사항</li>
+        <li>필요 인허가</li>
+        <li>공장등록</li>
+      </ol>
+      <div class="check" data-check="est" style="margin-top:24px">
+        <label><input type="checkbox"> 지번 · 용도지역</label>
+        <label><input type="checkbox"> 제조시설 대략 면적</label>
+        <label><input type="checkbox"> 생산품 · 업종</label>
+        <label><input type="checkbox"> 개별입지 / 산단</label>
+      </div>
+      <p class="warn">관련 기관의 요구사항과 절차를 확인하고 필요한 서류를 준비합니다. 관공서 네트워크를 내세우지 않습니다.</p>
+    </div>
+  </section>
+</main>
+<footer>
+  <div class="wrap"><div class="foot-name">다올기업행정사</div><p>예시 사무소 · 대표 김서준</p></div>
+</footer>
+<div class="sticky"><a class="talk" href="consult.html">상담</a><a class="tel" href="tel:031-000-0000">전화상담</a></div>
+<script src="assets/office.js"></script>
+</body>
+</html>

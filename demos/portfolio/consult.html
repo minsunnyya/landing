@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>상담 | 다올종합행정사</title>
+<meta name="description" content="단계형 상담. 잘 모르겠습니다를 넣을 수 있습니다. 무료 상담이라고 쓰지 않습니다.">
+<link rel="stylesheet" as="style" crossorigin href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/variable/pretendardvariable.css">
+<link rel="stylesheet" href="assets/office.css">
+</head>
+<body>
+<a class="skip" href="#contact">본문으로</a>
+<div class="topbar"><div class="wrap"><span>일반행정사 · 종합 행정</span><span><span id="hoursLive">평일 09:00–18:00</span> · 서울 종로 · <a href="tel:02-000-0005">02-000-0005</a></span></div></div>
+<header>
+  <div class="wrap nav">
+    <a href="index.html" class="brand"><b>다올종합행정사</b><span>문제부터 절차를 찾습니다</span></a>
+    <nav class="nav-links" aria-label="주요 메뉴">
+      <div class="mega" id="megaWrap"><button class="mega-btn" type="button" aria-expanded="false" aria-controls="megaPanel">업무분야</button></div>
+      <a href="find.html">상황별 상담</a>
+      <a href="cases.html">수행사례</a>
+      <a href="about.html">전문성</a>
+      <a href="info.html">정보센터</a>
+      <button class="icon-btn" id="searchOpen" type="button" aria-label="검색">⌕</button>
+      <a class="nav-consult is-on" href="consult.html">상담하기</a>
+    </nav>
+    <button class="burger" id="bb" type="button" aria-label="메뉴 열기" aria-expanded="false"><span></span><span></span><span></span></button>
+  </div>
+  <div class="mega-panel" id="megaPanel">
+    <div class="mega-inner">
+      <div><b>민원·행정</b><a href="services.html#minwon">민원</a></div>
+      <div><b>인허가</b><a href="services.html#permit">허가·신고</a></div>
+      <div><b>행정구제</b><a href="services.html#relief">행정심판</a></div>
+      <div><b>출입국</b><a href="services.html#visa">사증·체류</a></div>
+      <div><b>기업행정</b><a href="services.html#biz">기업</a></div>
+      <div><b>기타</b><a href="services.html">전체</a></div>
+    </div>
+  </div>
+  <div class="mpanel" id="mp"><a href="consult.html">상담하기</a><a href="tel:02-000-0005">전화</a></div>
+</header>
+<div class="search-scrim" id="searchScrim"><div class="search-box"><label class="field" for="searchInput">사이트에서 찾기</label><input id="searchInput" type="search"><div class="search-hits" id="searchHits"></div></div></div>
+<main>
+  <section class="contact" id="contact">
+    <div class="wrap contact-grid">
+      <div>
+        <h2>어떤 업무인지 모르셔도 괜찮습니다.</h2>
+        <p class="lead">현재 상황을 알려 주시면 필요한 행정절차를 함께 확인합니다. 자동 답변이 아닙니다. 카카오 채널은 개설 후 연결합니다.</p>
+        <a class="tel" href="tel:02-000-0005">02-000-0005</a>
+        <p class="hours">평일 09:00–18:00 · 서울 종로</p>
+      </div>
+      <form class="form" id="cf" action="#" method="post">
+        <p class="step-l">Step 1 · 어떤 도움이 필요하신가요?</p>
+        <div class="radios">
+          <label><input type="radio" name="need" value="민원"> 민원</label>
+          <label><input type="radio" name="need" value="인허가"> 인허가</label>
+          <label><input type="radio" name="need" value="행정심판"> 행정심판</label>
+          <label><input type="radio" name="need" value="출입국"> 출입국</label>
+          <label><input type="radio" name="need" value="기업행정"> 기업행정</label>
+          <label><input type="radio" name="need" value="법인"> 법인</label>
+          <label><input type="radio" name="need" value="기타"> 기타</label>
+          <label><input type="radio" name="need" value="모름"> 잘 모르겠습니다</label>
+        </div>
+        <p class="hint" id="unkHint">괜찮습니다. 상황을 알려 주시면 검토 후 적절한 업무를 안내해 드립니다.</p>
+        <p class="step-l">Step 2 · 현재 상황을 알려 주세요</p>
+        <div class="field">
+          <label for="m">알고 있는 대로</label>
+          <textarea id="m" name="message" rows="4" placeholder="언제, 어느 기관에서, 무엇이 막혔는지"></textarea>
+        </div>
+        <p class="step-l">Step 3 · 관련 기관</p>
+        <div class="field">
+          <label for="org">기관명 또는 종류</label>
+          <input id="org" name="org" placeholder="예: ○○구청, 출입국, 모름">
+        </div>
+        <p class="step-l">Step 4 · 관련 자료 첨부</p>
+        <div class="field">
+          <label for="files">파일명만 이 브라우저에 표시됩니다. 주민등록번호 등 민감정보는 넣지 말아 주세요.</label>
+          <input id="files" name="files" type="file" multiple accept=".pdf,.jpg,.jpeg,.png" data-files="fileOut">
+          <p id="fileOut" style="font-size:13px;color:var(--muted);margin-top:6px"></p>
+        </div>
+        <p class="step-l">Step 5 · 연락처</p>
+        <div class="form-grid">
+          <div class="field"><label for="n">이름</label><input id="n" name="name" required autocomplete="name"></div>
+          <div class="field"><label for="c">연락처</label><input id="c" name="contact" required autocomplete="tel"></div>
+        </div>
+        <div class="field"><label for="e">이메일</label><input id="e" name="email" type="email" autocomplete="email"></div>
+        <label class="consent">
+          <input type="checkbox" required>
+          <span>상담을 위해 이름·연락처·요지 수집에 동의합니다. <a href="privacy.html" style="color:var(--accent);font-weight:700">개인정보처리방침</a></span>
+        </label>
+        <button class="btn btn-navy submit" type="submit">상담 신청하기</button>
+        <p class="form-msg">이 데모는 전송하지 않습니다. 실제 사무소에서는 접수·상태 관리를 붙입니다.</p>
+      </form>
+    </div>
+  </section>
+</main>
+<footer>
+  <div class="wrap">
+    <div class="foot-name">다올종합행정사</div>
+    <p>예시 사무소 · 카카오 채널은 개설 후 · 관리자 CMS는 이 정적 데모에 없습니다.</p>
+  </div>
+</footer>
+<div class="sticky"><a class="tel" href="tel:02-000-0005">전화상담</a><a class="kakao" href="consult.html">상담문의</a></div>
+<script src="assets/office.js"></script>
+</body>
+</html>

@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>인허가 진단 | 다올토지행정사</title>
+<meta name="description" content="토지 매입 전·개발 가능성 사전 상담. 자동 허가 판정이 아닙니다. 경기 용인.">
+<link rel="stylesheet" as="style" crossorigin href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/variable/pretendardvariable.css">
+<link rel="stylesheet" href="assets/office.css">
+</head>
+<body>
+<a class="skip" href="#main">본문으로</a>
+<div class="topbar"><div class="wrap"><span>일반행정사 · 토지개발 인허가</span><span><span id="hoursLive">평일 09:00–18:00</span> · 경기 용인 · <a href="tel:031-000-0003">031-000-0003</a></span></div></div>
+<header>
+  <div class="wrap nav">
+    <a href="index.html" class="brand"><b>다올토지행정사</b><span>매입 전 · 개발 가능성</span></a>
+    <nav class="nav-links" aria-label="주요 메뉴">
+      <a href="permits.html">토지개발</a>
+      <a class="is-on" href="diagnose.html">인허가 진단</a>
+      <a href="cases.html">성공사례</a>
+      <a href="practice.html">전문성</a>
+      <a href="info.html">정보센터</a>
+      <a class="nav-consult" href="consult.html">상담하기</a>
+    </nav>
+    <a class="nav-phone" href="tel:031-000-0003">031-000-0003</a>
+    <button class="burger" id="bb" type="button" aria-label="메뉴 열기" aria-expanded="false"><span></span><span></span><span></span></button>
+  </div>
+  <div class="mpanel" id="mp">
+    <a href="permits.html">토지개발 인허가</a>
+    <a href="diagnose.html">인허가 진단 · 매입 전</a>
+    <a href="cases.html">성공사례</a>
+    <a href="practice.html">전문성</a>
+    <a href="info.html">정보센터</a>
+    <a href="consult.html">상담</a>
+    <a href="tel:031-000-0003">전화 031-000-0003</a>
+  </div>
+</header>
+<main id="main">
+  <section class="page-hero">
+    <div class="wrap">
+      <p class="crumb"><a href="index.html">홈</a> / 인허가 진단</p>
+      <h1>토지를 사기 전에,<br>개발 가능성부터 확인하세요.</h1>
+      <p class="lead">산 뒤에 ‘안 되네’보다, 사기 전에 ‘이 땅 살까요’가 비용이 적습니다. 화면에서 허가 여부를 가르지 않습니다.</p>
+    </div>
+  </section>
+  <section class="sec">
+    <div class="wrap">
+      <div class="cards" style="margin-bottom:40px">
+        <article class="card"><span class="k">BEFORE PURCHASE</span><h3>토지 매입 전 검토</h3><p>계약금 넣기 전 용도지역·접도·전용 가능 여부를 같이 봅니다.</p></article>
+        <article class="card"><span class="k">FEASIBILITY</span><h3>개발 가능성 검토</h3><p>목적(주택·공장·창고)에 필요한 인허가 묶음을 먼저 그립니다.</p></article>
+        <article class="card"><span class="k">PRE-REVIEW</span><h3>사전검토</h3><p>관할 기준·관계기관 협의 지점을 상담에서 짚습니다. 사전심사를 대신하지 않습니다.</p></article>
+      </div>
+      <form class="diag-box" id="diagForm">
+        <p class="warn">온라인 자동 허가 판정이 아닙니다. 전문가 사전 상담 신청입니다.</p>
+        <div class="form-grid">
+          <div class="field"><label for="si">시 / 군 / 구</label><input id="si" name="si" placeholder="예: 용인시"></div>
+          <div class="field"><label for="dong">읍 / 면 / 동</label><input id="dong" name="dong"></div>
+          <div class="field"><label for="lot">지번</label><input id="lot" name="lot"></div>
+        </div>
+        <p style="font-size:13px;font-weight:600;margin:8px 0 10px">개발 목적</p>
+        <div class="radios">
+          <label><input type="radio" name="purpose" value="전원주택"> 전원주택</label>
+          <label><input type="radio" name="purpose" value="공장"> 공장</label>
+          <label><input type="radio" name="purpose" value="창고"> 창고</label>
+          <label><input type="radio" name="purpose" value="근린"> 근린생활시설</label>
+          <label><input type="radio" name="purpose" value="태양광"> 태양광</label>
+          <label><input type="radio" name="purpose" value="분할"> 토지분할</label>
+          <label><input type="radio" name="purpose" value="기타"> 기타</label>
+        </div>
+        <p style="font-size:13px;font-weight:600;margin:18px 0 10px">현재 상황</p>
+        <div class="radios">
+          <label><input type="radio" name="stage" value="매입 전"> 토지 매입 전</label>
+          <label><input type="radio" name="stage" value="보유"> 토지 보유 중</label>
+          <label><input type="radio" name="stage" value="설계"> 설계 진행 중</label>
+          <label><input type="radio" name="stage" value="허가"> 허가 진행 중</label>
+          <label><input type="radio" name="stage" value="반려"> 반려·보완 상태</label>
+        </div>
+        <input type="hidden" name="type" value="개발 가능성 검토">
+        <button class="btn btn-green" type="submit" style="margin-top:20px">내 토지 개발 가능성 확인하기 →</button>
+      </form>
+    </div>
+  </section>
+</main>
+<footer>
+  <div class="wrap">
+    <div class="foot-name">다올토지행정사</div>
+    <div class="foot-nav"><a href="consult.html">상담</a><a href="privacy.html">개인정보처리방침</a></div>
+    <p>예시 사무소 · 031-000-0003 · 허가를 보장하지 않습니다.</p>
+  </div>
+</footer>
+<div class="sticky"><a class="tel" href="tel:031-000-0003">전화상담</a><a class="kakao" href="consult.html">카카오톡</a></div>
+<script src="assets/office.js"></script>
+</body>
+</html>

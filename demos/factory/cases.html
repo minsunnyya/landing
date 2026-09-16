@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>성공사례 | 다올기업행정사</title>
+<meta name="description" content="업종·지역·업무로 유사 사례를 찾습니다. 데모이며 동일 결과를 약속하지 않습니다.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" as="style" crossorigin href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/variable/pretendardvariable.css">
+<link rel="stylesheet" href="assets/office.css">
+</head>
+<body>
+<a class="skip" href="#c">본문으로</a>
+<div class="topbar"><div class="wrap"><span>일반행정사 · 사례</span><span>경기 성남</span></div></div>
+<header>
+  <div class="wrap nav">
+    <a href="index.html" class="brand"><b>다올기업행정사</b><span>CORPORATE ADMINISTRATION</span></a>
+    <nav class="nav-links" aria-label="주요 메뉴">
+      <a href="factory-site.html">공장 행정</a>
+      <a href="corporate.html">기업 행정</a>
+      <a href="find.html">기업 행정 진단</a>
+      <a href="cases.html" class="is-on">성공사례</a>
+      <a href="info.html">정보센터</a>
+      <a href="about.html">소개</a>
+      <a class="nav-consult" href="consult.html">상담</a>
+    </nav>
+    <button class="burger" id="bb" type="button" aria-label="메뉴 열기" aria-expanded="false"><span></span><span></span><span></span></button>
+  </div>
+  <div class="mpanel" id="mp"><a href="cases.html">사례</a><a href="consult.html">상담</a></div>
+</header>
+<main>
+  <section class="page-hero" id="c">
+    <div class="wrap">
+      <p class="crumb"><a href="index.html">홈</a> · 성공사례</p>
+      <h1>우리 회사와 비슷한 사례가 있나요?</h1>
+      <p class="lead">데모 시나리오입니다. 건수·결과를 실제 실적으로 읽지 마십시오.</p>
+    </div>
+  </section>
+  <section class="sec" style="padding-top:8px">
+    <div class="wrap">
+      <form class="sim" id="simForm">
+        <p class="step-l">유사 사례 검색</p>
+        <div class="sim-grid">
+          <div class="field"><label for="ind">업종</label>
+            <select id="ind" name="ind">
+              <option value="">전체</option>
+              <option value="metal">금속</option>
+              <option value="food">식품</option>
+              <option value="chem">화학</option>
+            </select>
+          </div>
+          <div class="field"><label for="reg">지역</label>
+            <select id="reg" name="reg">
+              <option value="">전체</option>
+              <option value="gg">경기</option>
+              <option value="cn">충남</option>
+              <option value="cb">충북</option>
+            </select>
+          </div>
+          <div class="field"><label for="work">업무</label>
+            <select id="work" name="work">
+              <option value="">전체</option>
+              <option value="new">공장설립</option>
+              <option value="change">공장변경</option>
+              <option value="permit">인허가</option>
+            </select>
+          </div>
+          <button class="btn btn-navy" type="submit">사례 검색</button>
+        </div>
+        <div class="quiz-out" id="simOut"></div>
+      </form>
+      <p class="step-l">업종</p>
+      <div class="filters" data-filter="ind">
+        <button type="button" class="on" data-v="all">전체</button>
+        <button type="button" data-v="metal">금속</button>
+        <button type="button" data-v="food">식품</button>
+        <button type="button" data-v="chem">화학</button>
+      </div>
+      <p class="step-l">지역</p>
+      <div class="filters" data-filter="reg">
+        <button type="button" class="on" data-v="all">전체</button>
+        <button type="button" data-v="gg">경기</button>
+        <button type="button" data-v="cn">충남</button>
+        <button type="button" data-v="cb">충북</button>
+      </div>
+      <p class="step-l">업무</p>
+      <div class="filters" data-filter="work">
+        <button type="button" class="on" data-v="all">전체</button>
+        <button type="button" data-v="new">공장설립</button>
+        <button type="button" data-v="change">공장변경</button>
+        <button type="button" data-v="permit">인허가</button>
+      </div>
+      <div class="case-grid">
+        <a href="case-01.html" data-case data-ind="metal" data-reg="gg" data-work="new">
+          <span class="k">CASE 01 · 예시</span>
+          <span class="badge">공장설립</span>
+          <h3>금속가공 제조기업</h3>
+          <p>경기도 ○○시</p>
+          <hr>
+          <p>ISSUE 신규 생산시설 구축</p>
+          <p>PROCESS 입지 → 관련 절차 → 설립 → 등록</p>
+          <p>RESULT 등록 완료(예시)</p>
+        </a>
+        <a href="case-02.html" data-case data-ind="food" data-reg="cn" data-work="change">
+          <span class="k">CASE 02 · 예시</span>
+          <span class="badge">공장변경</span>
+          <h3>식품 제조기업</h3>
+          <p>충남 ○○시</p>
+          <hr>
+          <p>ISSUE 업종·시설 변경</p>
+          <p>RESULT 변경 검토(예시)</p>
+        </a>
+        <a href="consult.html" data-case data-ind="chem" data-reg="cb" data-work="permit">
+          <span class="k">CASE 03 · 예시</span>
+          <span class="badge">인허가</span>
+          <h3>화학 관련 사업장</h3>
+          <p>충북 ○○군</p>
+          <hr>
+          <p>ISSUE 환경 관련 검토</p>
+        </a>
+      </div>
+    </div>
+  </section>
+</main>
+<footer><div class="wrap"><div class="foot-name">다올기업행정사</div><p>데모 사례입니다.</p></div></footer>
+<div class="sticky"><a class="talk" href="consult.html">상담</a><a class="tel" href="tel:031-000-0000">전화상담</a></div>
+<script src="assets/office.js"></script>
+</body>
+</html>
