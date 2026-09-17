@@ -108,22 +108,27 @@ select:focus-visible {
 }
 
 .promo-bar {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  gap: 6px 14px;
+  min-height: 40px;
+  padding: 8px 20px;
   background: var(--ink);
   color: #f4f4f5;
   font-size: 13px;
   font-weight: 500;
   letter-spacing: -0.02em;
+  text-align: center;
 }
 
 .promo-bar a {
-  display: flex;
+  display: inline-flex;
   flex-wrap: wrap;
   align-items: center;
   justify-content: center;
-  gap: 8px 12px;
-  min-height: 40px;
-  padding: 8px 20px;
-  text-align: center;
+  gap: 6px;
 }
 
 .promo-bar em {
@@ -136,13 +141,9 @@ select:focus-visible {
   color: #a1a1aa;
 }
 
-.promo-go {
-  font-weight: 650;
-  color: #5eead4;
-}
-
-.promo-go::after {
-  content: " →";
+.promo-split {
+  color: #52525b;
+  user-select: none;
 }
 
 .nav {
