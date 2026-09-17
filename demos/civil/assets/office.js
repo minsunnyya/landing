@@ -119,4 +119,41 @@
       if (msg) msg.classList.add("show");
     });
   }
+
+  var search = document.getElementById("searchHero");
+  if (search) {
+    var routes = [
+      { keys: ["발급", "증명", "서류"], href: "types.html" },
+      { keys: ["진정", "제기", "신문고", "민원"], href: "petition.html" },
+      { keys: ["거부", "불허"], href: "refused.html" },
+      { keys: ["처분", "이의", "심판"], href: "disposition.html" },
+      { keys: ["지연", "안 되고", "안되고"], href: "delayed.html" },
+      { keys: ["창구", "어디", "기관"], href: "agency.html" },
+      { keys: ["대행", "대신"], href: "consult.html" }
+    ];
+    search.addEventListener("submit", function (e) {
+      e.preventDefault();
+      var q = (document.getElementById("searchHeroQ").value || "").trim();
+      var href = "find.html";
+      var i, r, k;
+      for (i = 0; i < routes.length; i++) {
+        r = routes[i];
+        for (k = 0; k < r.keys.length; k++) {
+          if (q.indexOf(r.keys[k]) !== -1) {
+            href = r.href;
+            i = routes.length;
+            break;
+          }
+        }
+      }
+      var hint = document.getElementById("searchHint");
+      if (hint) {
+        hint.hidden = false;
+        hint.textContent = q
+          ? "안내 페이지로 이동합니다. 해결을 판정하지 않습니다."
+          : "상황을 고르거나 단어를 입력해 주십시오.";
+      }
+      if (q) location.href = href;
+    });
+  }
 })();

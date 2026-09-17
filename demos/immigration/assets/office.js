@@ -189,6 +189,9 @@
       else if (purpose === "유학" && loc === "abroad") rec = { code: "D-2", name: EN ? "A student path can be reviewed." : "유학 경로를 검토해볼 수 있습니다", href: "visa-d2.html" };
       else if (purpose === "구직" || (purpose === "취업" && st === "D-2")) rec = { code: "D-10 · E-7", name: EN ? "Job-seeking or a change to work status can be reviewed." : "구직 또는 취업 변경을 검토해볼 수 있습니다", href: "visa-d10.html" };
       else if (purpose === "취업") rec = { code: "E-7", name: EN ? "E-7 eligibility can be reviewed." : "E-7 가능성을 검토해볼 수 있습니다", href: "visa-e7.html" };
+      else if (purpose === "사업") rec = { code: EN ? "Business" : "사업", name: EN ? "A business stay path can be reviewed in consult." : "사업·투자 체류는 상담에서 가릅니다", href: "consult.html?purpose=사업" };
+      else if (purpose === "가족") rec = { code: EN ? "Family" : "가족", name: EN ? "Invitation and accompanying stay can be reviewed." : "초청·동반 체류를 검토해볼 수 있습니다", href: "consult.html?who=가족" };
+      else if (purpose === "변경") rec = { code: EN ? "Change of status" : "체류변경", name: EN ? "A change of status can be reviewed against your current stay." : "현재 체류를 기준으로 변경 가능성을 검토합니다", href: "consult.html?need=자격변경" };
       else if (purpose === "기업") rec = { code: EN ? "Employers" : "기업", name: EN ? "Hiring and stay management are reviewed in the employer consult." : "채용·체류관리를 기업 상담에서 봅니다", href: "corporate.html" };
       else if (purpose === "동포") rec = { code: "F-4", name: EN ? "Overseas Korean status can be reviewed." : "재외동포 해당 여부를 검토해볼 수 있습니다", href: "visa-f4.html" };
       if (out) {

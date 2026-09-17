@@ -16,7 +16,7 @@
 <link rel="stylesheet" href="assets/office.css">
 </head>
 <body>
-<a class="skip" href="#probs">본문으로</a>
+<a class="skip" href="#ask">본문으로</a>
 <div class="topbar">
   <div class="wrap">
     <span>일반행정사 · 행정문제 상담</span>
@@ -53,19 +53,26 @@
   </div>
 </header>
 <main id="top">
-  <section class="hero">
+  <section class="hero" id="ask">
     <img class="hero-img" src="assets/hero-consult.jpg" width="1920" height="1080" alt="다올민원행정사 대표 이미지. 창구에서 서류를 펼쳐 두고 행정 문제를 상담하는 장면입니다.">
     <div class="wrap">
       <div class="hero-copy">
       <p class="label">ADMINISTRATIVE COMPLAINT CONSULTING</p>
       <h1><span>혼자 해결하기 어려운 행정문제,</span><span>해결 방법부터 함께 찾습니다.</span></h1>
-      <p class="lead">각종 민원·진정·신청·이의제기부터 행정기관 대응까지, 상황에 맞는 절차를 검토합니다. 결과를 약속하지 않습니다.</p>
-      <div class="hero-actions">
-        <a class="btn btn-acc" href="consult.html">내 상황 상담하기 →</a>
-        <a class="btn btn-ghost" href="types.html">업무 분야 확인하기</a>
+      <p class="lead">발급, 증명, 민원, 대행. 지금 하려는 일을 검색하거나 고르십시오. 결과를 약속하지 않습니다.</p>
+      <form class="search-hero" id="searchHero" action="find.html" method="get">
+        <label class="visually-hidden" for="searchHeroQ">민원 검색</label>
+        <input id="searchHeroQ" name="q" type="search" placeholder="예: 민원 제기, 거부, 처분, 지연, 서류 발급" autocomplete="off">
+        <button class="btn btn-acc" type="submit">검색</button>
+      </form>
+      <p id="searchHint" class="search-hint" hidden></p>
+      <div class="sit-btns" aria-label="상황 선택">
+        <a href="types.html">서류를 발급받고 싶어요</a>
+        <a href="types.html">사실관계를 증명하고 싶어요</a>
+        <a href="petition.html">행정기관에 민원을 제기하고 싶어요</a>
+        <a href="consult.html">복잡한 민원을 대신 처리하고 싶어요</a>
       </div>
-      <p class="hero-flow">문제 → 분석 → 방법 → 절차 → 안내</p>
-      <p class="demo">포트폴리오용 예시입니다. 무료 상담이라고 쓰지 않습니다.</p>
+      <p class="demo">포트폴리오용 예시입니다. 검색은 안내 페이지로 연결합니다. 자동 해결이 아닙니다.</p>
       </div>
     </div>
   </section>

@@ -63,6 +63,14 @@ body.menu-lock{overflow:hidden}
 .hero h1{font-size:clamp(20px,calc((100vw - 48px) / 16.2),48px);font-weight:700;line-height:1.25;letter-spacing:-.03em;max-width:none;word-break:keep-all}
 .hero h1 span{display:block;white-space:nowrap}
 .hero .lead{margin-top:18px;color:var(--body);font-size:18px;max-width:38ch;line-height:1.8}
+.visually-hidden{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;border:0}
+.search-hero{display:flex;gap:8px;align-items:stretch;margin-top:24px;background:var(--sheet);border:1px solid var(--navy);border-radius:var(--radius);padding:6px 6px 6px 16px}
+.search-hero input{flex:1;border:0;background:transparent;font:inherit;font-size:16px;min-height:44px;color:var(--ink)}
+.search-hero .btn{border-radius:14px;flex-shrink:0}
+.search-hint{margin-top:8px;font-size:14px;color:var(--muted)}
+.sit-btns{display:flex;flex-wrap:wrap;gap:8px;margin-top:16px}
+.sit-btns a{min-height:48px;padding:10px 16px;border:1px solid var(--navy);background:var(--sheet);border-radius:var(--radius);font-size:15px;font-weight:600;display:inline-flex;align-items:center}
+.sit-btns a:hover{background:var(--soft)}
 .hero-actions{display:flex;gap:10px;flex-wrap:wrap;margin-top:28px}
 .hero-flow{margin-top:22px;font-size:13px;font-weight:700;letter-spacing:.02em;color:var(--navy)}
 .btn{display:inline-flex;align-items:center;justify-content:center;min-height:48px;padding:0 22px;font-size:16px;font-weight:600;border:0;border-radius:var(--radius)}
@@ -176,8 +184,10 @@ footer{background:#2a241c;color:#b8aea0;padding:28px 24px 88px;font-size:13px}
 @media(max-width:1000px){.probs,.cards,.why{grid-template-columns:1fr 1fr}.hero::after{background:linear-gradient(180deg,rgba(246,240,230,.94) 0%,rgba(246,240,230,.78) 48%,rgba(246,240,230,.28) 100%)}}
 @media(max-width:700px){
   .probs,.cards,.why,.contact-grid,.form-grid,.cv-box{grid-template-columns:1fr}
-  .hero{min-height:560px}
+  .hero{min-height:0}
+  .hero h1 span{white-space:normal}
   .hero-copy{padding:40px 0 36px}
+  .search-hero{flex-direction:column;padding:10px}
   .sec{padding:52px 0}
 }
 @media(prefers-reduced-motion:reduce){*{animation-duration:.01ms!important;transition-duration:.01ms!important;scroll-behavior:auto!important}}
