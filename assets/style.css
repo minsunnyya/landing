@@ -1109,6 +1109,7 @@ select:focus-visible {
 }
 
 .check-form {
+  position: relative;
   background: none;
   border: 0;
   border-radius: 0;
@@ -1215,14 +1216,6 @@ select:focus-visible {
 
 .compare-row span:nth-child(2) {
   color: var(--muted);
-}
-
-.compare-row-key {
-  background: rgba(15, 118, 110, 0.04);
-}
-
-.compare-row-key span:last-child {
-  font-weight: 650;
 }
 
 @media (max-width: 800px) {
@@ -2053,6 +2046,18 @@ details p {
 
 .submit {
   width: 100%;
+}
+
+.hp {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
 }
 
 .form-done,

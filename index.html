@@ -422,10 +422,11 @@
                 method="POST"
               >
                 <input type="hidden" name="_subject" value="홈페이지 점검 요청" />
-                <input type="hidden" name="문의 종류" value="홈페이지 점검" />
+                <input type="hidden" name="form_type" value="homepage_check" />
+                <input type="text" name="_gotcha" tabindex="-1" autocomplete="off" class="hp" />
                 <div class="field">
                   <label for="c-url">홈페이지 주소</label>
-                  <input id="c-url" name="website" type="text" required placeholder="https://" />
+                  <input id="c-url" name="site_url" type="text" required placeholder="https://" />
                   <p class="field-hint">현재 홈페이지 주소를 입력해 주세요.</p>
                 </div>
                 <div class="field">
@@ -471,17 +472,17 @@
             <span>다양한 업종</span>
             <span>행정사 사무소</span>
           </div>
-          <div class="compare-row compare-row-key" role="row">
+          <div class="compare-row" role="row">
             <span role="rowheader">첫 화면</span>
             <span>회사·사무소 소개</span>
             <span>고객이 찾는 업무부터</span>
           </div>
-          <div class="compare-row compare-row-key" role="row">
+          <div class="compare-row" role="row">
             <span role="rowheader">업무 안내</span>
             <span>서비스 목록 중심</span>
             <span>업무별 상황·절차 중심</span>
           </div>
-          <div class="compare-row compare-row-key" role="row">
+          <div class="compare-row" role="row">
             <span role="rowheader">상담</span>
             <span>문의 페이지 중심</span>
             <span>전화·카톡·문의 연결</span>
@@ -939,7 +940,7 @@
           </div>
           <div class="field">
             <label for="f-url">현재 사이트 (있으면)</label>
-            <input id="f-url" name="website" type="text" placeholder="https://" />
+            <input id="f-url" name="site_url" type="text" placeholder="https://" />
           </div>
           <div class="field">
             <label for="f-msg">내용</label>
@@ -1063,23 +1064,51 @@
           e.preventDefault();
           var done = form.querySelector(".form-done");
           var error = form.querySelector(".form-error");
+          var submit = form.querySelector("[type=submit]");
           done.classList.remove("show");
           error.classList.remove("show");
+          var data = new FormData(form);
+          if (form.id === "check-form") {
+            var site = (data.get("site_url") || "").toString().trim();
+            var contact = (data.get("contact") || "").toString().trim();
+            data.set(
+              "message",
+              "홈페이지 점검 요청입니다. 주소: " + site + " / 연락처: " + contact
+            );
+          }
+          if (submit) submit.disabled = true;
           fetch(form.action, {
             method: "POST",
-            body: new FormData(form),
+            body: data,
             headers: { Accept: "application/json" },
           })
             .then(function (response) {
-              if (response.ok) {
+              return response.json().then(
+                function (body) {
+                  return { ok: response.ok, body: body };
+                },
+                function () {
+                  return { ok: response.ok, body: null };
+                }
+              );
+            })
+            .then(function (result) {
+              if (result.ok) {
                 form.reset();
                 done.classList.add("show");
               } else {
+                var msg =
+                  result.body && (result.body.error || (result.body.errors && result.body.errors[0] && result.body.errors[0].message));
+                error.textContent = msg || "보내지 못했습니다. 잠시 후 다시 시도해 주세요.";
                 error.classList.add("show");
               }
             })
             .catch(function () {
+              error.textContent = "보내지 못했습니다. 잠시 후 다시 시도해 주세요.";
               error.classList.add("show");
+            })
+            .then(function () {
+              if (submit) submit.disabled = false;
             });
         });
       });
