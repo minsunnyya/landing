@@ -10,6 +10,8 @@
       content="웍스프레임은 대한민국에서 행정사 사무소 홈페이지만 제작합니다. 출입국·인허가·심판 샘플이 있고, 자격·주력 업무·연락처가 검색과 AI에 읽히게 구조를 짭니다."
     />
     <link rel="canonical" href="https://worksframe.com/" />
+    <link rel="icon" href="files/worksframe-icon.svg" type="image/svg+xml" />
+    <link rel="apple-touch-icon" href="files/worksframe-icon.svg" />
     <link rel="alternate" type="text/plain" href="https://worksframe.com/llms.txt" title="LLM" />
     <meta property="og:type" content="website" />
     <meta property="og:locale" content="ko_KR" />
@@ -19,6 +21,10 @@
       property="og:description"
       content="행정사 사무소만 제작합니다. 출입국, 공장, 심판, 민원. 검색과 AI가 읽기 쉬운 구조."
     />
+    <meta property="og:image" content="https://worksframe.com/files/worksframe-logo.svg" />
+    <meta name="twitter:card" content="summary" />
+    <meta name="twitter:image" content="https://worksframe.com/files/worksframe-icon.svg" />
+
     <script type="application/ld+json">
     {
       "@context": "https://schema.org",
@@ -29,33 +35,36 @@
           "name": "웍스프레임",
           "alternateName": "WorksFrame",
           "url": "https://worksframe.com/",
+          "logo": "https://worksframe.com/files/worksframe-logo.svg",
+          "image": "https://worksframe.com/files/worksframe-logo.svg",
           "description": "대한민국에서 행정사 사무소 홈페이지만 제작하는 스튜디오. 쇼핑몰·병원·학원은 받지 않습니다.",
           "areaServed": "KR",
           "serviceType": "행정사 사무소 홈페이지 제작",
           "knowsAbout": ["행정사", "출입국", "비자", "인허가", "행정심판", "민원"],
+
           "makesOffer": [
             {
               "@type": "Offer",
-              "name": "랜딩 1장",
+              "name": "사무소 홈페이지",
               "price": "200000",
               "priceCurrency": "KRW",
-              "description": "오픈 기념 할인 대상 아님. 부가세 별도."
+              "description": "오픈 기념 할인 제외. 부가세 별도."
             },
             {
               "@type": "Offer",
-              "name": "분야 사이트 오픈 기념 50% 할인",
+              "name": "업무 전문 홈페이지 오픈 기념 50% 할인",
               "price": "400000",
               "priceCurrency": "KRW",
-              "priceValidUntil": "2026-12-10",
-              "description": "정가 80만 원부터. 부가세 별도. 2026년 12월 초까지."
+              "priceValidUntil": "2026-12-05",
+              "description": "정가 80만 원부터. 부가세 별도. 2026년 12월 5일까지 계약 건."
             },
             {
               "@type": "Offer",
-              "name": "종합 사무소 오픈 기념 50% 할인",
+              "name": "종합 홈페이지 오픈 기념 50% 할인",
               "price": "700000",
               "priceCurrency": "KRW",
-              "priceValidUntil": "2026-12-10",
-              "description": "정가 140만 원부터. 부가세 별도. 2026년 12월 초까지."
+              "priceValidUntil": "2026-12-05",
+              "description": "정가 140만 원부터. 부가세 별도. 2026년 12월 5일까지 계약 건."
             }
           ]
         },
@@ -68,7 +77,7 @@
               "name": "검색하거나 AI에 물으면 사무소가 나오나요?",
               "acceptedAnswer": {
                 "@type": "Answer",
-                "text": "페이지 제목, 설명, 주력 업무와 연락처를 짧은 문장으로 넣고, 자주 묻는 답을 구조에 둡니다. 검색 엔진과 AI가 사무소 정보를 읽기 쉽게 만듭니다. 상단 노출은 이후 글·광고와 각 서비스 방식에도 달립니다."
+                "text": "검색엔진과 AI 검색·답변 서비스가 홈페이지 내용을 이해하기 쉽도록 사무소 정보, 전문 분야, 업무별 안내, FAQ, 상담 방법 등을 명확하게 구성합니다. 특정 AI에 반드시 노출되거나 답변에 인용되는 것은 보장하지 않습니다."
               }
             },
             {
@@ -104,12 +113,15 @@
       <p class="promo-bar">
         <a href="#pricing">
           오픈 기념 <em>50% 할인</em>
-          <span class="promo-when">2026.12월 초까지</span>
+          <span class="promo-when">2026.12.5까지</span>
           <span class="promo-go">견적 보기</span>
         </a>
       </p>
       <div class="wrap nav">
-        <a href="#top" class="logo">WorksFrame<span>행정사</span></a>
+        <a href="#top" class="logo" aria-label="WorksFrame 행정사">
+          <img src="files/worksframe-logo.svg" alt="WorksFrame" width="168" height="42" decoding="async" />
+        </a>
+
         <nav class="nav-links" aria-label="주요 메뉴">
           <a href="#need">이유</a>
           <a href="#work">작업</a>
@@ -462,99 +474,120 @@
       <div class="wrap">
         <header class="block-head reveal">
           <h2>행정사 사무소 견적</h2>
-          <p class="offer-line">오픈 기념, 분야·종합은 50% 할인입니다. 2026.12월 초까지. 랜딩 1장은 대상이 아닙니다.</p>
-          <p>
-            표시는 부가세 빼기 전입니다. 도메인·호스팅은 제작비 밖입니다.
-          </p>
-          <p>위 데모는 예시 사무소입니다. 실제 장 수에 따라 금액이 달라집니다.</p>
+          <p class="offer-line">오픈 기념으로 업무 전문·종합 홈페이지는 50% 할인합니다.</p>
+          <p class="offer-line">2026년 12월 5일까지 계약한 건에 적용됩니다.</p>
+          <p>표시 금액은 부가세 별도입니다.</p>
+          <p>도메인·홈페이지 운영비는 제작비에 포함되지 않습니다.</p>
+          <p>아래 금액은 구성 규모에 따른 기본 제작비입니다.</p>
+          <p>실제 견적은 필요한 업무와 페이지 수를 확인한 뒤 확정합니다.</p>
         </header>
         <div class="plans reveal">
           <article class="plan">
-            <p class="plan-tag">개업 · 광고</p>
-            <h3>랜딩 1장</h3>
-            <p class="plan-desc">화면 한 장입니다. 위 분야 데모보다 짧고, 첫 화면만 줄인 구성입니다.</p>
+            <p class="plan-tag">개업 · 우선 필요</p>
+            <h3>사무소 홈페이지</h3>
+            <p class="plan-desc">
+              검색했을 때 사무소와 연락처가 바로 보이는 홈페이지입니다. 소개와 주력 업무, 상담 방법을 한곳에 담습니다.
+            </p>
             <p class="plan-refs plan-refs-empty" aria-hidden="true"></p>
             <p class="plan-price">
               <span class="plan-was plan-was-spacer" aria-hidden="true">80만원</span>
               20만원<span>부터</span>
             </p>
-            <p class="plan-offer plan-offer-off">할인 대상 아님</p>
-            <p class="plan-time">자료 받은 뒤 약 1–2주 · 계약금 절반 후 시작</p>
+            <p class="plan-offer plan-offer-off">할인 제외</p>
+            <p class="plan-time">자료 받은 뒤 약 1–2주 · 계약금 50% 후 제작 시작</p>
             <ul>
-              <li>사무소명, 대표 성명, 전화, 위치, 주력 업무</li>
-              <li>받지 않는 업무를 한 줄로 적어 둘 수 있음</li>
-              <li>휴대폰에서 바로 전화, 카카오톡 버튼, 상담 문의 폼</li>
-              <li>화면 아래 고정 전화·상담 버튼</li>
+              <li>홈 1장 — 사무소 소개, 대표 행정사, 자격·등록</li>
+              <li>주력 업무, 위치, 전화·카카오톡·상담 폼</li>
+              <li>휴대폰 하단 고정 상담 버튼</li>
               <li>개인정보처리방침, 검색용 제목·설명</li>
-              <li>오픈 후 30일 글·사진 수정</li>
+              <li>검색·AI가 읽기 쉬운 기본 정보 구조</li>
+              <li>오픈 후 30일 동안 오탈자·글·사진 등 간단한 수정</li>
             </ul>
           </article>
           <article class="plan plan-main">
-            <p class="plan-tag">한 분야를 나눌 때</p>
-            <h3>분야 사이트</h3>
-            <p class="plan-desc">민원·자동차·행정심판 규모입니다. 공장·토지는 핵심만 넣으면 이 구간입니다.</p>
-            <!-- <p class="plan-refs">
-              <a href="demos/civil/index.html" target="_blank" rel="noopener">민원</a>
+            <p class="plan-tag">핵심 상품 · 가장 많이 선택</p>
+            <h3>업무 전문 홈페이지</h3>
+            <p class="plan-desc">
+              주력 업무를 자세히 설명하고, 방문자가 자기 상황에 맞는 업무를 찾아 상담까지 이어지게 구성합니다. 분야 개수보다 필요한 정보량이 기준입니다.
+            </p>
+            <p class="plan-refs">
+              <a href="demos/immigration/index.html" target="_blank" rel="noopener">출입국</a>
               <a href="demos/driving/index.html" target="_blank" rel="noopener">자동차</a>
               <a href="demos/appeal/index.html" target="_blank" rel="noopener">행정심판</a>
-              <a href="demos/factory/index.html" target="_blank" rel="noopener">공장(핵심만)</a>
-              <a href="demos/land/index.html" target="_blank" rel="noopener">토지(핵심만)</a>
-            </p> -->
-            <p class="plan-refs plan-refs-empty" aria-hidden="true"></p>
+              <a href="demos/factory/index.html" target="_blank" rel="noopener">공장</a>
+              <a href="demos/land/index.html" target="_blank" rel="noopener">토지</a>
+              <a href="demos/civil/index.html" target="_blank" rel="noopener">민원</a>
+            </p>
             <p class="plan-price">
               <s class="plan-was">80만원</s>
               40만원<span>부터</span>
             </p>
-            <p class="plan-offer">50% 할인 · 2026.12월 초까지</p>
-            <p class="plan-time">자료 받은 뒤 약 3–5주 · 계약금 절반 후 시작</p>
+            <p class="plan-offer">50% 할인 · 2026년 12월 5일까지</p>
+            <p class="plan-time">
+              자료 준비·검수 일정에 따라 달라집니다. 구성에 따라 상담 후 안내 · 계약금 50% 후 제작 시작
+            </p>
+            <a class="plan-cta" href="#contact">이 구성으로 상담</a>
             <ul>
-              <li>홈 1장 + 업무 안내 페이지 약 4~8장</li>
-              <li>소개(자격·등록), 상담, 개인정보처리방침</li>
-              <li>업무 찾기 또는 내 상황 확인 페이지 1장</li>
-              <li>사례 1~2장 — 있는 사실만. 없으면 칸을 비움</li>
-              <li>수임료 안내 페이지 — 금액을 안 적고 상담으로 둘 수 있음</li>
-              <li>전화, 카카오톡, 상담 폼(업무 종류 선택)</li>
-              <li>휴대폰 화면, 하단 고정 전화·상담, 검색용 제목·설명</li>
-              <li>오픈 후 30일 글·사진 수정</li>
+              <li>홈, 소개·자격·등록, 주력 업무 안내</li>
+              <li>업무별 상세 — 대상·절차·준비서류 등</li>
+              <li>업무 찾기 또는 내 상황 확인</li>
+              <li>실제 사례 — 없으면 다른 안내 콘텐츠로 구성</li>
+              <li>수임료·FAQ·상담·오시는 길</li>
+              <li>전화·카카오톡·상담 폼, 모바일 최적화</li>
+              <li>검색·AI 대응을 위한 업무별 정보 구조</li>
+              <li>오픈 후 30일 동안 오탈자·글·사진 등 간단한 수정</li>
             </ul>
           </article>
           <article class="plan">
-            <p class="plan-tag">여러 분야</p>
-            <h3>종합 사무소</h3>
-            <p class="plan-desc">종합 사무소, 출입국 비자 상세, 공장 데모 전체가 이 구간에 가깝습니다. 영문은 따로입니다.</p>
-            <!-- <p class="plan-refs">
-              <a href="demos/portfolio/index.html" target="_blank" rel="noopener">종합</a>
-              <a href="demos/immigration/index.html" target="_blank" rel="noopener">출입국</a>
-              <a href="demos/factory/index.html" target="_blank" rel="noopener">공장(데모 전체)</a>
-            </p> -->
-            <p class="plan-refs plan-refs-empty" aria-hidden="true"></p>
+            <p class="plan-tag">정보량이 클 때</p>
+            <h3>종합 홈페이지</h3>
+            <p class="plan-desc">
+              여러 분야를 나누거나, 한 분야라도 상세 페이지가 많은 구성을 한 홈페이지에서 체계적으로 보여 줍니다.
+            </p>
+            <p class="plan-refs">
+              <a href="demos/portfolio/index.html" target="_blank" rel="noopener">종합 행정사</a>
+              <a href="demos/immigration/index.html" target="_blank" rel="noopener">출입국 상세</a>
+              <a href="demos/factory/index.html" target="_blank" rel="noopener">기업·공장</a>
+            </p>
             <p class="plan-price">
               <s class="plan-was">140만원</s>
               70만원<span>부터</span>
             </p>
-            <p class="plan-offer">50% 할인 · 2026.12월 초까지</p>
-            <p class="plan-time">자료 받은 뒤 약 5–7주 · 계약금 절반 후 시작</p>
+            <p class="plan-offer">50% 할인 · 2026년 12월 5일까지</p>
+            <p class="plan-time">
+              제작 일정은 분야 수와 페이지 구성에 따라 상담 후 안내 · 계약금 50% 후 제작 시작
+            </p>
             <ul>
-              <li>여러 분야를 한 주소에서 나눔 (민원·인허가·구제·출입국 등)</li>
-              <li>업무 찾기, 분야별 문의 폼</li>
-              <li>소개, 사례, 정보·질문, 상담, 개인정보처리방침</li>
-              <li>전화, 카카오톡, 상담 폼, 휴대폰 하단 버튼</li>
-              <li>검색용 제목·설명, 오픈 후 30일 글·사진 수정</li>
-              <li>출입국이면 비자별 페이지. 영문·중문은 장 수에 따라 별도</li>
+              <li>분야별 메뉴와 업무 구조 (출입국·인허가·심판 등)</li>
+              <li>업무 찾기, 상황별 안내, 업무별 상세</li>
+              <li>사례·FAQ·정보·공지·수임료·상담</li>
+              <li>분야별 문의 폼, 전화·카카오톡, 모바일 하단 버튼</li>
+              <li>검색·AI 대응을 사이트 전체에 맞춤</li>
+              <li>영문·중문은 페이지 수에 따라 별도 견적</li>
+              <li>오픈 후 30일 동안 오탈자·글·사진 등 간단한 수정</li>
             </ul>
           </article>
         </div>
         <div class="price-extra reveal">
-          <h3>제작비 말고 따로 내는 돈</h3>
+          <h3>제작비 외에 필요한 비용</h3>
           <ul>
-            <li>부가세 10%</li>
-            <li>도메인 — 보통 1년에 1~3만 원. 사무소 이름으로 결제합니다</li>
-            <li>호스팅이나 카페24·아임웹 — 보통 한 달에 1~2만 원대. 쓰는 상품에 따릅니다</li>
-            <li>페이지 한 장 더 — 약 10만 원부터</li>
-            <li>영문·중문 — 장 수에 따라 그때 견적</li>
-            <li>매달 관리비 — 기본 견적 밖입니다. 필요하면 상담에서 정합니다</li>
+            <li>부가세 — 제작비의 10%</li>
+            <li>도메인 — 보통 1년에 1~3만 원. 사무소 명의로 결제합니다.</li>
+            <li>홈페이지 운영비 — 아임웹·카페24·웹호스팅 등 플랫폼과 상품에 따라 비용이 달라집니다.</li>
+            <li>추가 페이지 — 약 10만 원부터 (구성과 기능에 따라 달라집니다)</li>
+            <li>영문·중문 — 페이지 수에 따라 별도 견적</li>
+            <li>매달 관리비 — 기본 견적에 포함되지 않습니다. 필요한 경우 상담을 통해 정합니다.</li>
           </ul>
-          <p>검수가 끝나면 남은 돈을 냅니다. 세금계산서는 됩니다. 데모에 있는 페이지를 다 넣으면 금액이 올라갑니다. 필요한 페이지만 고르면 됩니다.</p>
+          <p>
+            실제 견적은 분야의 개수보다 필요한 페이지와 정보량, 기능에 따라 결정됩니다.
+          </p>
+          <p>
+            계약금 50% 결제 후 제작을 시작하며, 최종 검수가 끝난 후 잔금을 결제합니다.
+            세금계산서 발행이 가능합니다.
+          </p>
+          <p>
+            데모는 홈페이지 구성의 예시이며, 실제 제작은 사무소에 필요한 페이지와 기능을 선택해 진행합니다.
+          </p>
         </div>
       </div>
     </section>
@@ -562,8 +595,8 @@
     <section id="ops">
       <div class="wrap">
         <header class="block-head reveal">
-          <h2>견적 전에 정해 두는 것</h2>
-          <p>행정사 사무소가 계약 전에 보통 확인하는 내용입니다. 수정 방식은 상담 때 고릅니다.</p>
+          <h2>제작 전에 확인하는 내용</h2>
+          <p>행정사 사무소가 계약 전에 확인하면 좋은 내용입니다. 제작 범위와 운영 방식은 상담할 때 함께 정합니다.</p>
         </header>
 
         <div class="spec-grid reveal">
@@ -573,14 +606,15 @@
               <li>구조 기획, 시안, 반응형 제작</li>
               <li>전화 · 카카오톡 · 문의 폼</li>
               <li>제목·설명 등 검색 기본값</li>
-              <li>개인정보 안내 문구, 과장 광고 문구 점검</li>
+              <li>검색엔진·AI 검색을 고려한 기본 정보 구조</li>
+              <li>개인정보 안내 문구, 제공받은 정보 기준의 콘텐츠 구성</li>
             </ul>
           </article>
           <article class="spec">
             <h3>별도인 것</h3>
             <ul>
               <li>부가세</li>
-              <li>도메인, 호스팅, SSL — 연 비용은 플랫폼 기준</li>
+              <li>도메인·홈페이지 운영비 — 사용하는 플랫폼과 상품에 따라 별도</li>
               <li>페이지 추가, 기능 추가</li>
               <li>다국어, 사진 촬영, 네이버 플레이스·검색광고 대행</li>
             </ul>
@@ -597,17 +631,17 @@
           <article class="spec">
             <h3>명의</h3>
             <ul>
-              <li>도메인·호스팅·빌더 계정은 사무소 명의</li>
-              <li>오픈 때 관리 권한을 넘깁니다</li>
-              <li>오픈 후 30일, 글·이미지 수정은 견적 안</li>
-              <li>월 유지보수는 기본 견적에 넣지 않고 협의</li>
+              <li>도메인·호스팅·빌더 계정은 처음부터 사무소 명의로 운영합니다</li>
+              <li>오픈 후 30일은 간단한 글·사진 수정을 지원합니다</li>
+              <li>이후 수정은 요청 방식 또는 별도 견적으로 진행합니다</li>
+              <li>월 유지보수는 기본 견적에 넣지 않고 협의합니다</li>
             </ul>
           </article>
         </div>
 
         <header class="block-head reveal ops-sub">
           <h2>오픈 후 수정</h2>
-          <p>세 가지 모두 됩니다. 상담 때 하나만 고르거나, 섞어도 됩니다.</p>
+          <p>오픈 후 수정 방식은 사무소 상황에 맞게 선택할 수 있습니다.</p>
         </header>
         <div class="spec-grid ways reveal">
           <article class="spec">
@@ -616,7 +650,8 @@
               <li>전화, 카톡, 주소, 소개, 사진</li>
               <li>카톡·메일로 주시면 화면을 고칩니다</li>
               <li>에디터를 쓰지 않아도 됩니다</li>
-              <li>가벼운 수정은 건당으로 묶지 않아도 됩니다</li>
+              <li>오픈 후 30일은 간단한 글·사진 수정을 지원합니다</li>
+              <li>이후 수정은 요청 방식 또는 별도 견적으로 진행합니다</li>
             </ul>
           </article>
           <article class="spec">
@@ -625,7 +660,7 @@
               <li>카페24, 아임웹 등 글을 고칠 도구</li>
               <li>계정은 사무소 앞으로 두고 사용법을 안내합니다</li>
               <li>연락처·업무 안내처럼 자주 바꾸는 글에 맞습니다</li>
-              <li>레이아웃·새 페이지는 제작에 맡기는 편이 안전합니다</li>
+              <li>레이아웃 변경이나 새 페이지 제작은 별도 작업으로 진행합니다</li>
             </ul>
           </article>
           <article class="spec">
@@ -634,7 +669,7 @@
               <li>페이지 추가, 문의 폼 항목 추가, 외국어</li>
               <li>기능·화면을 더 넣는 일은 그때 견적</li>
               <li>월 관리가 필요하면 협의</li>
-              <li>한 분야만 열고 나중에 더하는 것도 됩니다</li>
+              <li>처음에는 필요한 업무만 구성하고, 이후 새로운 업무나 페이지를 추가할 수도 있습니다</li>
             </ul>
           </article>
         </div>
@@ -658,9 +693,11 @@
           <details>
             <summary>검색하거나 AI에 물으면 나오나요?</summary>
             <p>
-              페이지 제목, 설명, 주력 업무와 연락처를 짧은 문장으로 넣고, 자주 묻는 답을 구조에 둡니다. 검색 엔진과 AI가 사무소 정보를 읽기 쉽게 만듭니다.
+              검색엔진과 AI 검색·답변 서비스가 홈페이지의 내용을 이해하기 쉽도록 사무소 정보, 전문 분야, 업무별 안내, FAQ, 상담 방법 등을 명확하게 구성합니다.
             </p>
-            <p>상단 노출은 이후 글·광고와, 각 서비스가 무엇을 인용하는지에도 달립니다.</p>
+            <p>
+              다만 홈페이지를 만든다고 해서 특정 AI 서비스에 반드시 노출되거나 답변에 인용되는 것을 보장할 수는 없습니다. 실제 노출은 검색 서비스의 수집·평가 방식과 홈페이지의 콘텐츠, 외부 정보 등에 따라 달라질 수 있습니다.
+            </p>
           </details>
           <details>
             <summary>카톡이랑 블로그만 있으면 안 되나요?</summary>
@@ -674,9 +711,11 @@
           <details>
             <summary>상담이 늘어나나요?</summary>
             <p>
-              고객이 업무를 보고 연락할 수 있게 만듭니다. 카톡으로 처음부터 설명하는 횟수는 줄어들게 구성합니다.
+              홈페이지에서 주력 업무, 상담 방법, 필요한 기본 정보를 먼저 확인할 수 있도록 구성합니다. 따라서 상담 전에 반복적으로 안내해야 하는 기본적인 질문을 줄이는 데 도움이 될 수 있습니다.
             </p>
-            <p>몇 건이 올지는 방문과 응대에 달립니다.</p>
+            <p>
+              실제 상담 문의가 얼마나 늘어나는지는 홈페이지 방문자 수, 검색 노출, 광고 여부, 사무소의 응대 방식 등에 따라 달라집니다.
+            </p>
           </details>
           <details>
             <summary>있는 사이트를 손볼 수도 있나요?</summary>
@@ -684,11 +723,10 @@
               사진, 글, 연락처를 살려 구조와 화면만 다시 잡는 작업도 합니다. 주소를 주시면 먼저 어디를 고칠지 말씀드립니다.
             </p>
           </details>
-
           <details>
-            <summary>광고 랜딩으로 쓰나요?</summary>
+            <summary>광고용으로도 쓰나요?</summary>
             <p>
-              됩니다. 한 분야 광고에 쓸 한 장짜리 페이지도 만듭니다. 문구와 상담 버튼 위치를 광고에 맞춥니다.
+              됩니다. 사무소 홈페이지처럼 한 장에 소개와 상담 버튼을 두는 구성도 만듭니다. 문구와 버튼 위치를 광고에 맞춥니다.
             </p>
           </details>
           <details>
@@ -701,7 +739,7 @@
           <details>
             <summary>오픈 후 수정도 하나요?</summary>
             <p>
-              오픈 후 30일은 글·이미지를 견적 안에서 고칩니다.
+              오픈 후 30일은 오탈자·글·사진 등 간단한 수정을 견적 안에서 지원합니다.
             </p>
             <p>
               이후 연락처·소개는 요청으로 반영하거나, 직접 고치도록 열어 둘 수 있습니다. 페이지를 늘리거나 기능을 넣는 일은 별도입니다. 월 유지보수가 필요하면 그때 협의합니다.
@@ -710,15 +748,15 @@
           <details>
             <summary>개인정보는 어떻게 다루나요?</summary>
             <p>
-              문의 응대에 필요한 최소만 받도록 폼을 만들고, 안내 문구를 넣습니다. 사건 내용은 폼에 적지 않도록 안내할 수 있습니다.
+              문의 응대에 필요한 최소만 받도록 폼을 만들고, 안내 문구를 넣습니다. 사건의 구체적인 내용이나 불필요한 개인정보는 폼에 적지 않도록 안내합니다.
             </p>
           </details>
           <details>
             <summary>기간과 결제는요?</summary>
             <p>
-              자료를 받은 뒤 랜딩 1장은 약 1–2주, 분야 사이트는 3–5주, 종합은 5–7주입니다.
-              계약금 절반을 받으면 시작하고, 검수가 끝나면 나머지를 받습니다. 세금계산서는 됩니다.
-              부가세 10%와 도메인·호스팅은 제작비 밖입니다.
+              제작 기간은 페이지 수, 기능, 자료 준비 상황에 따라 달라집니다. 기본적인 사무소 홈페이지는 자료를 받은 뒤 약 1~2주를 기준으로 하며, 업무 전문·종합 홈페이지는 구성에 따라 상담 후 일정을 안내합니다.
+              계약금 50%를 받으면 시작하고, 검수가 끝나면 나머지를 받습니다. 세금계산서는 됩니다.
+              부가세 10%와 도메인·홈페이지 운영비는 제작비 밖입니다.
             </p>
           </details>
           <details>
@@ -730,10 +768,10 @@
           <details>
             <summary>행정사법 때문에 쓸 수 없는 문구가 있지 않나요?</summary>
             <p>
-              있습니다. 행정사법 제22조에 따라 허위·과장 광고로 위임을 끌어오면 안 됩니다. 표시광고법상 거짓·과장·부당비교도 해당됩니다.
+              있습니다. 허위·과장 광고로 위임을 끌어오는 표현, 표시광고법상 거짓·과장·부당비교에 해당하는 표현은 쓰지 않습니다.
             </p>
             <p>
-              허가·인용·비자 발급을 보장하는 말, 확인되지 않은 경력·실적, 다른 사무소 비방, 없는 업무처럼 읽히는 표현은 올리지 않습니다. 수임 사례는 확인한 것만 올리고, 상담 폼에는 사건 내용을 자세히 적지 않게 안내합니다.
+              허가·인용·비자 발급을 보장하는 표현, 확인되지 않은 경력·실적 등은 사실관계를 확인한 뒤 사용합니다. 수임 사례는 확인한 것만 올리고, 상담 폼에는 사건 내용을 자세히 적지 않게 안내합니다.
             </p>
           </details>
           <details>
@@ -745,7 +783,7 @@
           <details>
             <summary>네이버 플레이스와 같이 하나요?</summary>
             <p>
-              사이트 제작과 별도입니다. 주소·전화가 사이트와 맞게만 맞춰 드립니다. 플레이스 대행은 따로입니다.
+              홈페이지에 표시되는 주소·전화 등 기본 정보는 실제 사무소 정보에 맞춰 구성합니다. 네이버 플레이스 운영·등록 대행은 별도입니다.
             </p>
           </details>
         </div>
@@ -761,7 +799,7 @@
           <ul class="contact-points">
             <li>견적 전에 범위를 먼저 정합니다</li>
             <li>데모는 예시이며, 사무소 정보로만 넣습니다</li>
-            <li>사건 내용은 이 폼에 적지 않으셔도 됩니다</li>
+            <li>사건 내용은 이 폼에 적지 말아 주세요</li>
           </ul>
           <a class="text-link kakao" href="https://open.kakao.com/o/sYTIkUMi">카카오톡으로 문의<span aria-hidden="true"> →</span></a>
         </div>
@@ -789,9 +827,12 @@
               <option>출입국 · 비자</option>
               <option>공장 · 기업 행정</option>
               <option>행정심판 · 권익구제</option>
-              <option>자동차 · 운전</option>
-              <option>토지 · 개발</option>
-              <option>민원 · 기타</option>
+              <option>자동차 관련 행정</option>
+              <option>토지 · 개발 인허가</option>
+              <option>건축 · 건설 행정</option>
+              <option>영업 · 인허가</option>
+              <option>민원 · 증명</option>
+              <option>기타</option>
               <option>종합 행정</option>
             </select>
           </div>
@@ -799,10 +840,12 @@
             <label for="f-status">지금 상태</label>
             <select id="f-status" name="status">
               <option value="">선택</option>
-              <option>새로 만들 예정</option>
-              <option>있는 사이트를 손보고 싶음</option>
-              <option>광고용 랜딩이 필요함</option>
-              <option>아직 모름 · 구조만 듣고 싶음</option>
+              <option>새 홈페이지가 필요함</option>
+              <option>현재 홈페이지를 개선하고 싶음</option>
+              <option>간단한 사무소 소개 홈페이지가 필요함</option>
+              <option>업무를 자세히 보여주는 홈페이지가 필요함</option>
+              <option>여러 업무를 정리한 홈페이지가 필요함</option>
+              <option>아직 모르겠음 · 상담 후 결정하고 싶음</option>
             </select>
           </div>
           <div class="field">
@@ -811,11 +854,16 @@
           </div>
           <div class="field">
             <label for="f-msg">내용</label>
-            <textarea id="f-msg" name="message" rows="4" placeholder="주력 업무, 궁금한 점을 적어 주세요. 사건 내용은 적지 않으셔도 됩니다."></textarea>
+            <textarea
+              id="f-msg"
+              name="message"
+              rows="4"
+              placeholder="주력 업무와 홈페이지 제작 관련 궁금한 점만 적어 주세요. 사건의 구체적인 내용이나 개인정보는 입력하지 말아 주세요."
+            ></textarea>
           </div>
           <label class="consent">
-            <input type="checkbox" required />
-            <span>문의 응대를 위해 이름과 연락처 수집에 동의합니다. 상담이 끝나면 파기합니다. <a href="privacy.html">개인정보처리방침</a></span>
+            <input type="checkbox" name="consent" value="yes" required />
+            <span>문의 응대를 위해 이름과 연락처 수집에 동의합니다. 상담이 끝나거나 수임하지 않으면 파기합니다. <a href="privacy.html">개인정보처리방침</a></span>
           </label>
           <button type="submit" class="btn-pill submit">보내기</button>
           <p class="form-done">접수했습니다. 연락드리겠습니다.</p>
@@ -832,7 +880,7 @@
         </div>
         <p class="foot-privacy">
           웍스프레임은 대한민국에서 행정사 사무소 홈페이지만 제작합니다.
-          문의로 받은 개인정보는 상담 외에 쓰지 않고, <br />끝나면 바로 파기합니다.
+          문의로 받은 개인정보는 상담 외에 쓰지 않고, <br />상담이 끝나거나 수임하지 않으면 파기합니다.
           포트폴리오의 사무소명과 실적은 예시입니다.
           <a href="privacy.html">개인정보처리방침</a>
         </p>
