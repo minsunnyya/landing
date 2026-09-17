@@ -1,9 +1,9 @@
-# WorksFrame
+﻿# WorksFrame
 > 대한민국에서 행정사 사무소 홈페이지만 제작하는 스튜디오입니다. 쇼핑몰·병원·학원은 받지 않습니다.
 
-- 사이트: https://minsunnyya.github.io/landing/
+- 사이트: https://worksframe.com/
 - 상호: 웍스프레임
-- 문의: https://minsunnyya.github.io/landing/#contact
+- 문의: https://worksframe.com/#contact
 - 카카오 오픈채팅: https://open.kakao.com/o/sYTIkUMi
 
 ## 하는 일
@@ -19,8 +19,8 @@
 허가·인용·비자 발급 보장 문구. 확인되지 않은 승소율. 워드프레스 자체 개발, 회원·결제. 월 관리만 맡기는 건.
 
 ## 선택 페이지
-- [개인정보처리방침](https://minsunnyya.github.io/landing/privacy.html)
-- [종합 샘플](https://minsunnyya.github.io/landing/demos/portfolio/index.html)
-- [출입국 샘플](https://minsunnyya.github.io/landing/demos/immigration/index.html)
-- [공장 샘플](https://minsunnyya.github.io/landing/demos/factory/index.html)
-- [행정심판 샘플](https://minsunnyya.github.io/landing/demos/appeal/index.html)
+- [개인정보처리방침](https://worksframe.com/privacy.html)
+- [종합 샘플](https://worksframe.com/demos/portfolio/index.html)
+- [출입국 샘플](https://worksframe.com/demos/immigration/index.html)
+- [공장 샘플](https://worksframe.com/demos/factory/index.html)
+- [행정심판 샘플](https://worksframe.com/demos/appeal/index.html)

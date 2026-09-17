@@ -1,4 +1,4 @@
-User-agent: *
+﻿User-agent: *
 Allow: /
 
 User-agent: GPTBot
@@ -22,4 +22,4 @@ Allow: /
 User-agent: anthropic-ai
 Allow: /
 
-Sitemap: https://minsunnyya.github.io/landing/sitemap.xml
+Sitemap: https://worksframe.com/sitemap.xml
