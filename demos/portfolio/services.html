@@ -3,143 +3,350 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>업무분야 | 다올종합행정사</title>
-<meta name="description" content="민원, 인허가, 행정구제, 출입국, 기업행정. 서울 종로. 예시입니다.">
+<title>업무 안내 | 다올종합행정사</title>
+<meta name="description" content="민원·인허가·행정심판·출입국·기업·자동차·토지. 절차와 준비 방향을 안내합니다. 허가·인용·비자 발급을 약속하지 않습니다.">
 <link rel="stylesheet" as="style" crossorigin href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/variable/pretendardvariable.css">
 <link rel="stylesheet" href="assets/office.css">
 </head>
 <body>
 <a class="skip" href="#main">본문으로</a>
-<div class="topbar"><div class="wrap"><span>일반행정사 · 종합 행정</span><span><span id="hoursLive">평일 09:00–18:00</span> · 서울 종로 · <a href="tel:02-000-0005">02-000-0005</a></span></div></div>
+<div class="topbar"><div class="wrap"><span>일반행정사 · 종합 행정 · 예시 사무소</span><span><span id="hoursLive">평일 09:00–18:00</span> · 서울 종로 · <a href="tel:02-000-0005">02-000-0005</a></span></div></div>
 <header>
   <div class="wrap nav">
-    <a href="index.html" class="brand"><b>다올종합행정사</b><span>문제부터 절차를 찾습니다</span></a>
+    <a href="index.html" class="brand"><b>다올종합행정사</b><span>상황부터 절차를 찾습니다</span></a>
     <nav class="nav-links" aria-label="주요 메뉴">
-      <div class="mega" id="megaWrap"><button class="mega-btn is-on" type="button" aria-expanded="false" aria-controls="megaPanel">업무분야</button></div>
-      <a href="find.html">상황별 상담</a>
-      <a href="cases.html">수행사례</a>
-      <a href="about.html">전문성</a>
-      <a href="info.html">정보센터</a>
+      <a href="index.html#finder">업무 찾기</a>
+      <div class="mega" id="megaWrap">
+        <button class="mega-btn is-on" type="button" aria-expanded="false" aria-controls="megaPanel">업무 안내</button>
+      </div>
+      <a href="about.html">사무소</a>
+      <a href="cases.html">사례·정보</a>
       <button class="icon-btn" id="searchOpen" type="button" aria-label="검색">⌕</button>
-      <a class="nav-consult" href="consult.html">상담하기</a>
+      <a class="nav-consult" href="consult.html">상담</a>
     </nav>
     <button class="burger" id="bb" type="button" aria-label="메뉴 열기" aria-expanded="false"><span></span><span></span><span></span></button>
   </div>
   <div class="mega-panel" id="megaPanel">
-    <div class="mega-inner">
-      <div><b>민원·행정</b><a href="services.html#minwon">민원</a><a href="services.html#minwon">진정·탄원</a><a href="services.html#minwon">사실확인·내용증명</a></div>
-      <div><b>인허가</b><a href="services.html#permit">각종 허가</a><a href="services.html#permit">신고·등록</a><a href="services.html#permit">개발행위·공장</a></div>
-      <div><b>행정구제</b><a href="services.html#relief">행정심판</a><a href="services.html#relief">이의신청</a><a href="services.html#relief">처분 대응</a></div>
-      <div><b>출입국</b><a href="services.html#visa">사증·체류</a><a href="services.html#visa">자격변경</a><a href="services.html#visa">출입국 민원</a></div>
-      <div><b>기업행정</b><a href="services.html#biz">기업인증</a><a href="services.html#biz">조달·지원</a><a href="services.html#corp">법인·비영리</a></div>
-      <div><b>기타</b><a href="services.html#etc">토지·보상</a><a href="services.html#etc">기타 행정</a><a href="services.html">전체 보기</a></div>
+    <div class="mega-inner mega-inner-4">
+      <div>
+        <b>출입국 · 비자</b>
+        <a href="#visa">비자 · 사증</a>
+        <a href="#visa">체류 · 자격변경</a>
+        <a href="#visa">초청 · 외국인 고용</a>
+      </div>
+      <div>
+        <b>기업 · 인허가</b>
+        <a href="#permit">공장설립 · 등록</a>
+        <a href="#permit">영업허가 · 신고</a>
+        <a href="#biz">기업 관련 민원</a>
+      </div>
+      <div>
+        <b>행정심판 · 권익구제</b>
+        <a href="#relief">영업정지</a>
+        <a href="#relief">운전면허 · 행정처분</a>
+        <a href="#relief">이의신청</a>
+      </div>
+      <div>
+        <b>자동차 · 토지 · 기타</b>
+        <a href="#car">자동차</a>
+        <a href="#land">토지·건축</a>
+        <a href="#minwon">민원</a>
+      </div>
     </div>
   </div>
   <div class="mpanel" id="mp">
-    <details open><summary>업무분야</summary>
-      <a href="services.html#minwon">민원·행정</a>
-      <a href="services.html#permit">인허가</a>
-      <a href="services.html#relief">행정구제</a>
-      <a href="services.html#visa">출입국</a>
-      <a href="services.html#biz">기업</a>
+    <a href="index.html#finder">업무 찾기</a>
+    <details open><summary>업무 안내</summary>
+      <a href="#visa">출입국 · 비자</a>
+      <a href="#permit">인허가</a>
+      <a href="#relief">행정심판</a>
+      <a href="#biz">기업</a>
+      <a href="#car">자동차</a>
+      <a href="#land">토지·건축</a>
+      <a href="#minwon">민원</a>
     </details>
-    <a href="find.html">상황별 상담</a>
-    <a href="consult.html">상담하기</a>
+    <a href="about.html">사무소</a>
+    <a href="cases.html">사례·정보</a>
+    <a href="consult.html">상담</a>
     <a href="tel:02-000-0005">전화 02-000-0005</a>
   </div>
 </header>
-<div class="search-scrim" id="searchScrim"><div class="search-box"><label class="field" for="searchInput">사이트에서 찾기</label><input id="searchInput" type="search"><div class="search-hits" id="searchHits"></div></div></div>
+<div class="search-scrim" id="searchScrim"><div class="search-box"><label class="field" for="searchInput">사이트에서 찾기</label><input id="searchInput" type="search" placeholder="예: 행정심판, 공장"><div class="search-hits" id="searchHits"></div></div></div>
+
 <main id="main">
   <section class="page-hero">
     <div class="wrap">
-      <p class="crumb"><a href="index.html">홈</a> / 업무분야</p>
-      <p class="eyebrow">OUR SERVICES</p>
-      <h1>이 사무소에서 다루는 업무입니다.</h1>
-      <p class="lead">카탈로그처럼 나열하되, 실제 수임하는 범위만 적습니다. 허가·인용·비자 발급을 약속하지 않습니다.</p>
+      <p class="crumb"><a href="index.html">홈</a> / 업무 안내</p>
+      <p class="eyebrow">업무 안내</p>
+      <h1>업무마다 절차가 다릅니다.</h1>
+      <p class="lead">아래에서 분야별 대상·절차 방향·준비 포인트를 확인하세요. 허가·인용·비자 발급을 약속하지 않습니다.</p>
     </div>
   </section>
-  <section class="sec">
-    <div class="wrap">
-      <div class="cat" id="minwon">
-        <h2>민원·행정</h2>
-        <ul>
-          <li><a href="consult.html?need=민원">민원서류</a></li>
-          <li><a href="consult.html?need=민원">진정</a></li>
-          <li><a href="consult.html?need=민원">탄원</a></li>
-          <li><a href="consult.html?need=민원">사실확인</a></li>
-          <li><a href="consult.html?need=민원">내용증명</a></li>
-          <li><a href="consult.html?need=민원">각종 신청</a></li>
-        </ul>
-        <p class="sub" style="margin-top:12px">대상·필요서류·절차는 기관마다 다릅니다. 상담에서 확인합니다.</p>
-      </div>
-      <div class="cat" id="permit">
-        <h2>인허가</h2>
-        <ul>
-          <li><a href="consult.html?need=인허가">개발행위</a></li>
-          <li><a href="consult.html?need=인허가">영업허가</a></li>
-          <li><a href="consult.html?need=인허가">공장 관련</a></li>
-          <li><a href="consult.html?need=인허가">각종 신고</a></li>
-          <li><a href="consult.html?need=인허가">등록</a></li>
-          <li><a href="consult.html?need=인허가">변경</a></li>
-        </ul>
-      </div>
-      <div class="cat" id="relief">
-        <h2>행정구제</h2>
-        <ul>
-          <li><a href="consult.html?need=행정심판">행정심판</a></li>
-          <li><a href="consult.html?need=행정심판">이의신청</a></li>
-          <li><a href="consult.html?need=행정심판">소청</a></li>
-          <li><a href="consult.html?need=행정심판">처분 대응</a></li>
-        </ul>
-        <p class="sub" style="margin-top:12px">제기 기간이 짧은 경우가 있습니다. 인용을 보장하지 않습니다.</p>
-      </div>
-      <div class="cat" id="visa">
-        <h2>출입국</h2>
-        <ul>
-          <li><a href="consult.html?need=출입국">비자</a></li>
-          <li><a href="consult.html?need=출입국">체류</a></li>
-          <li><a href="consult.html?need=출입국">자격변경</a></li>
-          <li><a href="consult.html?need=출입국">출입국 관련</a></li>
-        </ul>
-      </div>
-      <div class="cat" id="biz">
-        <h2>기업행정</h2>
-        <ul>
-          <li><a href="consult.html?need=기업행정">기업인증</a></li>
-          <li><a href="consult.html?need=기업행정">조달</a></li>
-          <li><a href="consult.html?need=기업행정">각종 기업행정</a></li>
-        </ul>
-      </div>
-      <div class="cat" id="corp">
-        <h2>법인·비영리</h2>
-        <ul>
-          <li><a href="consult.html?need=법인">법인</a></li>
-          <li><a href="consult.html?need=법인">비영리법인</a></li>
-        </ul>
-      </div>
-      <div class="cat" id="etc">
-        <h2>기타</h2>
-        <ul>
-          <li><a href="consult.html?need=기타">토지·보상</a></li>
-          <li><a href="consult.html?need=기타">기타 행정</a></li>
-        </ul>
-      </div>
-      <div class="cta-end">
-        <h2>어떤 업무인지 모르셔도 됩니다.</h2>
-        <p>상황을 적으면 검토 후 안내합니다.</p>
-        <p style="margin-top:16px"><a class="btn btn-navy" href="consult.html?need=모름">상담하기 →</a></p>
+
+  <section class="sec svc-sec">
+    <div class="wrap svc-layout">
+      <aside class="svc-side" aria-label="업무 목차">
+        <p class="svc-side-label">업무 안내</p>
+        <nav class="svc-toc">
+          <a href="#visa">출입국 · 비자</a>
+          <a href="#permit">인허가 · 공장</a>
+          <a href="#relief">행정심판 · 구제</a>
+          <a href="#biz">기업행정</a>
+          <a href="#car">자동차</a>
+          <a href="#land">토지 · 건축</a>
+          <a href="#minwon">민원 · 기타</a>
+          <a href="#corp">법인 · 비영리</a>
+        </nav>
+        <a class="btn btn-navy svc-side-cta" href="index.html#finder">내 상황 확인하기</a>
+      </aside>
+
+      <div class="svc-main">
+        <article class="svc-block" id="visa">
+          <header class="svc-head">
+            <span class="svc-num">01</span>
+            <h2>출입국 · 비자</h2>
+            <p>체류자격 · 초청 · 외국인 고용. 발급·허가를 보장하지 않습니다.</p>
+          </header>
+          <div class="svc-grid-items">
+            <div class="svc-item">
+              <h3>체류자격 변경</h3>
+              <p>현재 자격과 목적에 맞는지부터 확인합니다.</p>
+            </div>
+            <div class="svc-item">
+              <h3>비자 · 사증</h3>
+              <p>입국 목적·초청 관계에 따라 서류가 달라집니다.</p>
+            </div>
+            <div class="svc-item">
+              <h3>초청 · 동행</h3>
+              <p>초청인·피초청인 요건을 함께 봅니다.</p>
+            </div>
+            <div class="svc-item">
+              <h3>기업 출입국</h3>
+              <p>고용·파견·주재 등 기업 측 서류를 정리합니다.</p>
+            </div>
+          </div>
+          <div class="svc-meta">
+            <div>
+              <h4>진행 방향 예시</h4>
+              <ol>
+                <li>현황·자격 확인</li>
+                <li>필요 서류 목록 정리</li>
+                <li>신청·제출</li>
+                <li>보완·결과 안내</li>
+              </ol>
+            </div>
+            <div>
+              <h4>상담 전 준비</h4>
+              <ul>
+                <li>여권·외국인등록 정보</li>
+                <li>체류자격·만료일</li>
+                <li>초청·고용 관련 서류(있으면)</li>
+              </ul>
+            </div>
+          </div>
+          <p class="svc-note">업무에 따라 절차와 필요 서류가 달라질 수 있습니다.</p>
+          <a class="btn btn-acc" href="consult.html?need=출입국">이 업무 상담하기 →</a>
+        </article>
+
+        <article class="svc-block" id="permit">
+          <header class="svc-head">
+            <span class="svc-num">02</span>
+            <h2>인허가 · 공장</h2>
+            <p>허가·신고·등록·변경. 승인을 단정하지 않습니다.</p>
+          </header>
+          <div class="svc-grid-items">
+            <div class="svc-item">
+              <h3>공장설립 · 등록</h3>
+              <p>입지·용도·관할부터 가늠합니다.</p>
+            </div>
+            <div class="svc-item">
+              <h3>영업허가 · 신고</h3>
+              <p>업종별 요건과 시설 기준을 확인합니다.</p>
+            </div>
+            <div class="svc-item">
+              <h3>개발행위</h3>
+              <p>행위 유형과 관련 인허가를 함께 봅니다.</p>
+            </div>
+            <div class="svc-item">
+              <h3>변경 · 증설</h3>
+              <p>등록 변경과 업종 변경을 구분합니다.</p>
+            </div>
+          </div>
+          <div class="svc-meta">
+            <div>
+              <h4>공장 관련 절차 예시</h4>
+              <ol>
+                <li>입지 검토</li>
+                <li>공장설립 승인</li>
+                <li>관련 인허가</li>
+                <li>공장등록</li>
+                <li>변경·증설</li>
+              </ol>
+            </div>
+            <div>
+              <h4>상담 전 준비</h4>
+              <ul>
+                <li>사업 계획·업종 개요</li>
+                <li>사업장 주소·도면(있으면)</li>
+                <li>기존 허가·신고 서류(있으면)</li>
+              </ul>
+            </div>
+          </div>
+          <p class="svc-note">업무에 따라 절차와 필요 서류가 달라질 수 있습니다.</p>
+          <a class="btn btn-acc" href="consult.html?need=인허가">이 업무 상담하기 →</a>
+        </article>
+
+        <article class="svc-block" id="relief">
+          <header class="svc-head">
+            <span class="svc-num">03</span>
+            <h2>행정심판 · 권익구제</h2>
+            <p>이의·심판·처분 대응. 인용을 보장하지 않습니다.</p>
+          </header>
+          <div class="svc-grid-items">
+            <div class="svc-item">
+              <h3>영업정지 · 과태료</h3>
+              <p>통지서·기한부터 확인합니다.</p>
+            </div>
+            <div class="svc-item">
+              <h3>운전면허 · 행정처분</h3>
+              <p>처분 유형과 대응 절차를 가늠합니다.</p>
+            </div>
+            <div class="svc-item">
+              <h3>이의신청</h3>
+              <p>원 처분 기관에 대한 이의가 맞는지 봅니다.</p>
+            </div>
+            <div class="svc-item">
+              <h3>행정심판</h3>
+              <p>청구 취지·이유를 사실관계에 맞춰 정리합니다.</p>
+            </div>
+          </div>
+          <div class="svc-meta">
+            <div>
+              <h4>진행 방향 예시</h4>
+              <ol>
+                <li>처분서·송달일 확인</li>
+                <li>제기 기간·관할 확인</li>
+                <li>사실관계·서류 정리</li>
+                <li>신청·대응 · 결과 안내</li>
+              </ol>
+            </div>
+            <div>
+              <h4>상담 전 준비</h4>
+              <ul>
+                <li>처분서·통지서</li>
+                <li>처분일·송달일</li>
+                <li>관련 신청·소명 자료</li>
+              </ul>
+            </div>
+          </div>
+          <p class="svc-note">제기 기간이 짧은 경우가 있습니다. 업무에 따라 절차가 달라질 수 있습니다.</p>
+          <a class="btn btn-acc" href="consult.html?need=행정심판">이 업무 상담하기 →</a>
+        </article>
+
+        <article class="svc-block" id="biz">
+          <header class="svc-head">
+            <span class="svc-num">04</span>
+            <h2>기업행정</h2>
+            <p>인증·조달·기업 서류. 선정·지원을 약속하지 않습니다.</p>
+          </header>
+          <div class="svc-grid-items">
+            <div class="svc-item">
+              <h3>기업인증</h3>
+              <p>요건·증빙 목록을 확인합니다.</p>
+            </div>
+            <div class="svc-item">
+              <h3>조달 · 지원</h3>
+              <p>등록·신청에 필요한 서류를 정리합니다.</p>
+            </div>
+            <div class="svc-item">
+              <h3>기업 민원</h3>
+              <p>관할 기관에 제출하는 기업 행정 서류를 다룹니다.</p>
+            </div>
+          </div>
+          <a class="btn btn-acc" href="consult.html?need=기업행정">이 업무 상담하기 →</a>
+        </article>
+
+        <article class="svc-block" id="car">
+          <header class="svc-head">
+            <span class="svc-num">05</span>
+            <h2>자동차</h2>
+            <p>이전 · 상속 · 말소 · 압류·저당 관련 행정.</p>
+          </header>
+          <div class="svc-grid-items">
+            <div class="svc-item"><h3>이전등록</h3><p>매매·명의 이전에 필요한 서류를 확인합니다.</p></div>
+            <div class="svc-item"><h3>상속 · 증여</h3><p>상속 관계 서류와 등록 절차를 정리합니다.</p></div>
+            <div class="svc-item"><h3>말소</h3><p>폐차·수출 등 말소 유형에 맞게 안내합니다.</p></div>
+            <div class="svc-item"><h3>압류 · 저당</h3><p>관련 통지와 해소 절차를 가늠합니다.</p></div>
+          </div>
+          <a class="btn btn-acc" href="consult.html?need=자동차">이 업무 상담하기 →</a>
+        </article>
+
+        <article class="svc-block" id="land">
+          <header class="svc-head">
+            <span class="svc-num">06</span>
+            <h2>토지 · 건축</h2>
+            <p>개발행위 · 건축 관련 행정. 허가를 단정하지 않습니다.</p>
+          </header>
+          <div class="svc-grid-items">
+            <div class="svc-item"><h3>개발 · 인허가</h3><p>행위 유형과 관할을 확인합니다.</p></div>
+            <div class="svc-item"><h3>건축 관련 행정</h3><p>건축·용도 관련 행정 서류를 다룹니다.</p></div>
+            <div class="svc-item"><h3>토지 분할 · 이용</h3><p>공부·도면을 바탕으로 절차를 가늠합니다.</p></div>
+          </div>
+          <a class="btn btn-acc" href="consult.html?need=토지">이 업무 상담하기 →</a>
+        </article>
+
+        <article class="svc-block" id="minwon">
+          <header class="svc-head">
+            <span class="svc-num">07</span>
+            <h2>민원 · 기타</h2>
+            <p>진정 · 사실확인 · 내용증명 등. 결과 해결을 약속하지 않습니다.</p>
+          </header>
+          <div class="svc-grid-items">
+            <div class="svc-item"><h3>민원 · 진정</h3><p>어디에, 어떻게 넣을지부터 정리합니다.</p></div>
+            <div class="svc-item"><h3>사실확인 · 내용증명</h3><p>확인된 사실만 문서로 남깁니다.</p></div>
+            <div class="svc-item"><h3>각종 신청</h3><p>기관별 신청 양식·첨부 서류를 맞춥니다.</p></div>
+          </div>
+          <a class="btn btn-acc" href="consult.html?need=민원">이 업무 상담하기 →</a>
+        </article>
+
+        <article class="svc-block" id="corp">
+          <header class="svc-head">
+            <span class="svc-num">08</span>
+            <h2>법인 · 비영리</h2>
+            <p>법인·단체 관련 행정. 설립 허가를 보장하지 않습니다.</p>
+          </header>
+          <div class="svc-grid-items">
+            <div class="svc-item"><h3>법인</h3><p>목적·임원·정관 관련 행정 서류를 정리합니다.</p></div>
+            <div class="svc-item"><h3>비영리 · 단체</h3><p>주무관청·요건에 맞는 서류 구성을 안내합니다.</p></div>
+          </div>
+          <a class="btn btn-acc" href="consult.html?need=법인">이 업무 상담하기 →</a>
+        </article>
+
+        <div class="cta-end">
+          <h2>어떤 업무인지 모르셔도 됩니다.</h2>
+          <p>상황부터 고르면 상담 방향을 안내합니다.</p>
+          <p style="margin-top:16px;display:flex;flex-wrap:wrap;gap:10px">
+            <a class="btn btn-navy" href="index.html#finder">내 상황 확인하기 →</a>
+            <a class="btn btn-acc" href="consult.html?need=모름">상담하기 →</a>
+          </p>
+        </div>
       </div>
     </div>
   </section>
 </main>
+
 <footer>
   <div class="wrap">
     <div class="foot-name">다올종합행정사</div>
-    <div class="foot-nav"><a href="fees.html">수임 안내</a><a href="privacy.html">개인정보처리방침</a></div>
+    <div class="foot-nav">
+      <a href="index.html#finder">업무 찾기</a>
+      <a href="fees.html">수임 안내</a>
+      <a href="privacy.html">개인정보처리방침</a>
+    </div>
     <p>예시 사무소 · 서울 종로 · 02-000-0005</p>
   </div>
 </footer>
-<div class="sticky"><a class="tel" href="tel:02-000-0005">전화상담</a><a class="kakao" href="consult.html">상담문의</a></div>
+<div class="sticky"><a class="tel" href="tel:02-000-0005">전화상담</a><a class="kakao" href="consult.html">카카오톡 상담</a></div>
 <script src="assets/office.js"></script>
 </body>
 </html>

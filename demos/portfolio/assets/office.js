@@ -258,4 +258,237 @@
       }
     });
   }
+
+  /* Kinetic word on home hero */
+  var kinetic = document.getElementById("kineticWord");
+  if (kinetic && !window.matchMedia("(prefers-reduced-motion: reduce)").matches) {
+    var words = ["행정", "사업", "인허가", "출입국", "행정심판"];
+    var wi = 0;
+    setInterval(function () {
+      wi = (wi + 1) % words.length;
+      kinetic.textContent = words[wi];
+    }, 2800);
+  }
+
+  /* Situation finder */
+  var finder = document.getElementById("situationFinder");
+  if (finder) {
+    var paneEls = finder.querySelectorAll(".finder-pane");
+    var progress = finder.querySelectorAll(".finder-progress li");
+    var step2 = document.getElementById("finderStep2");
+    var step2Title = document.getElementById("finderStep2Title");
+    var prepEl = document.getElementById("finderPrep");
+    var resultEl = document.getElementById("finderResult");
+    var consultLink = document.getElementById("finderConsult");
+    var state = { step: 0, branch: "", need: "", label: "" };
+
+    var tree = {
+      biz: {
+        title: "어떤 사업인가요?",
+        opts: [
+          ["공장을 설립하려고 합니다", "인허가", "공장설립·등록 방향"],
+          ["식당·영업을 시작하려고 합니다", "인허가", "영업 허가·신고 방향"],
+          ["외국인을 고용하려고 합니다", "출입국", "외국인 고용·체류 방향"],
+          ["허가·신고가 필요한 것 같습니다", "인허가", "인허가·신고 방향"]
+        ],
+        prep: ["사업 계획·업종 개요", "사업장 주소·도면(있으면)", "기존 허가·신고 서류(있으면)"]
+      },
+      disp: {
+        title: "어떤 처분에 가깝나요?",
+        opts: [
+          ["영업정지·과태료 통지를 받았습니다", "행정심판", "영업정지·처분 대응"],
+          ["운전면허 관련 처분입니다", "행정심판", "운전면허·행정처분"],
+          ["신청이 거부·반려되었습니다", "행정심판", "거부·반려 대응"],
+          ["이의·심판이 맞는지 모르겠습니다", "행정심판", "구제 절차 검토"]
+        ],
+        prep: ["처분서·통지서", "처분일·송달일 확인", "관련 신청 이력"]
+      },
+      visa: {
+        title: "출입국 중 어디에 가깝나요?",
+        opts: [
+          ["체류자격 변경이 필요합니다", "출입국", "체류자격 변경"],
+          ["비자·사증 신청입니다", "출입국", "비자·사증"],
+          ["초청·동행이 필요합니다", "출입국", "초청·동행"],
+          ["기업 출입국 업무입니다", "출입국", "기업 출입국"]
+        ],
+        prep: ["여권·외국인등록 정보", "체류자격·만료일", "초청·고용 관련 서류(있으면)"]
+      },
+      land: {
+        title: "토지·건축 중 어디에 가깝나요?",
+        opts: [
+          ["개발행위·인허가가 필요합니다", "토지", "개발·인허가"],
+          ["건축 관련 행정입니다", "토지", "건축 관련 행정"],
+          ["토지 분할·이용 문제입니다", "토지", "토지 관련 행정"],
+          ["잘 모르겠습니다", "모름", "상황 상담"]
+        ],
+        prep: ["지번·공부 자료", "도면·계획(있으면)", "관할 문의 이력(있으면)"]
+      },
+      car: {
+        title: "자동차 업무 중 어디에 가깝나요?",
+        opts: [
+          ["이전등록이 필요합니다", "자동차", "이전등록"],
+          ["상속·증여입니다", "자동차", "상속·증여"],
+          ["말소·압류·저당입니다", "자동차", "말소·압류·저당"],
+          ["잘 모르겠습니다", "모름", "상황 상담"]
+        ],
+        prep: ["자동차등록증", "소유자·상속 관계 서류", "압류·저당 관련 통지(있으면)"]
+      },
+      unk: {
+        title: "조금 더 가까운 말을 고르세요",
+        opts: [
+          ["개인 민원·진정에 가깝습니다", "민원", "민원·진정"],
+          ["사업·허가가 필요해 보입니다", "인허가", "인허가·신고"],
+          ["기관 처분에 대응해야 합니다", "행정심판", "행정구제"],
+          ["외국인·출입국입니다", "출입국", "출입국"],
+          ["그래도 모르겠습니다", "모름", "상황 상담"]
+        ],
+        prep: ["지금 막힌 상황을 날짜 순으로 정리", "받은 서류·문자·메일", "원하는 결과(가능 범위 안에서)"]
+      }
+    };
+
+    function showStep(n) {
+      state.step = n;
+      paneEls.forEach(function (p) {
+        var i = parseInt(p.getAttribute("data-pane"), 10);
+        p.hidden = i !== n;
+        p.classList.toggle("is-on", i === n);
+      });
+      progress.forEach(function (li, idx) {
+        li.classList.toggle("is-on", idx <= n);
+      });
+    }
+
+    function fillStep2(branch) {
+      var node = tree[branch];
+      if (!node || !step2) return;
+      if (step2Title) step2Title.textContent = node.title;
+      step2.innerHTML = node.opts.map(function (row) {
+        return "<button type='button' data-need='" + row[1] + "' data-label='" + row[2] + "'>" + row[0] + "</button>";
+      }).join("");
+    }
+
+    function fillPrep(branch) {
+      var node = tree[branch];
+      if (!node || !prepEl) return;
+      prepEl.innerHTML = node.prep.map(function (t) { return "<li>" + t + "</li>"; }).join("");
+    }
+
+    finder.addEventListener("click", function (e) {
+      var back = e.target.closest("[data-back]");
+      if (back) {
+        if (state.step > 0) showStep(state.step - 1);
+        return;
+      }
+      var nextPrep = e.target.closest("[data-next-prep]");
+      if (nextPrep) {
+        if (resultEl) {
+          resultEl.textContent = "선택하신 방향: " + state.label + ". 상담에서 관할·요건·서류를 확인합니다.";
+        }
+        if (consultLink) consultLink.href = "consult.html?need=" + encodeURIComponent(state.need || "모름");
+        showStep(3);
+        return;
+      }
+      var branchBtn = e.target.closest("[data-branch]");
+      if (branchBtn) {
+        state.branch = branchBtn.getAttribute("data-branch");
+        fillStep2(state.branch);
+        showStep(1);
+        return;
+      }
+      var needBtn = e.target.closest("[data-need]");
+      if (needBtn && e.target.closest("#finderStep2")) {
+        state.need = needBtn.getAttribute("data-need");
+        state.label = needBtn.getAttribute("data-label") || state.need;
+        fillPrep(state.branch);
+        showStep(2);
+      }
+    });
+  }
+
+  /* Home FAQ search */
+  var faqInput = document.getElementById("faqInput");
+  var faqHits = document.getElementById("faqHits");
+  var faqItems = [
+    { q: "행정심판은 언제 신청하나요?", u: "info.html" },
+    { q: "비자 변경에 필요한 서류는?", u: "consult.html?need=출입국" },
+    { q: "공장설립 승인은 어디서 받나요?", u: "consult.html?need=인허가" },
+    { q: "영업정지 통지를 받으면?", u: "consult.html?need=행정심판" },
+    { q: "자동차 이전등록은?", u: "consult.html?need=자동차" }
+  ];
+  function renderFaq(q) {
+    if (!faqHits) return;
+    var s = (q || "").trim();
+    if (!s) {
+      faqHits.innerHTML = "";
+      return;
+    }
+    var hits = faqItems.filter(function (item) { return item.q.indexOf(s) !== -1; });
+    if (!hits.length) {
+      faqHits.innerHTML = "<p style='font-size:14px;color:#64748B'>관련 안내가 없습니다. 상담에서 상황을 적어 주세요. <a class='go' href='consult.html'>문의하기 →</a></p>";
+      return;
+    }
+    faqHits.innerHTML = hits.map(function (item) {
+      return "<a href='" + item.u + "'>" + item.q + "</a>";
+    }).join("");
+  }
+  if (faqInput) {
+    faqInput.addEventListener("input", function () { renderFaq(faqInput.value); });
+  }
+  var faqRecent = document.getElementById("faqRecent");
+  if (faqRecent && faqInput) {
+    faqRecent.addEventListener("click", function (e) {
+      var btn = e.target.closest("[data-q]");
+      if (!btn) return;
+      faqInput.value = btn.getAttribute("data-q");
+      renderFaq(faqInput.value);
+      faqInput.focus();
+    });
+  }
+
+  /* Reveal + timeline scroll */
+  var reveals = document.querySelectorAll("[data-reveal]");
+  if (reveals.length && "IntersectionObserver" in window) {
+    var io = new IntersectionObserver(function (entries) {
+      entries.forEach(function (entry) {
+        if (entry.isIntersecting) {
+          entry.target.classList.add("is-in");
+          io.unobserve(entry.target);
+        }
+      });
+    }, { rootMargin: "0px 0px -8% 0px", threshold: 0.12 });
+    reveals.forEach(function (el) { io.observe(el); });
+  } else {
+    reveals.forEach(function (el) { el.classList.add("is-in"); });
+  }
+
+  var timeline = document.getElementById("processTimeline");
+  if (timeline && "IntersectionObserver" in window) {
+    var items = timeline.querySelectorAll("li");
+    var tio = new IntersectionObserver(function (entries) {
+      entries.forEach(function (entry) {
+        if (entry.isIntersecting) entry.target.classList.add("is-active");
+      });
+    }, { threshold: 0.45 });
+    items.forEach(function (li) { tio.observe(li); });
+  }
+
+  /* Services sticky TOC highlight */
+  var toc = document.querySelector(".svc-toc");
+  var blocks = document.querySelectorAll(".svc-block[id]");
+  if (toc && blocks.length && "IntersectionObserver" in window) {
+    var tocLinks = toc.querySelectorAll("a[href^='#']");
+    var map = {};
+    tocLinks.forEach(function (a) {
+      map[a.getAttribute("href").slice(1)] = a;
+    });
+    var sio = new IntersectionObserver(function (entries) {
+      entries.forEach(function (entry) {
+        if (!entry.isIntersecting) return;
+        var id = entry.target.id;
+        tocLinks.forEach(function (a) { a.classList.remove("is-on"); });
+        if (map[id]) map[id].classList.add("is-on");
+      });
+    }, { rootMargin: "-20% 0px -55% 0px", threshold: 0 });
+    blocks.forEach(function (b) { sio.observe(b); });
+  }
 })();
