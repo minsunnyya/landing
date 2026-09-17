@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0">
+  <channel>
+    <title>WorksFrame — 행정사 전문 홈페이지</title>
+    <link>https://worksframe.com/</link>
+    <description>웍스프레임은 대한민국에서 행정사 사무소 홈페이지만 제작합니다. 출입국·인허가·심판 샘플이 있고, 자격·주력 업무·연락처가 검색과 AI에 읽히게 구조를 짭니다.</description>
+    <language>ko</language>
+    <lastBuildDate>Wed, 17 Sep 2026 10:00:00 +0000</lastBuildDate>
+    <item>
+      <title>WorksFrame — 행정사 전문 홈페이지</title>
+      <link>https://worksframe.com/</link>
+      <guid isPermaLink="true">https://worksframe.com/</guid>
+      <description>행정사 사무소 홈페이지만 제작합니다. 사무소·업무 전문·종합 구성과 샘플을 안내합니다.</description>
+      <pubDate>Wed, 17 Sep 2026 10:00:00 +0000</pubDate>
+    </item>
+    <item>
+      <title>개인정보처리방침</title>
+      <link>https://worksframe.com/privacy.html</link>
+      <guid isPermaLink="true">https://worksframe.com/privacy.html</guid>
+      <description>웍스프레임 개인정보처리방침입니다.</description>
+      <pubDate>Wed, 17 Sep 2026 10:00:00 +0000</pubDate>
+    </item>
+    <item>
+      <title>종합 행정사 샘플</title>
+      <link>https://worksframe.com/demos/portfolio/index.html</link>
+      <guid isPermaLink="true">https://worksframe.com/demos/portfolio/index.html</guid>
+      <description>종합 행정사 사무소 홈페이지 샘플입니다.</description>
+      <pubDate>Wed, 17 Sep 2026 10:00:00 +0000</pubDate>
+    </item>
+    <item>
+      <title>출입국·비자 샘플</title>
+      <link>https://worksframe.com/demos/immigration/index.html</link>
+      <guid isPermaLink="true">https://worksframe.com/demos/immigration/index.html</guid>
+      <description>출입국·비자 행정사 홈페이지 샘플입니다.</description>
+      <pubDate>Wed, 17 Sep 2026 10:00:00 +0000</pubDate>
+    </item>
+    <item>
+      <title>공장·기업 인허가 샘플</title>
+      <link>https://worksframe.com/demos/factory/index.html</link>
+      <guid isPermaLink="true">https://worksframe.com/demos/factory/index.html</guid>
+      <description>공장·기업 인허가 행정사 홈페이지 샘플입니다.</description>
+      <pubDate>Wed, 17 Sep 2026 10:00:00 +0000</pubDate>
+    </item>
+    <item>
+      <title>행정심판·권익구제 샘플</title>
+      <link>https://worksframe.com/demos/appeal/index.html</link>
+      <guid isPermaLink="true">https://worksframe.com/demos/appeal/index.html</guid>
+      <description>행정심판·권익구제 행정사 홈페이지 샘플입니다.</description>
+      <pubDate>Wed, 17 Sep 2026 10:00:00 +0000</pubDate>
+    </item>
+  </channel>
+</rss>
