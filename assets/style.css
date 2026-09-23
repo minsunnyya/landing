@@ -36,7 +36,7 @@
 
 html {
   scroll-behavior: smooth;
-  scroll-padding-top: 104px;
+  scroll-padding-top: var(--header-h, 105px);
 }
 
 body {
@@ -634,19 +634,6 @@ select:focus-visible {
 
 #work {
   padding: 72px 0 48px;
-}
-
-#need,
-#work,
-#fit,
-#check,
-#compare,
-#process,
-#pricing,
-#ops,
-#faq,
-#contact {
-  scroll-margin-top: 104px;
 }
 
 .spot {

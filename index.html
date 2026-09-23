@@ -155,39 +155,39 @@
     <section class="hero">
       <div class="wrap hero-grid">
         <div class="hero-copy">
-          <p class="hero-kicker">행정사 사무소만 제작합니다</p>
+          <p class="hero-kicker">검색 · AI 답변 대응형 행정사 홈페이지</p>
           <h1>
-            <span class="hero-line">고객이 내 사무소를</span>
-            <span class="hero-line">선택할 이유를 보여주세요.</span>
+            <span class="hero-line">검색엔진과 AI가</span>
+            <span class="hero-line">이해하기 쉽게 만듭니다.</span>
           </h1>
           <ul class="hero-points">
-            <li>주력 업무가 무엇인지,</li>
-            <li>어떤 고객을 돕는지,</li>
-            <li>어떻게 상담하면 되는지.</li>
+            <li>업무마다 찾을 수 있는 페이지,</li>
+            <li>질문에 바로 답하는 정보,</li>
+            <li>상담으로 이어지는 구조.</li>
           </ul>
-          <p class="hero-sub">검색해서 들어온 고객이 필요한 정보를 찾고 자연스럽게 상담으로 이어질 수 있도록, <strong>행정사 업무에 맞춰 홈페이지를 설계합니다.</strong></p>
+          <p class="hero-sub">고객이 네이버·구글에서 검색하거나 AI에 업무를 물을 때 사무소명, 전문 업무, 상담 방법을 이해하기 쉽도록 <strong>행정사 업무에 맞춰 정보 구조를 설계합니다.</strong></p>
           <div class="hero-actions">
-            <a class="btn-pill" href="#check">홈페이지 무료 점검받기<span class="cta-arrow" aria-hidden="true">→</span></a>
+            <a class="btn-pill" href="#check">검색·AI 대응 무료 점검<span class="cta-arrow" aria-hidden="true">→</span></a>
             <a class="btn-ghost" href="#work">실제 데모 보기</a>
           </div>
         </div>
-        <aside class="hero-stage" aria-label="분야별 첫 질문 예시">
-          <p class="stage-label">첫 화면에 이런 질문을 둡니다</p>
+        <aside class="hero-stage" aria-label="검색과 AI 대응을 위한 기본 정보 구조">
+          <p class="stage-label">검색과 AI가 읽는 핵심 정보</p>
           <ol class="stage-cards">
             <li>
-              <span>출입국</span>
-              <strong>체류기간이 언제 끝나나요?</strong>
-              <em>비자 종류를 고르고 문의</em>
+              <span>업무별 페이지</span>
+              <strong>출입국 · 인허가 · 행정심판</strong>
+              <em>업무마다 고유한 주소와 설명</em>
             </li>
             <li>
-              <span>공장 · 기업</span>
-              <strong>사업이 공장인가요, 사무실인가요?</strong>
-              <em>등록·인허가 안내로 연결</em>
+              <span>질문형 정보</span>
+              <strong>누가, 언제, 무엇을 준비하나요?</strong>
+              <em>대상 · 요건 · 준비서류 · 절차</em>
             </li>
             <li>
-              <span>행정심판</span>
-              <strong>처분서를 받으셨나요?</strong>
-              <em>처분 종류와 신청 기한 안내</em>
+              <span>상담 연결</span>
+              <strong>어떤 사무소에 어떻게 문의하나요?</strong>
+              <em>행정사 정보 · 전화 · 카카오톡</em>
             </li>
           </ol>
         </aside>
@@ -246,6 +246,10 @@
     </section>
 
     <section id="work">
+         <header class="block-head reveal">
+          <h2>행정사 업무별 샘플입니다.</h2>
+          <p>출입국, 공장, 심판, 민원, 자동차, 토지. 눌러 보시면 구성이 보입니다.</p>
+        </header>
       <div class="wrap">
         <article class="spot">
           <div class="spot-copy">
@@ -268,10 +272,7 @@
           </a>
         </article>
 
-        <header class="block-head reveal">
-          <h2>행정사 업무별 샘플입니다.</h2>
-          <p>출입국, 공장, 심판, 민원, 자동차, 토지. 눌러 보시면 구성이 보입니다.</p>
-        </header>
+     
 
         <div class="work-grid">
           <article class="work-card reveal">
@@ -1015,11 +1016,50 @@
         });
       }
 
-      function spyLine() {
+      var navLockUntil = 0;
+
+      function headerOffset() {
         var header = document.querySelector(".site-header");
-        var headerH = header ? header.offsetHeight : 104;
-        var pad = parseFloat(getComputedStyle(document.documentElement).scrollPaddingTop) || 104;
-        return Math.max(headerH, pad) + 80;
+        return (header ? header.offsetHeight : 0) + 10;
+      }
+
+      function syncHeaderH() {
+        var header = document.querySelector(".site-header");
+        if (header) {
+          document.documentElement.style.setProperty("--header-h", header.offsetHeight + "px");
+        }
+      }
+
+      function scrollToId(id, instant) {
+        var behavior = instant ? "auto" : "smooth";
+        if (!id || id === "top") {
+          window.scrollTo({ top: 0, behavior: behavior });
+          return;
+        }
+        var section = document.getElementById(id);
+        if (!section) return;
+        var title = section.querySelector("h2, h1");
+        var target = title || section;
+        var top = target.getBoundingClientRect().top + window.pageYOffset - headerOffset();
+        window.scrollTo({ top: Math.max(0, top), behavior: behavior });
+      }
+
+      document.addEventListener("click", function (e) {
+        var a = e.target.closest("a[href^='#']");
+        if (!a) return;
+        var href = a.getAttribute("href");
+        if (!href || href === "#") return;
+        var id = href.slice(1);
+        if (id !== "top" && !document.getElementById(id)) return;
+        e.preventDefault();
+        setActiveNav(href);
+        navLockUntil = Date.now() + 1000;
+        scrollToId(id);
+        if (history.replaceState) history.replaceState(null, "", href);
+      });
+
+      function spyLine() {
+        return headerOffset() + 16;
       }
 
       function updateActiveNav() {
@@ -1034,14 +1074,6 @@
         setActiveNav("#" + current);
       }
 
-      var navLockUntil = 0;
-      navLinks.forEach(function (link) {
-        link.addEventListener("click", function () {
-          setActiveNav(link.getAttribute("href"));
-          navLockUntil = Date.now() + 800;
-        });
-      });
-
       var navTick = 0;
       window.addEventListener(
         "scroll",
@@ -1054,7 +1086,14 @@
         },
         { passive: true }
       );
-      window.addEventListener("resize", updateActiveNav);
+      window.addEventListener("resize", function () {
+        syncHeaderH();
+        updateActiveNav();
+      });
+      syncHeaderH();
+      if (location.hash.length > 1) {
+        scrollToId(location.hash.slice(1), true);
+      }
       updateActiveNav();
 
       document.querySelectorAll("#contact-form, #check-form").forEach(function (form) {
