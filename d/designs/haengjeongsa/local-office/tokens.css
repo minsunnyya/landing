@@ -1,0 +1,38 @@
+:root {
+  --paper: #fffdf8;
+  --surface: #eef5ee;
+  --ink: #173029;
+  --muted: #60706a;
+  --line: #c8d7cf;
+  --accent: #176b4d;
+  --button-text: #fff;
+  --focus: #125b43;
+  --contact: #205f48;
+  --contact-text: #fff;
+  --contact-button: #fff4c4;
+  --accent-text: #173029;
+  --font-body: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", "Noto Sans KR", sans-serif;
+  --font-display: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", "Noto Sans KR", sans-serif;
+  --display: 4.5rem;
+  --radius-button: 999px;
+}
+.design-local-office .site-head { background: var(--paper); }
+.design-local-office .hero { background: var(--hero-bg); }
+.design-local-office .hero-inner { min-height: 590px; }
+.design-local-office .hero-location {
+  align-self: stretch; display: grid; align-content: space-between; min-height: 320px;
+  padding: 1.4rem; border: 2px solid var(--ink); background: var(--paper);
+}
+.design-local-office .map-mark { width: 72px; height: 72px; display: grid; place-items: center; border-radius: 50% 50% 50% 8%; transform: rotate(-12deg); color: #fff; background: var(--accent); font-size: 1.8rem; }
+.design-local-office .map-mark span { transform: rotate(12deg); }
+.design-local-office .location-name { margin: 1.5rem 0 .3rem; font-size: clamp(1.7rem, 6vw, 2.7rem); line-height: 1.1; letter-spacing: -.04em; }
+.design-local-office .office-hours { margin: 0; color: var(--muted); }
+.design-local-office .nearby-list { display: flex; flex-wrap: wrap; gap: .45rem; margin-top: 1.2rem; }
+.design-local-office .nearby-list span { padding: .4rem .65rem; border: 1px solid var(--line); border-radius: 999px; background: var(--surface); font-size: .82rem; }
+.design-local-office .hero.variant-b .hero-grid { grid-template-columns: 1fr; }
+.design-local-office .hero.variant-b .hero-location { min-height: 220px; grid-template-columns: auto 1fr; gap: 1.4rem; align-items: center; }
+@media (min-width: 820px) {
+  .design-local-office .hero-grid { grid-template-columns: minmax(0, 1fr) minmax(300px, .65fr); }
+  .design-local-office .hero.variant-b .hero-grid { grid-template-columns: minmax(320px, .7fr) 1fr; }
+  .design-local-office .hero.variant-b .hero-location { order: -1; grid-template-columns: 1fr; min-height: 430px; }
+}

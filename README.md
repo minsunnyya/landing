@@ -1,6 +1,6 @@
 # WorksFrame (worksframe.com)
 
-행정사 사무소 홈페이지 제작 랜딩 + 샘플 데모.
+행정사 사무소 홈페이지 제작 + 월 관리 구독 랜딩, 샘플 데모, 개업 가이드.
 
 ## 폴더 구조
 
@@ -13,6 +13,7 @@
 ├── sitemap.xml
 ├── feed.xml                # RSS (네이버 제출용)
 ├── llms.txt                # AI/LLM용 요약
+├── guide/                  # 행정사 마케팅 가이드 50편 (글마다 index.html · cover.jpg · thumb.jpg)
 ├── google….html            # Google Search Console 소유 확인 (루트 고정)
 ├── naver….html             # 네이버 서치어드바이저 소유 확인 (루트 고정)
 ├── assets/                 # 랜딩 CSS/JS
@@ -26,7 +27,7 @@
 │   ├── civil/              # 민원
 │   └── land/               # 토지
 ├── _archive/drafts/        # 예전 초안 HTML (공개 링크 없음)
-└── _source/                # 원본 이미지 등 (gitignore, 비공개)
+└── _source/                # 원본 이미지, 영업 키트(sales-kit), 가이드 원고·빌드 도구(guide-src) (gitignore, 비공개)
 ```
 
 ## Google / Naver 확인 파일
@@ -41,3 +42,9 @@
 ## 배포
 
 `main` 푸시 → GitHub Pages → https://worksframe.com/
+
+## 배포 전 확인 (2026-09 개편)
+
+- `index.html`의 대표 사진·이름·경력, 푸터의 사업자등록번호 자리(`data-placeholder`, 주황 점선)를 채우고 속성을 지웁니다.
+- 대표 사진은 `files/` 에 넣고 `.about-photo` 안에 `<img>` 로 넣습니다.
+- 개편 전 원본은 `_source/backup-2026-09-28-before-subscription/` (비공개) 에 있습니다.

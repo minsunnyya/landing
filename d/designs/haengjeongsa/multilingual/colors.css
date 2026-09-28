@@ -1,0 +1,12 @@
+body[data-color="a"] {
+  --paper: #f7fbfa; --surface: #e5f0ee; --ink: #0f2929; --muted: #5b7371;
+  --line: #b8cdca; --accent: #087f72; --hero-bg: #103f3d; --hero-ink: #f5fffd;
+  --hero-muted: #bcd8d4; --passport: #174c49; --passport-line: #43706c;
+  --lang-active-text: #fff; --contact: #092f2d; --contact-button: #d9fff7;
+}
+body[data-color="b"] {
+  --paper: #f8f8fc; --surface: #ececf5; --ink: #22233d; --muted: #66677f;
+  --line: #c8c8d8; --accent: #5652a5; --hero-bg: #242447; --hero-ink: #fafaff;
+  --hero-muted: #c7c7dd; --passport: #30305a; --passport-line: #5f5f82;
+  --lang-active-text: #fff; --contact: #1f1f3c; --contact-button: #efefff;
+}

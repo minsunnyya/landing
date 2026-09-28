@@ -1,0 +1,41 @@
+:root {
+  --paper: #f7fbfa;
+  --surface: #e7f1ef;
+  --ink: #0f2929;
+  --muted: #5b7371;
+  --line: #b9cdca;
+  --accent: #087f72;
+  --button-text: #fff;
+  --focus: #006e63;
+  --contact: #0a4642;
+  --contact-text: #fff;
+  --contact-button: #d9fff7;
+  --accent-text: #102d2a;
+  --font-body: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", "Noto Sans KR", sans-serif;
+  --font-display: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", "Noto Sans KR", sans-serif;
+  --display: 4.7rem;
+  --radius-button: 0;
+}
+.design-multilingual .site-head { background: var(--paper); }
+.design-multilingual .hero { color: var(--hero-ink); background: var(--hero-bg); }
+.design-multilingual .hero-lead { color: var(--hero-muted); }
+.design-multilingual .passport-panel { border: 1px solid var(--passport-line); background: var(--passport); }
+.design-multilingual .lang-row { display: flex; gap: 0; border-bottom: 1px solid var(--passport-line); }
+.design-multilingual .lang-row span {
+  flex: 1; min-height: 48px; display: grid; place-items: center;
+  border-right: 1px solid var(--passport-line);
+  color: inherit; background: transparent; font-weight: 800;
+}
+.design-multilingual .lang-row span:first-child { color: var(--lang-active-text); background: var(--accent); }
+.design-multilingual .visa-list { display: grid; grid-template-columns: repeat(2, 1fr); margin: 0; padding: 0; list-style: none; }
+.design-multilingual .visa-list li { min-height: 104px; padding: 1rem; border-right: 1px solid var(--passport-line); border-bottom: 1px solid var(--passport-line); }
+.design-multilingual .visa-list strong { display: block; font-size: 1.4rem; }
+.design-multilingual .visa-list span { color: var(--hero-muted); font-size: .8rem; }
+.design-multilingual .hero.variant-b .passport-panel { max-width: 780px; }
+.design-multilingual .hero.variant-b .hero-copy { max-width: 920px; }
+@media (min-width: 860px) {
+  .design-multilingual .hero.variant-a .hero-grid { grid-template-columns: minmax(0, 1fr) minmax(360px, .75fr); }
+  .design-multilingual .hero.variant-b .hero-grid { grid-template-columns: 1fr; }
+  .design-multilingual .hero.variant-b .passport-panel { margin-left: auto; width: 70%; }
+  .design-multilingual .visa-list { grid-template-columns: repeat(3, 1fr); }
+}

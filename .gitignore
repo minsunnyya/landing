@@ -4,3 +4,9 @@ _source/
 Thumbs.db
 .vscode/
 .idea/
+
+# 사이트와 관계없는 개인 문서가 실수로 공개되지 않도록
+*.hwp
+*.hwpx
+*.docx
+/*.pdf

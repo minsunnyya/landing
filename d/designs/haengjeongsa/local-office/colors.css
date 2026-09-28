@@ -1,0 +1,10 @@
+body[data-color="a"] {
+  --paper: #fffdf8; --surface: #edf5ee; --hero-bg: #e2f0e8; --ink: #173029;
+  --muted: #60706a; --line: #bdcec4; --accent: #176b4d; --contact: #205f48;
+  --contact-text: #fff; --contact-button: #fff1a8;
+}
+body[data-color="b"] {
+  --paper: #fffdf9; --surface: #f6eee6; --hero-bg: #f4e2d1; --ink: #38251c;
+  --muted: #79675e; --line: #ddc8b8; --accent: #a44624; --contact: #6f321d;
+  --contact-text: #fff; --contact-button: #fff5dc;
+}

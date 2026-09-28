@@ -1,0 +1,36 @@
+:root {
+  --paper: #fbfbfa;
+  --surface: #f1f1ee;
+  --ink: #181b1a;
+  --muted: #646a67;
+  --line: #cfd2cf;
+  --accent: #a52822;
+  --button-text: #fff;
+  --focus: #176b5b;
+  --contact: #202321;
+  --contact-text: #fff;
+  --contact-button: #fff;
+  --accent-text: #181b1a;
+  --font-body: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", "Noto Sans KR", sans-serif;
+  --font-display: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", "Noto Sans KR", sans-serif;
+  --display: 4.9rem;
+  --radius-button: 2px;
+}
+.design-document .site-head { border-top: 5px solid var(--accent); }
+.design-document .hero { background-color: var(--paper); background-image: linear-gradient(var(--grid) 1px, transparent 1px), linear-gradient(90deg, var(--grid) 1px, transparent 1px); background-size: 32px 32px; }
+.design-document .hero-grid { grid-template-columns: 1fr; }
+.design-document .document-index { margin-top: 2.4rem; border-top: 2px solid var(--ink); }
+.design-document .document-index li {
+  display: grid; grid-template-columns: 2.5rem 1fr auto; gap: .8rem; align-items: center;
+  padding: .85rem 0; border-bottom: 1px solid var(--line);
+}
+.design-document .document-index span { color: var(--accent); font-variant-numeric: tabular-nums; font-weight: 800; }
+.design-document .document-index small { color: var(--muted); }
+.design-document .hero.variant-b .hero-grid { align-items: end; }
+.design-document .hero.variant-b .hero-copy { max-width: none; display: grid; gap: 1.5rem; }
+.design-document .hero.variant-b h1 { max-width: 820px; }
+.design-document .hero.variant-b .document-index { max-width: 680px; margin-left: auto; width: 100%; }
+@media (min-width: 860px) {
+  .design-document .hero.variant-a .hero-grid { grid-template-columns: minmax(0, 1.05fr) minmax(340px, .65fr); }
+  .design-document .hero.variant-a .document-index { margin-top: 0; }
+}

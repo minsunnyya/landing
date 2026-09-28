@@ -1,25 +1,60 @@
+# 웍스프레임 — 검색엔진과 AI 모두 환영합니다.
 User-agent: *
 Allow: /
+Disallow: /_archive/
 
-User-agent: GPTBot
+# 네이버 · 다음
+User-agent: Yeti
 Allow: /
 
-User-agent: ChatGPT-User
+User-agent: Daumoa
 Allow: /
 
-User-agent: OAI-SearchBot
+# 구글 · 빙 (ChatGPT 검색은 빙 색인을 많이 참고합니다)
+User-agent: Googlebot
 Allow: /
 
 User-agent: Google-Extended
 Allow: /
 
-User-agent: PerplexityBot
+User-agent: Bingbot
+Allow: /
+
+# AI 검색·답변 서비스
+User-agent: OAI-SearchBot
+Allow: /
+
+User-agent: ChatGPT-User
+Allow: /
+
+User-agent: GPTBot
 Allow: /
 
 User-agent: ClaudeBot
 Allow: /
 
+User-agent: Claude-SearchBot
+Allow: /
+
+User-agent: Claude-User
+Allow: /
+
 User-agent: anthropic-ai
+Allow: /
+
+User-agent: PerplexityBot
+Allow: /
+
+User-agent: Perplexity-User
+Allow: /
+
+User-agent: Applebot
+Allow: /
+
+User-agent: Applebot-Extended
+Allow: /
+
+User-agent: CCBot
 Allow: /
 
 Sitemap: https://worksframe.com/sitemap.xml
